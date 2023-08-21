@@ -1,0 +1,140 @@
+// @import 'bootstrap4/bootstrap-grid';
+@import 'slick';
+@import 'animate';
+@import "mixin/flex";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+
+
+@function px2rem($u) {
+  @return (1rem * $u / 14.4);
+  // @if (unitless($u) or unit($u) == 'px') {
+  //  @return 1rem * (to-number($u)/16);
+  // } @else {
+  //  @return $u;
+  // }
+}
+
+@mixin transition-all($time: .5s) {  //миксин для транзишинов. использовать как @include transition-all(.5s);
+  -webkit-transition: all $time ease-in-out;
+    -moz-transition: all $time ease-in-out;
+    -o-transition: all $time ease-in-out;
+    transition: all $time ease-in-out;
+}
+
+
+
+
+// @include f;    //Это вешает display: flexbox;
+// @include ai(center);    //Это вешает align-items: center;   в место center могут быть все варианты align-items
+// @include jcsb;    //Это вешает justify-content(space-between);
+// @include jc(space-between);    //Это вешает justify-content(space-between);
+// @include fw(wrap);    //Это вешает flex-wrap: wrap;
+
+
+html {
+  font-size: 1vw;
+}
+body {
+  font-family: "Open Sans";
+   // background-color: #ffc8b4;
+}
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+
+
+$gray: #202326;
+$black: #000;
+$red: #c51718;
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.clear {
+  clear: both;
+}
+.hidden {
+  display: none;
+}
+
+.boxshadow {
+   display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    position: fixed;
+    z-index: 21;
+    // display: block;
+}
+
+.flex_box {
+  @include f;
+}
+.flex_row {
+  @include f;
+}
+a {
+  display: block;
+}
+
+.container {
+  width: px2rem(1160);
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.container1 {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  .container {
+    .title {
+      font-size: px2rem(30);
+      color: $red;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) { }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) { 
+
+
+
+
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {  }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) { }
+
+
+
+
