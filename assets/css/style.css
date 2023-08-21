@@ -1448,7 +1448,9 @@ html {
 }
 
 body {
-  font-family: "Open Sans";
+  /* font-family: "Open Sans";*/
+  /*font-family: "TT Commons";*/
+  font-family: "SF Pro Display Regular", sans-serif;
 }
 
 button {
@@ -1512,8 +1514,11 @@ a {
 }
 
 header .container .title {
-  font-size: 2.0833333333rem;
-  color: #c51718;
+  font-size: 1.6666666667rem;
+  color: var(--grey, #616161);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 16px */
 }
 
 /*# sourceMappingURL=style.css.map */
