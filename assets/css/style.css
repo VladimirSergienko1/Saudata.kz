@@ -1508,17 +1508,108 @@ a {
   border: 1px solid red;
 }
 
+.header-container {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
 .container1 {
   width: 80%;
   margin: 0 auto;
 }
 
-header .container .title {
-  font-size: 1.6666666667rem;
-  color: var(--grey, #616161);
+header .container {
+  display: flex;
+  padding: 1.8055555556rem 0 1.7361111111rem 0;
+  align-items: center;
+}
+header .container .header-logo {
+  margin-right: 11.7708333333rem;
+  width: 6.4583333333rem;
+}
+header .container .flex_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  /* width: px2rem(794.5);*/
+}
+header .container .flex_row .main-nav .nav-list {
+  display: flex;
+  width: 44.0972222222rem;
+  justify-content: space-between;
+  list-style: none;
+  gap: 2.7777777778rem;
+}
+header .container .flex_row .main-nav .nav-list .nav-item .nav-link {
+  text-decoration: none;
+  transition: color 300ms ease-out;
+  color: #616161;
+  font-family: SF Pro Display;
+  font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 16px */
+}
+header .container .flex_row .main-nav .nav-list .nav-item .nav-link:hover {
+  color: #000080;
+}
+header .container .flex_row .flex_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container .flex_row .flex_box .language {
+  display: flex;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  padding: 0.2777777778rem 0.5555555556rem 0.2777777778rem 0.6944444444rem;
+  align-items: flex-start;
+  gap: 0.1388888889rem;
+  border-radius: 1.3888888889rem;
+  color: var(--grey, #616161);
+  text-align: center;
+  font-size: 0.8333333333rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1805555556rem;
+  letter-spacing: 0.2px;
+}
+header .container .flex_row .flex_box .language:after {
+  content: url("/assets/img/icons.png");
+  margin-left: 2px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+header .container .flex_row .flex_box .language:active {
+  border: none;
+}
+header .container .flex_row .flex_box .login {
+  display: flex;
+  text-decoration: none;
+  color: #2A81DD;
+  transition: color 300ms ease-out;
+  text-align: right;
+  font-size: 0.9722222222rem;
+  line-height: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  margin-left: 2.0138888889rem;
+}
+header .container .flex_row .flex_box .login:hover {
+  color: #000080;
+}
+
+.about .container {
+  padding-top: 4.1666666667rem;
+}
+.about .container img {
+  align-self: flex-end;
+  width: 46.3888888889rem;
+  height: 45.2083333333rem;
 }
 
 /*# sourceMappingURL=style.css.map */
