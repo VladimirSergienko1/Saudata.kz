@@ -5,22 +5,25 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&family=Roboto+Flex:opsz@8..144&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700" rel="stylesheet" />
 		<link rel="stylesheet" href="assets/css/animate.scss">
 		<link rel="stylesheet" href="assets/fancy/jquery.fancybox.css">
-		<link rel="stylesheet" href="themes/ivy.css" />
 		<link href="assets/css/select2.min.css" rel="stylesheet"/>
 		<link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<!-- <link rel="stylesheet" href="assets/css/guide.css?v=4"> -->
 		<link rel="stylesheet" href="assets/fonts/stylesheet.css">
-
+		<link rel="stylesheet" href="assets/css/choices.min.css">
 		<link rel="stylesheet" href="assets/css/style.css?v=4">
 		<script src="assets/js/jq.js" type="text/javascript"></script>
 		<script src="assets/js/slick.js" type="text/javascript"></script>
 
 		<script src="assets/js/js.js" type="text/javascript"></script>
 		<script src="assets/js/wow.min.js" type="text/javascript"></script>
+		<script src="assets/js/choices.min.js"></script>
 		<script src="assets/js/script.js" type="module"></script>
 
 	</head>
@@ -46,12 +49,13 @@
 				</ul>
 			</nav>
 			<div class="flex_box">
-					<select class="language" id="language">
+				<div class="select-container">
+					<select class="default" id="language">
 						<option value="kz">KAZ</option>
 						<option value="ru" selected>RUS</option>
 						<option value="en">ENG</option>
 					</select>
-
+				</div>
 					<a class="login" href="index.html">
 						Вход в систему
 					</a>
@@ -59,10 +63,66 @@
 		</div>
 	</div>
 </header>
+<section class="intro">
+	<div class="container">
+		<div class="container-text">
+			<h1 class="top-text">Понимайте рынок лучше, чем когда-либо прежде!</h1>
+			<p class="middle-text">Вся товарная аналитика в одном месте</p>
+			<p class="bottom-text">Анализируйте данные о <span class="blue">фактических продажах</span>, популярности товаров, ценах и конкурентах, все это и многое другое предоставляется вам в реальном времени.</p>
+			<button class="btn">Получить демо</button>
+		</div>
+		<img src="assets/img/illustration.svg">
+	</div>
+</section>
 <section class="about">
 	<div class="container">
-		<img src="assets/img/illustration.svg">
-
+		<h2 class="title">О нас</h2>
+		<p class="about-content content-text">SAUDATA – это компания, которая строит продукты на стыке различных технологий. Наша специализация заключается в сборе, обработке, структурированию, анализе и визуализации больших данных с применением передовых моделей машинного обучения.</p>
+		<div class="grid">
+			<div class="grid-item">
+				<div class="grid-img">
+					<img src="/assets/img/about-image1.svg" alt="">
+				</div>
+				<div class="grid-text">
+					<h3 class="grid-text-title">Богатый источник данных</h3>
+					<p class="content-text">Данные из чеков покупок, дают глубокое понимание потребительского поведения и позволяют анализировать продажи и цены товаров в различных категориях и каналах сбыта.</p>
+					<p class="content-text grid-content-next-line">Наши данные поступают ежедневно в режиме онлайн с более чем <span class="accent">600 000 контрольно-кассовых аппаратов.</span></p>
+				</div>
+			</div>
+			<div class="grid-item">
+				<div class="grid-img">
+					<img src="/assets/img/about-image2.svg" alt="">
+				</div>
+				<div class="grid-text">
+					<h3 class="grid-text-title">Передовые технологии</h3>
+					<!--//FIXME wrong font-->
+					<p class="content-text grid-content">Наша команда разработала собственные <span class="accent">ML & AI</span> наработки для сегментации торговых точек по типу бизнеса и категоризации товаров по товарным категориям. Это позволяет повышать точность и полезность получаемой информации, что помогает нашим клиентам принимать обоснованные решения и добиваться успеха на рынке.</p>
+				</div>
+			</div>
+			<div class="grid-item">
+				<div class="grid-img">
+					<img src="/assets/img/about-image3.svg" alt="">
+				</div>
+				<div class="grid-text">
+					<h3 class="grid-text-title">Быстрая обработка и обновление данных</h3>
+					<p class="content-text">Мы гордимся тем, что способны обрабатывать данные в режиме близком к реальному времени. Это позволяет нам быть в курсе последних трендов рынка и оперативно корректировать стратегии наших клиентов. Быстрое получение информации - залог оперативных решений и успеха вашего бизнеса.</p>
+				</div>
+			</div>
+			<div class="grid-item">
+				<div class="grid-img">
+					<img src="/assets/img/about-image4.svg" alt="">
+				</div>
+				<div class="grid-text">
+					<h3 class="grid-text-title">Интуитивно понятные BI дашборды</h3>
+					<p class="content-text">Мы предоставляем аналитику в виде удобных дашбордов и отчетов. Это позволяет нашим клиентам быстро и легко интерпретировать данные, получать ценные инсайты и принимать обоснованные решения для дальнейшего развития своего бизнеса.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="map">
+	<div class="container">
+		<div class="title">Количество чеков в месяц по регионам Казахстана</div>
 	</div>
 </section>
 
