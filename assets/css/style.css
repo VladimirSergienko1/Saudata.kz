@@ -1537,6 +1537,45 @@ a {
   line-height: 150%; /* 24px */
 }
 
+.grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.grid .grid-item {
+  display: flex;
+  width: 38.1944444444rem;
+  /* border: #6f42c1 solid 1px;*/
+  justify-content: space-between;
+}
+.grid .grid-item:nth-child(1), .grid .grid-item:nth-child(2) {
+  margin-bottom: 2.7777777778rem;
+}
+.grid .grid-item .grid-img {
+  display: flex;
+  width: 5.5555555556rem;
+  height: 5.5555555556rem;
+  background-size: cover;
+}
+.grid .grid-item .grid-text {
+  display: flex;
+  width: 30.8333333333rem;
+  flex-direction: column;
+  margin-right: 0.8333333333rem;
+}
+.grid .grid-item .grid-text .grid-text-title {
+  display: flex;
+  color: #333;
+  font-size: 1.3888888889rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 26px */
+  margin-bottom: 0.6944444444rem;
+}
+.grid .grid-item .grid-text .grid-content-next-line {
+  margin-top: 1.0416666667rem;
+}
+
 header .container {
   display: flex;
   padding: 1.8055555556rem 0 1.7361111111rem 0;
@@ -1667,7 +1706,7 @@ header .container .flex_row .flex_box .login:hover {
 }
 
 .about {
-  /*background: url("/assets/img/Group.svg") no-repeat;*/
+  background: url("/assets/img/Group.svg") no-repeat;
 }
 .about .container {
   border: none;
@@ -1686,51 +1725,13 @@ header .container .flex_row .flex_box .login:hover {
   width: 39.5833333333rem;
   margin-bottom: 3.8194444444rem;
 }
-.about .container .grid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.about .container .grid .grid-item {
-  display: flex;
-  width: 38.1944444444rem;
-  /* border: #6f42c1 solid 1px;*/
-  justify-content: space-between;
-}
-.about .container .grid .grid-item:nth-child(1), .about .container .grid .grid-item:nth-child(2) {
-  margin-bottom: 2.7777777778rem;
-}
-.about .container .grid .grid-item .grid-img {
-  display: flex;
-  width: 5.5555555556rem;
-  height: 5.5555555556rem;
-  background-size: cover;
-}
-.about .container .grid .grid-item .grid-text {
-  display: flex;
-  width: 30.8333333333rem;
-  flex-direction: column;
-  margin-right: 0.8333333333rem;
-}
-.about .container .grid .grid-item .grid-text .grid-text-title {
-  display: flex;
-  color: #333;
-  font-size: 1.3888888889rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 130%; /* 26px */
-  margin-bottom: 0.6944444444rem;
-}
-.about .container .grid .grid-item .grid-text .grid-content {
+.about .container .grid-content {
   font-family: "Roboto Flex";
   color: #333;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
-}
-.about .container .grid .grid-item .grid-text .grid-content-next-line {
-  margin-top: 1.0416666667rem;
 }
 
 .map .container {
@@ -1745,132 +1746,173 @@ header .container .flex_row .flex_box .login:hover {
   line-height: 2.1527777778rem; /* 155% */
 }
 
-.choices__inner {
-  /*padding: 4px 8px 4px 20px;*/
-  /* text-align: center;*/
-  border-radius: 1.3888888889rem;
-  position: relative;
-  width: 4.1666666667rem;
-  border: none;
+.products .container {
+  padding-top: 4.3055555556rem;
+}
+.products .container .title {
+  color: #333;
+  font-size: 2.2222222222rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 48px */
+  margin-bottom: 1.7361111111rem;
+}
+.products .container .desc {
   color: #616161;
-  background: #F3F5FC;
-  min-height: auto;
+  font-size: 1.25rem;
+  width: 32.7777777778rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+  margin-bottom: 2.0833333333rem;
+}
+.products .container .carousel-buttons {
+  /*display: inline-flex;
+  width: px2rem(130);
+  justify-content: space-between;*/
+}
+#slider .slider_item .grid-img {
+  display: flex;
+  width: 5.5555555556rem;
+  height: 5.5555555556rem;
+  background-size: cover;
+}
+#slider .slider_item .grid-text {
+  display: flex;
+  width: 30.8333333333rem;
+  flex-direction: column;
+  margin-right: 0.8333333333rem;
+}
+#slider .slider_item .grid-text .grid-text-title {
+  display: flex;
+  color: #333;
+  font-size: 1.3888888889rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 26px */
+  margin-bottom: 0.6944444444rem;
+}
+#slider .slider_item .grid-text .grid-content-next-line {
+  margin-top: 1.0416666667rem;
+}
+
+/* Для элемента select */
+.select2-container .select2-selection {
+  border: none !important;
+  border-radius: 1.0416666667rem !important;
+  background-color: #F3F5FC !important;
+}
+
+/* Изменяет высоту контейнера */
+.select2-container .select2-selection--single {
+  width: 4.1666666667rem !important; /* Пример высоты */
+  position: relative;
+  height: 1.9444444444rem;
+}
+
+.select2-container .select2-selection__rendered:hover {
+  transition: color 0.3s ease-in-out;
+  color: #000080 !important;
+}
+
+/* Когда dropdown активно (открывается вниз) */
+.select2-container--open .select2-selection {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+/* Для выпадающего списка */
+.select2-dropdown {
+  font-size: 0.8333333333rem;
+  padding-left: 0.1388888889rem;
+  width: 4.1666666667rem !important; /* Пример высоты */
+  border: none !important;
+  border-radius: 1.0416666667rem !important;
+  background-color: #F3F5FC !important;
+}
+
+/*Наведение на dropdown*/
+.select2-dropdown .select2-results__option {
   transition: color 0.3s ease-in-out;
 }
 
-.choices__inner:hover {
-  color: blue;
-}
-
-.choices__list--single {
-  padding: 0;
-}
-
-.is-open .choices__inner {
-  /*padding: 4px 8px 4px 20px;*/
-  border-top-left-radius: 1.3888888889rem;
-  border-top-right-radius: 1.3888888889rem;
-  border: none;
-  background: #F3F5FC;
-  min-height: auto;
-}
-
-.language .default option {
-  margin: 0;
-  padding: 0;
-}
-
-.default {
-  border-radius: 1.3888888889rem;
-  color: #616161;
-  text-align: center;
+.select2-container--default .select2-selection--single .select2-selection__rendered {
   font-size: 0.8333333333rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 0.8333333333rem;
-  letter-spacing: 0.2px;
+  transition: color 0.3s ease-in-out !important;
+  padding-left: 0.5555555556rem;
+  padding-right: 1.3888888889rem;
+  overflow: inherit;
+  line-height: 1.9444444444rem;
 }
 
-.choices__item--choice {
-  transition: color 0.3s ease-in-out;
+/* Изменение цвета текста при наведении на элемент выпадающего списка */
+.select2-dropdown .select2-results__option:hover {
+  color: #000080 !important;
 }
 
-.choices__list--dropdown .choices__item--choice:hover {
-  color: blue;
+.select2-results__option--highlighted[aria-selected=true] {
+  background-color: unset !important;
+  color: unset !important;
 }
 
-.choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list {
-  position: relative;
-  overflow: unset;
-  -webkit-overflow-scrolling: touch;
-  word-break: normal;
+.select2-container--default .select2-results__option--selected:not(.select2-results__option--highlighted) {
+  background-color: unset !important;
 }
 
-.choices__list--dropdown {
-  /*padding: 4px 8px 4px 15px;*/
-  width: 4.1666666667rem;
-  align-items: flex-start;
-  color: #616161;
-  text-align: center;
-  font-size: 0.8333333333rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 0.8333333333rem;
-  letter-spacing: 0.2px;
-  border: none;
-  background: #F3F5FC;
-  padding: 0;
-  margin: 0;
+/* Когда dropdown открывается вниз, скругляем верхние углы */
+.select2-dropdown--below {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
 }
 
-.choices__list .choices__list--dropdown .is-active {
-  width: 4.1666666667rem;
-}
-
-.is-open .choices__list--dropdown {
-  border-bottom-left-radius: 1.3888888889rem;
-  border-bottom-right-radius: 1.3888888889rem;
-  border: none;
-  background: #F3F5FC;
-}
-
-.choices__list--dropdown,
-.choices__list[aria-expanded] {
-  width: 4.1666666667rem;
-}
-
-.choices__list--dropdown .choices__item--choice,
-.choices__list--dropdown .choices__item--choice.is-highlighted {
-  background-color: transparent !important;
-}
-
-/*.choices[data-type*="select-one"]::after {
-  content: none;
-}*/
-/*.choices[data-type*="select-one"]::after {
-  background-image: url('assets/img/icons.svg'); !important;
-  border-style: none;
-  right: px2rem(10);
-  top: 0%;
-  left: 0%;
-  pointer-events: all;
-}*/
-/*.choices[data-type*="select-one"]::after {
-  content: url('assets/img/icons.svg');  !* замените на путь к вашей иконке *!
-  position: absolute;
-  fill: blue;
- !* right: px2rem(10);  !* вы можете настроить положение иконки по горизонтали *!*!
- !* top: 50%;     !* центрируем иконку по вертикали *!
-  transform: translateY(-50%); !* смещаем иконку вверх на половину ее высоты для вертикального центрирования *!
-  pointer-events: all;  !* чтобы иконка не блокировала клики *!*!
-
-}*/
-.choices[data-type*=select-one]:hover::before {
-  fill: blue;
-}
-
-.choices__list--dropdown .choices__item--selectable.is-highlighted:after {
+/*иконка*/
+/* Скрыть стандартную иконку стрелочки */
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
   display: none;
+}
+
+/* Добавить SVG иконку */
+.select2-container--default .select2-selection--single .select2-selection__arrow::before {
+  background-image: url("/assets/img/icons.svg");
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%; /* Центрируем по вертикали */
+  transform: translateY(-50%);
+  width: 1.1111111111rem;
+  height: 1.1111111111rem;
+  background-size: 1.1111111111rem;
+  background-repeat: no-repeat;
+}
+
+.select2-selection__arrow {
+  display: inline-block;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 50%;
+  width: 1.1111111111rem;
+  height: 1.1111111111rem;
+  margin-right: 0.5555555556rem;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow::before {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow::before {
+  transition: transform 0.3s ease-in-out; /* Добавляем плавность */
+}
+
+/*для ховер стрелочи*/
+.select2-container:hover .select2-selection--single .select2-selection__arrow::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6667 6.5L7.99999 10.5L3.33332 6.5' stroke='rgba(0, 0, 128, 1)' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.select2-container {
+  width: 4.1666666667rem !important;
 }
 
 /*# sourceMappingURL=style.css.map */
