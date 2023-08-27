@@ -84,7 +84,7 @@
 		<div class="grid">
 			<div class="grid-item">
 				<div class="grid-img">
-					<img src="/assets/img/about-image1.svg" alt="">
+					<img src="/assets/img/about-icons/about-image1.svg" alt="">
 				</div>
 				<div class="grid-text">
 					<h3 class="grid-text-title">Богатый источник данных</h3>
@@ -94,7 +94,7 @@
 			</div>
 			<div class="grid-item">
 				<div class="grid-img">
-					<img src="/assets/img/about-image2.svg" alt="">
+					<img src="/assets/img/about-icons/about-image2.svg" alt="">
 				</div>
 				<div class="grid-text">
 					<h3 class="grid-text-title">Передовые технологии</h3>
@@ -104,7 +104,7 @@
 			</div>
 			<div class="grid-item">
 				<div class="grid-img">
-					<img src="/assets/img/about-image3.svg" alt="">
+					<img src="/assets/img/about-icons/about-image3.svg" alt="">
 				</div>
 				<div class="grid-text">
 					<h3 class="grid-text-title">Быстрая обработка и обновление данных</h3>
@@ -113,7 +113,7 @@
 			</div>
 			<div class="grid-item">
 				<div class="grid-img">
-					<img src="/assets/img/about-image4.svg" alt="">
+					<img src="/assets/img/about-icons/about-image4.svg" alt="">
 				</div>
 				<div class="grid-text">
 					<h3 class="grid-text-title">Интуитивно понятные BI дашборды</h3>
@@ -132,94 +132,161 @@
 	<div class="container">
 		<h2 class="title">Продукты</h2>
 		<p class="desc">Используйте наши продукты,чтобы вести бизнес эффективнее</p>
-		<!--<div class="carousel-buttons">
-			<img src="/assets/img/arrow-left.svg">
-			<img src="/assets/img/arrow-right.svg">
-		</div>-->
 		<div class="grid products_grid"  style="display: block">
+			<div class="slick-prev">
+				<svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g id="icons">
+						<path class="prev-arrow" id="Vector" d="M15 5L9 12L15 19" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</g>
+				</svg>
+			</div>
+			<div class="slick-next">
+				<svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g id="icons">
+						<path id="Vector" d="M9 5L15 12L9 19" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</g>
+				</svg>
+			</div>
 			<div class="flex-row" id="slider" >
+
+
 				<div class="slider_item">
 					<div class="grid-img">
-						<img src="/assets/img/about-image1.svg" alt="">
+						<img src="/assets/img/product-icons/product-icons1.svg" alt="">
 					</div>
 					<div class="grid-text">
-						<h3 class="grid-text-title">Богатый источник данных</h3>
-						<p class="content-text">Данные из чеков покупок, дают глубокое понимание потребительского поведения и позволяют анализировать продажи и цены товаров в различных категориях и каналах сбыта.</p>
-						<p class="content-text grid-content-next-line">Наши данные поступают ежедневно в режиме онлайн с более чем <span class="accent">600 000 контрольно-кассовых аппаратов.</span></p>
+						<p class="grid-tag">Price Dynamics</p>
+						<h3 class="grid-text-title">Мониторинг цен</h3>
+						<p class="content-text grid-content-margin-bot">Отслеживайте ценовые тренды рынка Вашей продукции и конкурентов.</p>
+						<p class="content-text">Отчет о том, сколько стоит товар в вашем регионе, поможет установить на него такую цену, чтобы обойти конкурентов и не продешевить. В отчетах вы увидите максимальную, минимальную, среднюю, медианную и самую популярную цену.</p>
 					</div>
 				</div>
 				<div class="slider_item">
 					<div class="grid-img">
-						<img src="/assets/img/about-image2.svg" alt="">
+						<img src="/assets/img/product-icons/product-icons2.svg" alt="">
 					</div>
 					<div class="grid-text">
-						<h3 class="grid-text-title">Передовые технологии</h3>
-						<!--//FIXME wrong font-->
-						<p class="content-text grid-content">Наша команда разработала собственные <span class="accent">ML & AI</span> наработки для сегментации торговых точек по типу бизнеса и категоризации товаров по товарным категориям. Это позволяет повышать точность и полезность получаемой информации, что помогает нашим клиентам принимать обоснованные решения и добиваться успеха на рынке.</p>
+						<p class="grid-tag">Volume Dynamics</p>
+						<h3 class="grid-text-title">Динамика продаж</h3>
+						<p class="content-text grid-content-margin-bot">Отслеживайте тренды по объемам продаж, проводите оценку долей рынка</p>
+						<p class="content-text">Объемы продаж по гео, брендам, товарам-конкурентам, сегментам бизнеса, доли рынка в денежном и товарном выражении, динамика, анализ исторических данных, сравнение на начало и конец периода.</p>
 					</div>
 				</div>
 				<div class="slider_item">
 					<div class="grid-img">
-						<img src="/assets/img/about-image3.svg" alt="">
+						<img src="/assets/img/product-icons/product-icons3.svg" alt="">
 					</div>
 					<div class="grid-text">
-						<h3 class="grid-text-title">Быстрая обработка и обновление данных</h3>
-						<p class="content-text">Мы гордимся тем, что способны обрабатывать данные в режиме близком к реальному времени. Это позволяет нам быть в курсе последних трендов рынка и оперативно корректировать стратегии наших клиентов. Быстрое получение информации - залог оперативных решений и успеха вашего бизнеса.</p>
+						<p class="grid-tag">Distribution Analysis</p>
+						<h3 class="grid-text-title">Анализ Дистрибуции</h3>
+						<p class="content-text grid-content-margin-bot">Оценка покрытия торговых точек вашим товаром или брендом покажет, сколько магазинов его уже продают и как активно.</p>
+						<p class="content-text">Это поможет найти новые рынки сбыта и спланировать продвижение в городе, регионе, стране. В отчетах вы увидите взвешенную и нумерическую дистрибуции</p>
+
 					</div>
 				</div>
 				<div class="slider_item">
 					<div class="grid-img">
-						<img src="/assets/img/about-image4.svg" alt="">
+						<img src="/assets/img/product-icons/product-icons4.svg" alt="">
 					</div>
 					<div class="grid-text">
-						<h3 class="grid-text-title">Интуитивно понятные BI дашборды</h3>
-						<p class="content-text">Мы предоставляем аналитику в виде удобных дашбордов и отчетов. Это позволяет нашим клиентам быстро и легко интерпретировать данные, получать ценные инсайты и принимать обоснованные решения для дальнейшего развития своего бизнеса.</p>
+						<p class="grid-tag">Category structure</p>
+						<h3 class="grid-text-title">Структура категории</h3>
+						<p class="content-text">Анализ структуры категории с детализацией до уровня товарных подгрупп дает возможность составить ассортиментную матрицу, наиболее полно удовлетворяющую запросам и предпочтениям потребителей</p>
+					</div>
+				</div>
+				<div class="slider_item">
+					<div class="grid-img">
+						<img src="/assets/img/product-icons/product-icons5.svg" alt="">
+					</div>
+					<div class="grid-text">
+						<p class="grid-tag">Segments Dynamics</p>
+						<h3 class="grid-text-title">Анализ</h3>
+						<p class="content-text">Сегментов Бизнеса и каналов сбыта - Динамика продаж и средний чек по различным сегментам бизнеса, анализ ассортимента, кластеризация торгового пространства по типам, а также информация по различным каналам продаж (E-comm, Modern trade, Traditional Trade, HoReCa и даже спец. розница)</p>
+					</div>
+				</div>
+				<div class="slider_item">
+					<div class="grid-img">
+						<img src="/assets/img/product-icons/product-icons6.svg" alt="">
+					</div>
+					<div class="grid-text">
+						<p class="grid-tag">Penetration Analysis</p>
+						<h3 class="grid-text-title">Пенетрация в чеки</h3>
+        		        <p class="content-text grid-content-margin-bot">Проводите оценку своего потенциала в категории и популярность товара у потребителя.</p>
+						<p class="content-text">Пенетрация товара и товаров-конкурентов в чеки категории, анализ покупок сопутствующих товаров.</p>
+					</div>
+				</div>
+				<div class="slider_item">
+					<div class="grid-img">
+						<img src="/assets/img/product-icons/product-icons7.svg" alt="">
+					</div>
+					<div class="grid-text">
+						<p class="grid-tag">Heat map</p>
+						<h3 class="grid-text-title">Тепловая карта</h3>
+        		        <p class="content-text grid-content-margin-bot">Анализируйте данные по рынку и свою представленность разрезе территорий</p>
+						<p class="content-text">Оценка представленности вашего товара или бренда покажет, концентрацию торговых точек в том или ином регионе. Это поможет понимать представленность в районах города, региона, стране.</p>
+
+					</div>
+				</div>
+				<div class="slider_item">
+					<div class="grid-img">
+						<img src="/assets/img/product-icons/product-icons8.svg" alt="">
+					</div>
+					<div class="grid-text">
+						<p class="grid-tag">O2O</p>
+						<h3 class="grid-text-title">O2O</h3>
+						<p class="content-text">Анализ эффективности рекламных компаний, влияние на конечные продажи, анализ чековых промо, digital активностей</p>
 					</div>
 				</div>
 			</div>
-
-
-<!--			<div class="flex-row">-->
-<!--				<div class="grid-item">-->
-<!--					<div class="grid-img">-->
-<!--						<img src="/assets/img/about-image4.svg" alt="">-->
-<!--					</div>-->
-<!--					<div class="grid-text">-->
-<!--						<h3 class="grid-text-title">Интуитивно понятные BI дашборды</h3>-->
-<!--						<p class="content-text">Мы предоставляем аналитику в виде удобных дашбордов и отчетов. Это позволяет нашим клиентам быстро и легко интерпретировать данные, получать ценные инсайты и принимать обоснованные решения для дальнейшего развития своего бизнеса.</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="grid-item">-->
-<!--					<div class="grid-img">-->
-<!--						<img src="/assets/img/about-image4.svg" alt="">-->
-<!--					</div>-->
-<!--					<div class="grid-text">-->
-<!--						<h3 class="grid-text-title">Интуитивно понятные BI дашборды</h3>-->
-<!--						<p class="content-text">Мы предоставляем аналитику в виде удобных дашбордов и отчетов. Это позволяет нашим клиентам быстро и легко интерпретировать данные, получать ценные инсайты и принимать обоснованные решения для дальнейшего развития своего бизнеса.</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="grid-item">-->
-<!--					<div class="grid-img">-->
-<!--						<img src="/assets/img/about-image4.svg" alt="">-->
-<!--					</div>-->
-<!--					<div class="grid-text">-->
-<!--						<h3 class="grid-text-title">Интуитивно понятные BI дашборды</h3>-->
-<!--						<p class="content-text">Мы предоставляем аналитику в виде удобных дашбордов и отчетов. Это позволяет нашим клиентам быстро и легко интерпретировать данные, получать ценные инсайты и принимать обоснованные решения для дальнейшего развития своего бизнеса.</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="grid-item">-->
-<!--					<div class="grid-img">-->
-<!--						<img src="/assets/img/about-image4.svg" alt="">-->
-<!--					</div>-->
-<!--					<div class="grid-text">-->
-<!--						<h3 class="grid-text-title">Интуитивно понятные BI дашборды</h3>-->
-<!--						<p class="content-text">Мы предоставляем аналитику в виде удобных дашбордов и отчетов. Это позволяет нашим клиентам быстро и легко интерпретировать данные, получать ценные инсайты и принимать обоснованные решения для дальнейшего развития своего бизнеса.</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--			</div>-->
+		</div>
+	</div>
+	<div class="banner">
+		<div class="banner-content">
+		<p class="title">Актуальные данные в удобном формате</p>
+		<p class="subtitle">Оставьте заявку и получите доступ к демо отчетам на основе реальных рыночных данных.</p>
+		<button class="btn">Получить демо</button>
+		</div>
+		<img class="banner-img" src="/assets/img/banner-image.svg">
+	</div>
+</section>
+<section class="detilize">
+	<div class="container">
+		<div class="title-block">
+			<p class="detilize-title">Выбирайте нужную <span class="blue">детализацию </span>отчетов</p>
+			<img class="detilize-img" src="/assets/img/detilize-img.svg">
+		</div>
+		<div class="grid">
+			<div class="grid-item">
+				<div class="grid-text">
+					<h3 class="grid-text-title">Любой уровень детализации </h3>
+					<p class="content-text">Данные категории, брендов, продуктовых линеек – вплоть до конкретной товарной позиции с определенным весом, вкусом, объемом</p>
+				</div>
+			</div>
+			<div class="grid-item">
+				<div class="grid-text">
+					<h3 class="grid-text-title">Промежуток времени</h3>
+					<p class="content-text">Данные по годам, месяцам, неделям и дням помогут спланировать работу в разное время года и вовремя среагировать, если конкуренты начнут продавать что-то новое или изменят цены.</p>
+				</div>
+			</div>
+			<div class="grid-item">
+				<div class="grid-text">
+					<h3 class="grid-text-title">География</h3>
+					<p class="content-text">Изучайте отдельные географии чтобы определить самые прибыльные – города, области, весь Казахстан.</p>
+				</div>
+			</div>
+			<div class="grid-item">
+				<div class="grid-text">
+					<h3 class="grid-text-title">Каналы продаж</h3>
+					<p class="content-text">Современная торговля, е-комм, специализированные сети и аптеки, традиционная торговля – от крупнейших розничных сетей до локальных продавцов.</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
+<section class="contact-us">
+
+</section>
+
 
 
 
