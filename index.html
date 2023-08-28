@@ -24,10 +24,10 @@
 		<script src="assets/js/slick.js" type="text/javascript"></script>
 		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-
+		<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+		<script src = "https://code.highcharts.com/maps/modules/map.js"></script >
 		<script src="assets/js/js.js" type="text/javascript"></script>
 		<script src="assets/js/wow.min.js" type="text/javascript"></script>
-		<script src="assets/js/script.js" type="module"></script>
 
 	</head>
 
@@ -41,7 +41,7 @@
 			</a>
 		</div>
 		<div class="flex_row">
-			<nav class="main-nav">
+			<nav class="main-nav dekstop">
 				<ul class="nav-list">
 					<li class="nav-item"><a href="#" class="nav-link">О нас</a></li>
 					<li class="nav-item"><a href="#" class="nav-link">Продукты</a></li>
@@ -66,6 +66,18 @@
 		</div>
 	</div>
 </header>
+
+<nav class="mobile">
+	<ul class="nav-list">
+		<li class="nav-item"><a href="#" class="nav-link">О нас</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">Продукты</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">Индексы</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">Контакты</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">Кейсы и исследования</a></li>
+	</ul>
+</nav>
+
 <section class="intro">
 	<div class="container">
 		<div class="container-text">
@@ -84,7 +96,7 @@
 		<div class="grid">
 			<div class="grid-item">
 				<div class="grid-img">
-					<img src="/assets/img/about-icons/about-image1.svg" alt="">
+					<img src="assets/img/about-icons/about-image1.svg" alt="">
 				</div>
 				<div class="grid-text">
 					<h3 class="grid-text-title">Богатый источник данных</h3>
@@ -94,7 +106,7 @@
 			</div>
 			<div class="grid-item">
 				<div class="grid-img">
-					<img src="/assets/img/about-icons/about-image2.svg" alt="">
+					<img src="assets/img/about-icons/about-image2.svg" alt="">
 				</div>
 				<div class="grid-text">
 					<h3 class="grid-text-title">Передовые технологии</h3>
@@ -104,7 +116,7 @@
 			</div>
 			<div class="grid-item">
 				<div class="grid-img">
-					<img src="/assets/img/about-icons/about-image3.svg" alt="">
+					<img src="assets/img/about-icons/about-image3.svg" alt="">
 				</div>
 				<div class="grid-text">
 					<h3 class="grid-text-title">Быстрая обработка и обновление данных</h3>
@@ -113,7 +125,7 @@
 			</div>
 			<div class="grid-item">
 				<div class="grid-img">
-					<img src="/assets/img/about-icons/about-image4.svg" alt="">
+					<img src="assets/img/about-icons/about-image4.svg" alt="">
 				</div>
 				<div class="grid-text">
 					<h3 class="grid-text-title">Интуитивно понятные BI дашборды</h3>
@@ -123,9 +135,12 @@
 		</div>
 	</div>
 </section>
-<section class="map">
+<section class="map-section">
 	<div class="container">
 		<div class="title">Количество чеков в месяц по регионам Казахстана</div>
+		<div class="map" id="map">
+
+		</div>
 	</div>
 </section>
 <section class="products">
@@ -152,7 +167,7 @@
 
 				<div class="slider_item">
 					<div class="grid-img">
-						<img src="/assets/img/product-icons/product-icons1.svg" alt="">
+						<img src="assets/img/product-icons/product-icons1.svg" alt="">
 					</div>
 					<div class="grid-text">
 						<p class="grid-tag">Price Dynamics</p>
@@ -163,7 +178,7 @@
 				</div>
 				<div class="slider_item">
 					<div class="grid-img">
-						<img src="/assets/img/product-icons/product-icons2.svg" alt="">
+						<img src="assets/img/product-icons/product-icons2.svg" alt="">
 					</div>
 					<div class="grid-text">
 						<p class="grid-tag">Volume Dynamics</p>
@@ -174,7 +189,7 @@
 				</div>
 				<div class="slider_item">
 					<div class="grid-img">
-						<img src="/assets/img/product-icons/product-icons3.svg" alt="">
+						<img src="assets/img/product-icons/product-icons3.svg" alt="">
 					</div>
 					<div class="grid-text">
 						<p class="grid-tag">Distribution Analysis</p>
@@ -186,7 +201,7 @@
 				</div>
 				<div class="slider_item">
 					<div class="grid-img">
-						<img src="/assets/img/product-icons/product-icons4.svg" alt="">
+						<img src="assets/img/product-icons/product-icons4.svg" alt="">
 					</div>
 					<div class="grid-text">
 						<p class="grid-tag">Category structure</p>
@@ -196,7 +211,7 @@
 				</div>
 				<div class="slider_item">
 					<div class="grid-img">
-						<img src="/assets/img/product-icons/product-icons5.svg" alt="">
+						<img src="assets/img/product-icons/product-icons5.svg" alt="">
 					</div>
 					<div class="grid-text">
 						<p class="grid-tag">Segments Dynamics</p>
@@ -206,7 +221,7 @@
 				</div>
 				<div class="slider_item">
 					<div class="grid-img">
-						<img src="/assets/img/product-icons/product-icons6.svg" alt="">
+						<img src="assets/img/product-icons/product-icons6.svg" alt="">
 					</div>
 					<div class="grid-text">
 						<p class="grid-tag">Penetration Analysis</p>
@@ -217,7 +232,7 @@
 				</div>
 				<div class="slider_item">
 					<div class="grid-img">
-						<img src="/assets/img/product-icons/product-icons7.svg" alt="">
+						<img src="assets/img/product-icons/product-icons7.svg" alt="">
 					</div>
 					<div class="grid-text">
 						<p class="grid-tag">Heat map</p>
@@ -229,7 +244,7 @@
 				</div>
 				<div class="slider_item">
 					<div class="grid-img">
-						<img src="/assets/img/product-icons/product-icons8.svg" alt="">
+						<img src="assets/img/product-icons/product-icons8.svg" alt="">
 					</div>
 					<div class="grid-text">
 						<p class="grid-tag">O2O</p>
@@ -246,14 +261,14 @@
 		<p class="subtitle">Оставьте заявку и получите доступ к демо отчетам на основе реальных рыночных данных.</p>
 		<button class="btn">Получить демо</button>
 		</div>
-		<img class="banner-img" src="/assets/img/banner-image.svg">
+		<img class="banner-img" src="assets/img/banner-image.svg">
 	</div>
 </section>
 <section class="detilize">
 	<div class="container">
 		<div class="title-block">
 			<p class="detilize-title">Выбирайте нужную <span class="blue">детализацию </span>отчетов</p>
-			<img class="detilize-img" src="/assets/img/detilize-img.svg">
+			<img class="detilize-img" src="assets/img/detilize-img.svg">
 		</div>
 		<div class="grid">
 			<div class="grid-item">
@@ -289,53 +304,51 @@
 		<p class="title">Свяжитесь с нами</p>
 		<p class="subtitle">Оставьте заявку и получите демо-доступ к отчетам на основе реальных рыночных данных Казахстана.</p>
 		<div class="form-container">
-
 			<div class="form">
 				<form action="" method="post">
 					<div class="input-group">
 						<div class="input-container">
-							<input type="text" class="input-field"  id="name-input" name="name" required>
+							<input type="text" class="input-field"  id="name-input" name="name">
 							<label for="name-input">Ваше Имя</label>
 						</div>
 						<div class="input-container">
-							<input type="email" class="input-field"  id="email-input" name="email" required>
+							<input type="email" class="input-field"  id="email-input" name="email" >
 							<label for="email-input">Email</label>
 						</div>
 					</div>
 					<div class="input-container">
-						<input type="text" class="input-field organization"  id="organization-input" name="organization" required>
+						<input type="text" class="input-field organization"  id="organization-input" name="organization" >
 						<label for="organization-input">Организация</label>
 					</div>
 					<div class="input-group">
 						<div class="input-container">
-							<input type="text" class="input-field"  id="job-input" name="job" required>
+							<input type="text" class="input-field"  id="job-input" name="job" >
 							<label for="name-input">Должность</label>
 						</div>
 						<div class="input-container">
-							<input type="text" class="input-field"  id="phone-input" name="phone" required>
+							<input type="text" class="input-field"  id="phone-input" name="phone" >
 							<label for="email-input">Телефон</label>
 						</div>
 					</div>
 					<div class="input-container">
-						<textarea type="text" class="input-field message"  id="message-input" name="message" required>	</textarea>
+						<textarea type="text" class="input-field message"  id="message-input" name="message" >	</textarea>
 						<label class="textarea-label" for="message-input">Сообщение</label>
 					</div>
 					<div class="radio-group">
 						<div class="radio-item1">
-							<input class="radio1" type="radio" id="radio1" name="radio1">
-							<p class="radio-text">Согласие на обработку персональных данных</p>
+							<p class="radio-text">Согласие на обработку персональных данных *</p>
 						</div>
 						<div class="radio-item2">
-							<input class="radio2" type="radio" id="radio2" name="radio2" >
+							<input class="round-checkbox" type="checkbox" id="radio2" name="radio2" >
 							<p class="radio-text">Я хочу время от времени получать новости и инсайты от Saudata</p>
 						</div>
 					</div>
 
-					<input class="btn" type="submit" value="Отправить заявку">
+					<input class="btn" type="submit" id="openPopup" value="Отправить заявку *">
 				</form>
 			</div>
 			<div>
-				<img class="form-img" src="/assets/img/form-image.svg">
+				<img class="form-img" src="assets/img/form-image.svg">
 
 			</div>
 
@@ -422,11 +435,21 @@
 					</clipPath>
 				</defs>
 			</svg>
-
 		</div>
 	</div>
+		<p class="rights">© 2023</p>
 </footer>
-
+<div class="overlay"></div>
+<div class="popup">
+	<img class="popup-icon" src="assets/img/popup-icon.svg">
+	<h2 class="title">Отправлено!</h2>
+	<p class="subtitle">Ваша заявка успешно отправлена.</p>
+	<div class="desc">
+		<p class="desc-text">Что дальше?</p>
+		<p class="desc-subtext">В ближайшее время мы свяжемся с вами и уточним детали, проконсультируем и затем предоставим демо-доступ для ознакомления с нашим сервисом.</p>
+	</div>
+	<button class="btn" id="closePopup">Ok</button>
+</div>
 
 
 
