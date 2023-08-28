@@ -732,11 +732,13 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: px2rem(40);
+    margin-bottom: px2rem(30);
+
     .contacts{
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: px2rem(40);
       .contacts-title{
         color: $black;
         font-family: SF Pro Display;
@@ -749,6 +751,8 @@ footer{
       .contacts-email{
         display: flex;
         margin-left: px2rem(53);
+        align-items: center;
+
         .email-text{
           margin-left: px2rem(10);
 
@@ -770,6 +774,7 @@ footer{
       .contacts-address{
         display: flex;
         margin-left: px2rem(50);
+        align-items: center;
         .address-photo{
           display: flex;
           width: px2rem(24);
@@ -792,7 +797,49 @@ footer{
 
     .links{
       display: flex;
+      width: px2rem(210);
       justify-content: space-between;
+
+      .svg-icon {
+        width: px2rem(30);
+        height: px2rem(30);
+
+        & path {
+          fill: #ACACAC;
+          transition: fill 0.3s ease-in-out;
+        }
+
+      }
+      .youtube{
+        &:hover{
+          & path {
+            fill: #FF0302;
+          }
+        }
+      }
+      .facebook{
+        &:hover{
+          & path {
+            fill: #1877F2;
+          }
+        }
+      }
+
+      //FIXME no transition because url
+      .instagram{
+        &:hover{
+          & path {
+            fill: url(#paint1_linear_109_4253);
+          }
+        }
+      }
+      .linkedin{
+        &:hover{
+          & path {
+            fill: #0A66C2;
+          }
+        }
+      }
 
     }
   }
