@@ -1447,6 +1447,7 @@
 html {
   font-size: 1vw;
   font-family: SF Pro Display;
+  background-color: #FAFAFA;
 }
 
 body {
@@ -1871,7 +1872,7 @@ header .container .flex_row .flex_box .login:hover {
 }
 .detilize .container .grid .grid-item .grid-text .grid-text-title {
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 1.3888888889rem;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
@@ -1889,6 +1890,229 @@ header .container .flex_row .flex_box .login:hover {
 
 .contact-us {
   padding-top: 5.5555555556rem;
+}
+.contact-us .input-container {
+  position: relative;
+}
+.contact-us .input-container label {
+  position: absolute;
+  top: 50%;
+  left: 1.3888888889rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #616161;
+  font-family: Roboto Flex;
+  font-size: 1.1111111111rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  transition: 0.3s ease-in-out;
+}
+.contact-us .input-container label {
+  position: absolute;
+  top: 50%;
+  left: 1.3888888889rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #616161;
+  font-family: Roboto Flex;
+  font-size: 1.1111111111rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  transition: 0.3s ease-in-out;
+}
+.contact-us .input-container .textarea-label {
+  position: absolute;
+  top: 1.9444444444rem;
+  left: 1.3888888889rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #616161;
+  font-family: Roboto Flex;
+  font-size: 1.1111111111rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  transition: 0.3s ease-in-out;
+}
+.contact-us .input-container input:focus + label {
+  top: 0.6944444444rem;
+  left: 1.3888888889rem;
+  font-size: 0.8333333333rem;
+}
+.contact-us .input-container textarea:focus + label {
+  top: 0.6944444444rem;
+  left: 1.3888888889rem;
+  font-size: 0.8333333333rem;
+}
+.contact-us .container .form-img {
+  display: flex;
+  width: 32.7777777778rem;
+  margin-left: 1.3888888889rem;
+}
+.contact-us .container .title {
+  color: #333;
+  font-size: 2.2222222222rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 48px */
+  margin-bottom: 1.3888888889rem;
+  width: 25.9027777778rem;
+}
+.contact-us .container .subtitle {
+  color: #616161;
+  font-family: SF Pro Display;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+  margin-bottom: 2.0833333333rem;
+  width: 32.7777777778rem;
+}
+.contact-us .container .form-container {
+  display: flex;
+}
+.contact-us .container .form-container .form {
+  display: flex;
+  width: 46.3888888889rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact-us .container .form-container .form .input-field {
+  display: flex;
+  width: 22.2222222222rem;
+  padding: 1.25rem 1.3888888889rem 1.1805555556rem 1.3888888889rem;
+  border-radius: 0.6944444444rem;
+  background: #FFF;
+  border: none;
+  color: #333;
+  font-family: Roboto Flex;
+  font-size: 1.1111111111rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+}
+.contact-us .container .form-container .form .input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.0833333333rem;
+}
+.contact-us .container .form-container .form .organization {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2.0833333333rem;
+}
+.contact-us .container .form-container .form .message {
+  display: flex;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 1.25rem 1.3888888889rem 1.1805555556rem 1.3888888889rem;
+  margin-bottom: 1.7361111111rem;
+  min-height: 11.25rem;
+}
+.contact-us .container .form-container .form .btn {
+  width: 16.0416666667rem;
+  display: inline-flex;
+  font-family: SF Pro Display;
+  background-color: #333;
+  padding: 18px 40px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6.9444444444rem;
+}
+.contact-us .container .form-container .form .btn:hover {
+  background-color: #2A81DD;
+}
+.contact-us .container .form-container .form .radio-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.contact-us .container .form-container .form .radio-group .radio-item1 {
+  display: flex;
+  margin-bottom: 1.3888888889rem;
+}
+.contact-us .container .form-container .form .radio-group .radio-item1 .radio1 {
+  margin-right: 0.5555555556rem;
+}
+.contact-us .container .form-container .form .radio-group .radio-item2 {
+  display: flex;
+  margin-bottom: 2.0833333333rem;
+}
+.contact-us .container .form-container .form .radio-group .radio-item2 .radio2 {
+  margin-right: 0.5555555556rem;
+}
+.contact-us .container .form-container .form .radio-group .radio-text {
+  color: #616161;
+  font-family: Roboto Flex;
+  font-size: 1.1111111111rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 20.8px */
+  letter-spacing: -0.0111111111rem;
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .container .contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.7777777778rem;
+}
+footer .container .contacts .contacts-title {
+  color: #333;
+  font-family: SF Pro Display;
+  font-size: 2.2222222222rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 32px */
+}
+footer .container .contacts .contacts-email {
+  display: flex;
+  margin-left: 3.6805555556rem;
+}
+footer .container .contacts .contacts-email .email-text {
+  margin-left: 0.6944444444rem;
+}
+footer .container .contacts .contacts-email .email-text a {
+  text-decoration: none;
+  display: flex;
+  color: #2A81DD;
+  font-family: Roboto Flex;
+  font-size: 1.1111111111rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 20.8px */
+  letter-spacing: -0.0111111111rem;
+}
+footer .container .contacts .contacts-address {
+  display: flex;
+  margin-left: 3.4722222222rem;
+}
+footer .container .contacts .contacts-address .address-photo {
+  display: flex;
+  width: 1.6666666667rem;
+}
+footer .container .contacts .contacts-address .address-text {
+  margin-left: 0.6944444444rem;
+  display: flex;
+  color: #333;
+  font-family: Roboto Flex;
+  font-size: 1.1111111111rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 20.8px */
+  letter-spacing: -0.0111111111rem;
+}
+footer .container .links {
+  display: flex;
+  justify-content: space-between;
 }
 
 #slider .slider_item {
@@ -1986,6 +2210,10 @@ header .container .flex_row .flex_box .login:hover {
 .slick-next svg {
   width: 1.6666666667rem;
   height: 1.6666666667rem;
+  stroke: red;
+}
+.slick-next svg:hover {
+  stroke: #2A81DD;
 }
 
 /* Для элемента select */

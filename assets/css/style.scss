@@ -37,10 +37,18 @@
 // @include jc(space-between);    //Это вешает justify-content(space-between);
 // @include fw(wrap);    //Это вешает flex-wrap: wrap;
 
+$black: #333;
+$red: #c51718;
+$Accent: #000080;
+$gray: #616161;
+$background-gray: #FAFAFA;
+$blue: #2A81DD;
+$light-blue: #15BCE8;
 
 html {
   font-size: 1vw;
   font-family: SF Pro Display;
+  background-color: $background-gray;
 }
 body {
  /* font-family: "Open Sans";*/
@@ -57,12 +65,7 @@ button {
 
 
 
-$black: #333;
-$red: #c51718;
-$Accent: #000080;
-$gray: #616161;
-$blue: #2A81DD;
-$light-blue: #15BCE8;
+
 
 img {
   width: 100%;
@@ -521,7 +524,7 @@ header {
 
           .grid-text-title {
             color: $black;
-            margin-bottom: 20px;
+            margin-bottom: px2rem(20);
             font-size: px2rem(18);
             font-style: normal;
             font-weight: 600;
@@ -545,7 +548,254 @@ header {
 
 .contact-us{
   padding-top: px2rem(80);
+  .input-container {
+    position: relative;
+    label {
+      position: absolute;
+      top: 50%;
+      left: px2rem(20);
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: $gray;
+      font-family: Roboto Flex;
+      font-size: px2rem(16);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 19.2px */
+      transition: 0.3s ease-in-out;
+    }
+    label {
+      position: absolute;
+      top: 50%;
+      left: px2rem(20);
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: $gray;
+      font-family: Roboto Flex;
+      font-size: px2rem(16);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 19.2px */
+      transition: 0.3s ease-in-out;
+    }
+    .textarea-label{
+      position: absolute;
+      top: px2rem(28);
+      left: px2rem(20);
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: $gray;
+      font-family: Roboto Flex;
+      font-size: px2rem(16);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 19.2px */
+      transition: 0.3s ease-in-out;
+    }
 
+      input:focus + label {
+      top: px2rem(10);
+      left: px2rem(20);
+      font-size: px2rem(12);
+    }
+    textarea:focus + label {
+      top: px2rem(10);
+      left: px2rem(20);
+      font-size: px2rem(12);
+    }
+  }
+
+
+
+  .container{
+    .form-img{
+      display: flex;
+      width: px2rem(472);
+      margin-left: px2rem(20);
+    }
+
+    .title{
+      color: $black;
+      font-size: px2rem(32);
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%; /* 48px */
+      margin-bottom: px2rem(20);
+      width: px2rem(373);
+    }
+    .subtitle{
+      color: $gray;
+      font-family: SF Pro Display;
+      font-size: px2rem(18);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 27px */
+      margin-bottom: px2rem(30);
+      width: px2rem(472);
+    }
+    .form-container{
+      display: flex;
+
+      .form{
+        display: flex;
+        width: px2rem(668);
+        flex-direction: column;
+        justify-content: space-between;
+
+        .input-field{
+          display: flex;
+          width: px2rem(320);
+          padding: px2rem(18) px2rem(20) px2rem(17) px2rem(20);
+          border-radius: px2rem(10);
+          background: #FFF;
+          border: none;
+
+          color: $black;
+          font-family: Roboto Flex;
+          font-size: px2rem(16);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%; /* 19.2px */
+        }
+        .input-group{
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: px2rem(30);
+        }
+        .organization{
+          display: flex;
+          width: 100%;
+          margin-bottom: px2rem(30);
+        }
+        .message{
+          display: flex;
+          max-width: 100%;
+          min-width: 100%;
+          padding: px2rem(18) px2rem(20) px2rem(17) px2rem(20);
+          margin-bottom: px2rem(25);
+          min-height: px2rem(162);
+        }
+
+        .btn{
+          width: px2rem(231);
+          display: inline-flex;
+          font-family: SF Pro Display;
+          background-color: $black;
+          padding: 18px 40px;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: px2rem(100);
+
+          &:hover{
+            background-color: $blue;
+          }
+        }
+        .radio-group{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+
+          .radio-item1{
+            display: flex;
+            margin-bottom: px2rem(20);
+
+            .radio1{
+              margin-right: px2rem(8);
+            }
+          }
+          .radio-item2{
+            display: flex;
+            margin-bottom: px2rem(30);
+
+            .radio2{
+              margin-right: px2rem(8);
+
+            }
+          }
+          .radio-text{
+            color: $gray;
+            font-family: Roboto Flex;
+            font-size: px2rem(16);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%; /* 20.8px */
+            letter-spacing: px2rem(-0.16);
+          }
+        }
+      }
+    }
+  }
+}
+footer{
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .contacts{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: px2rem(40);
+      .contacts-title{
+        color: $black;
+        font-family: SF Pro Display;
+        font-size: px2rem(32);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%; /* 32px */
+
+      }
+      .contacts-email{
+        display: flex;
+        margin-left: px2rem(53);
+        .email-text{
+          margin-left: px2rem(10);
+
+
+          a{
+            text-decoration: none;
+            display: flex;
+            color: $blue;
+            font-family: Roboto Flex;
+            font-size: px2rem(16);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%; /* 20.8px */
+            letter-spacing: px2rem(-0.16);
+          }
+        }
+
+      }
+      .contacts-address{
+        display: flex;
+        margin-left: px2rem(50);
+        .address-photo{
+          display: flex;
+          width: px2rem(24);
+        }
+        //FIXME FONT
+        .address-text{
+          margin-left: px2rem(10);
+          display: flex;
+          color: $black;
+          font-family: Roboto Flex;
+          font-size: px2rem(16);
+          font-style: normal;
+          font-weight: 500;
+          line-height: 130%; /* 20.8px */
+          letter-spacing: px2rem(-0.16);
+        }
+
+      }
+    }
+
+    .links{
+      display: flex;
+      justify-content: space-between;
+
+    }
+  }
 }
 
 
@@ -695,6 +945,11 @@ header {
   svg{
     width: px2rem(24);
     height: px2rem(24);
+    stroke: red;
+
+    &:hover{
+      stroke: $blue;
+    }
   }
 }
 
