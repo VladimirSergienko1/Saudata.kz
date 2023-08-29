@@ -14,7 +14,7 @@ $(document).ready(function() {
        /* $('body').addClass('lock-scroll')*/
     });
 
-    $('#closePopup, .overlay .close-icon').click(function() {
+    $('#closePopup, .overlay ').click(function() {
         $('.popup, .overlay').removeClass('active');
         /*$('body').css('overflow', '');*/
         /*$('body').removeClass('lock-scroll');*/

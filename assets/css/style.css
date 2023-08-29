@@ -1712,6 +1712,7 @@ header .container .flex_row .flex_box .login:hover {
 .about {
   padding-top: 4.1666666667rem;
   background: url("../img/backgrounds/waves.png") no-repeat;
+  background-size: cover;
 }
 .about .container {
   border: none;
