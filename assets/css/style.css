@@ -1710,8 +1710,8 @@ header .container .flex_row .flex_box .login:hover {
 }
 
 .about {
-  margin-top: 4.1666666667rem;
-  background: url("/assets/img/backgrounds/waves.svg") no-repeat;
+  padding-top: 4.1666666667rem;
+  background: url("../img/backgrounds/waves.png") no-repeat;
 }
 .about .container {
   border: none;
@@ -1761,8 +1761,9 @@ header .container .flex_row .flex_box .login:hover {
 }
 
 .products {
-  background: url("/assets/img/backgrounds/products.svg") no-repeat center center;
   margin-top: 4.3055555556rem;
+  background: url("../img/backgrounds/products-background.png") no-repeat;
+  background-size: cover;
 }
 .products .container {
   position: relative;
@@ -1845,8 +1846,8 @@ header .container .flex_row .flex_box .login:hover {
 }
 
 .detilize {
-  background: url("/assets/img/backgrounds/detilize-background.svg") no-repeat right center;
-  margin-top: 5.5555555556rem;
+  padding-top: 5.5555555556rem;
+  background: url("../img/backgrounds/detilize-background.png") no-repeat right center;
 }
 .detilize .container {
   display: flex;
@@ -1903,8 +1904,9 @@ header .container .flex_row .flex_box .login:hover {
 }
 
 .contact-us {
-  margin-top: 5.5555555556rem;
-  background: url("/assets/img/backgrounds/form-background.svg") no-repeat;
+  padding-top: 5.5555555556rem;
+  background: url("../img/backgrounds/form-background.png");
+  background-size: cover;
 }
 .contact-us .input-container {
   position: relative;
@@ -2016,6 +2018,8 @@ header .container .flex_row .flex_box .login:hover {
   padding: 1.25rem 1.3888888889rem 1.1805555556rem 1.3888888889rem;
   margin-bottom: 1.7361111111rem;
   min-height: 11.25rem;
+  max-height: 11.25rem;
+  resize: none;
 }
 .contact-us .container .form-container .form .btn {
   width: 16.0416666667rem;
@@ -2070,7 +2074,7 @@ header .container .flex_row .flex_box .login:hover {
   box-sizing: border-box;
 }
 .contact-us .container .form-container .form .radio-group .radio-item2 .round-checkbox:checked {
-  background-image: url("/assets/img/radio-checked.svg");
+  background-image: url("../img/radio-checked.svg");
   background-size: cover;
   border: none;
 }
@@ -2203,19 +2207,26 @@ footer .rights {
 }
 
 .popup {
-  background: url("/assets/img/backgrounds/popup-background.svg") no-repeat;
+  background: url("../img/backgrounds/popup-background.svg") no-repeat;
   flex-direction: column;
   align-items: center;
   position: fixed;
   top: 50%;
   left: 50%;
   width: 31.9444444444rem;
+  height: 37.2916666667rem;
   transform: translate(-50%, -50%);
   background-color: #fff;
   padding: 1.3888888889rem;
   box-shadow: 0 0 0.6944444444rem rgba(0, 0, 0, 0.3);
   display: none;
   border-radius: 0.5555555556rem;
+}
+.popup .close-icon {
+  position: absolute;
+  top: -2.7777777778rem;
+  right: -1.7361111111rem;
+  cursor: pointer;
 }
 .popup .popup-icon {
   display: flex;

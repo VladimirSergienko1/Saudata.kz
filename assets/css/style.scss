@@ -337,8 +337,8 @@ header {
   }
 }
 .about {
-  margin-top: px2rem(60);
-  background: url("/assets/img/backgrounds/waves.svg") no-repeat;
+  padding-top: px2rem(60);
+  background: url("../img/backgrounds/waves.png") no-repeat;
 
 
   .container {
@@ -395,9 +395,9 @@ header {
 }
 
 .products{
-  background: url("/assets/img/backgrounds/products.svg") no-repeat center center;
   margin-top: px2rem(62);
-
+  background: url("../img/backgrounds/products-background.png") no-repeat;
+  background-size: cover;
   .container{
     position: relative;;
     .title{
@@ -494,8 +494,8 @@ header {
   }
 }
 .detilize{
-  background: url("/assets/img/backgrounds/detilize-background.svg") no-repeat right center;
-  margin-top: px2rem(80);
+  padding-top: px2rem(80);
+  background: url("../img/backgrounds/detilize-background.png") no-repeat right center;
 
   .container{
     display: flex;
@@ -563,8 +563,10 @@ header {
 }
 
 .contact-us{
-  margin-top: px2rem(80);
-  background: url("/assets/img/backgrounds/form-background.svg") no-repeat;
+  padding-top: px2rem(80);
+  background: url("../img/backgrounds/form-background.png");
+  background-size: cover;
+
   .input-container {
     position: relative;
     label {
@@ -681,6 +683,8 @@ header {
           padding: px2rem(18) px2rem(20) px2rem(17) px2rem(20);
           margin-bottom: px2rem(25);
           min-height: px2rem(162);
+          max-height: px2rem(162);
+          resize: none;
         }
 
         .btn{
@@ -739,7 +743,7 @@ header {
               box-sizing: border-box;
 
               &:checked {
-                background-image: url("/assets/img/radio-checked.svg");
+                background-image: url("../img/radio-checked.svg");
                 background-size: cover;
                 border: none;
               }
@@ -913,19 +917,29 @@ footer{
 
 //FIXME WHEN SCROLL OFF Jumping left
 .popup {
-  background: url("/assets/img/backgrounds/popup-background.svg") no-repeat;
+  background: url("../img/backgrounds/popup-background.svg") no-repeat;
   flex-direction: column;
   align-items: center;
   position: fixed;
   top: 50%;
   left: 50%;
   width: px2rem(460);
+  height: px2rem(537);
   transform: translate(-50%, -50%);
   background-color: #fff;
   padding: px2rem(20);
   box-shadow: 0 0 px2rem(10) rgba(0, 0, 0, 0.3);
   display: none;
   border-radius: px2rem(8);
+
+  .close-icon {
+    position: absolute;
+    top: px2rem(-40);
+    right: px2rem(-25);
+    cursor: pointer;
+  }
+
+
 
   .popup-icon{
     display: flex;

@@ -10,13 +10,13 @@ $(document).ready(function() {
 
     $('#openPopup').click(function() {
         $('.popup, .overlay').addClass('active');
-        $('body').css('overflow', 'hidden'); // Запрет прокрутки страницы
+       /* $('body').css('overflow', 'hidden');*/
        /* $('body').addClass('lock-scroll')*/
     });
 
-    $('#closePopup, .overlay').click(function() {
+    $('#closePopup, .overlay .close-icon').click(function() {
         $('.popup, .overlay').removeClass('active');
-        $('body').css('overflow', ''); // Восстановление прокрутки страницы
+        /*$('body').css('overflow', '');*/
         /*$('body').removeClass('lock-scroll');*/
     });
 
