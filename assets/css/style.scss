@@ -224,7 +224,7 @@ header {
         .nav-list {
           display: flex;
           width: px2rem(635);
-          justify-content: space-between;
+          justify-content: flex-end;
           list-style: none;
           gap: px2rem(40);
 
@@ -291,11 +291,12 @@ header {
 
   .container{
       display: flex;
-      justify-content: space-between;
+    /*  justify-content: space-between;*/
 
       img{
-        width: px2rem(668) ;
-        height:px2rem(651) ;
+        /*width: px2rem(668)*/ ;
+        width: px2rem(550) ;
+        margin-left: px2rem(20);
     }
     .container-text{
       display: flex;
@@ -1090,9 +1091,10 @@ footer{
     padding: px2rem(25) px2rem(25) px2rem(30) px2rem(25);
     border-radius: px2rem(8);
     background: #FFF;
-    margin-right: px2rem(30);
+    margin-right: px2rem(32);
     box-shadow: px2rem(0) px2rem(12) px2rem(16) px2rem(0) rgba(78, 132, 225, 0.05);
     justify-content: space-between;
+    margin-bottom: px2rem(30);
     /*border: 1px solid black;*/
 
     .grid-img{
@@ -1142,6 +1144,39 @@ footer{
 .slider_item .slick-slide .slick-active{
   width: unset !important;
 
+}
+.slick-dots {
+  display: flex;
+  justify-content: center; /* Выравнивание точек по центру */
+  list-style: none; /* Убираем маркеры списка */
+  margin: 20px 0; /* Примерное расстояние от слайдера */
+  padding: 0;
+}
+
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+
+.slick-dots li button::before {
+  content: "";
+  width: 12px; /* Диаметр точки */
+  height: 12px; /* Диаметр точки */
+  border-radius: 50%; /* Круглая форма */
+  background-color: #bbb; /* Цвет точки */
+  display: block;
+}
+
+/* Стилизация активной точки */
+.slick-dots li.slick-active button::before {
+  background-color: #007bff; /* Цвет активной точки */
+}
+.slick-dots li button {
+  font-size: 0; /* Установить размер шрифта на 0 */
+  line-height: 0; /* Установить высоту строки на 0 */
+  color: transparent; /* Сделать текст прозрачным */
+  border: none;
 }
 
 .slick-prev {
@@ -1518,6 +1553,83 @@ footer{
     }
   }
 
+  header {
+    .container {
+      width: 95%;
+      display: flex;
+      padding: px2rem(26) 0 px2rem(25) 0;
+      align-items: center;
+
+      .header-logo {
+        margin-right: px2rem(169.5);
+        width: 93px;
+      }
+
+
+
+
+      .flex_row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .main-nav {
+          .nav-list {
+            display: flex;
+            width: px2rem(635);
+            justify-content: flex-end;
+            list-style: none;
+            gap: px2rem(40);
+
+            .nav-item {
+              .nav-link {
+                text-decoration: none;
+                transition: color 300ms ease-out;
+
+                color: $gray;
+                font-size: px2rem(16);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%; /* 16px */
+                &:hover {
+                  color: $Accent;
+                }
+              }
+            }
+          }
+        }
+        .flex_box {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .select-container{
+            display: flex;
+
+          }
+
+          .login {
+            display: flex;
+            text-decoration: none;
+            color: $blue;
+            transition: color 300ms ease-out;
+            text-align: right;
+            font-size: px2rem(14);
+            line-height: px2rem(18);
+            font-style: normal;
+            font-weight: 700;
+            //line-height: normal;
+            margin-left: px2rem(29);
+
+            &:hover {
+              color: $Accent;
+            }
+          }
+        }
+      }
+    }
+  }
   .intro{
     padding-top: 50px;
 

@@ -1615,7 +1615,7 @@ header .container .flex_row {
 header .container .flex_row .main-nav .nav-list {
   display: flex;
   width: 44.0972222222rem;
-  justify-content: space-between;
+  justify-content: flex-end;
   list-style: none;
   gap: 2.7777777778rem;
 }
@@ -1669,11 +1669,12 @@ header .container .flex_row .flex_box .login:hover {
 }
 .intro .container {
   display: flex;
-  justify-content: space-between;
+  /*  justify-content: space-between;*/
 }
 .intro .container img {
-  width: 46.3888888889rem;
-  height: 45.2083333333rem;
+  /*width: px2rem(668)*/
+  width: 38.1944444444rem;
+  margin-left: 1.3888888889rem;
 }
 .intro .container .container-text {
   display: flex;
@@ -2320,9 +2321,10 @@ footer .rights {
   padding: 1.7361111111rem 1.7361111111rem 2.0833333333rem 1.7361111111rem;
   border-radius: 0.5555555556rem;
   background: #FFF;
-  margin-right: 2.0833333333rem;
+  margin-right: 2.2222222222rem;
   box-shadow: 0rem 0.8333333333rem 1.1111111111rem 0rem rgba(78, 132, 225, 0.05);
   justify-content: space-between;
+  margin-bottom: 2.0833333333rem;
   /*border: 1px solid black;*/
 }
 #slider .slider_item .grid-img {
@@ -2367,6 +2369,39 @@ footer .rights {
 
 .slider_item .slick-slide .slick-active {
   width: unset !important;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center; /* Выравнивание точек по центру */
+  list-style: none; /* Убираем маркеры списка */
+  margin: 20px 0; /* Примерное расстояние от слайдера */
+  padding: 0;
+}
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+.slick-dots li button::before {
+  content: "";
+  width: 12px; /* Диаметр точки */
+  height: 12px; /* Диаметр точки */
+  border-radius: 50%; /* Круглая форма */
+  background-color: #bbb; /* Цвет точки */
+  display: block;
+}
+
+/* Стилизация активной точки */
+.slick-dots li.slick-active button::before {
+  background-color: #007bff; /* Цвет активной точки */
+}
+
+.slick-dots li button {
+  font-size: 0; /* Установить размер шрифта на 0 */
+  line-height: 0; /* Установить высоту строки на 0 */
+  color: transparent; /* Сделать текст прозрачным */
+  border: none;
 }
 
 .slick-prev {
@@ -2576,6 +2611,64 @@ footer .rights {
   }
   .btn:hover {
     background: #000080;
+  }
+  header .container {
+    width: 95%;
+    display: flex;
+    padding: 1.8055555556rem 0 1.7361111111rem 0;
+    align-items: center;
+  }
+  header .container .header-logo {
+    margin-right: 11.7708333333rem;
+    width: 93px;
+  }
+  header .container .flex_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  header .container .flex_row .main-nav .nav-list {
+    display: flex;
+    width: 44.0972222222rem;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 2.7777777778rem;
+  }
+  header .container .flex_row .main-nav .nav-list .nav-item .nav-link {
+    text-decoration: none;
+    transition: color 300ms ease-out;
+    color: #616161;
+    font-size: 1.1111111111rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 16px */
+  }
+  header .container .flex_row .main-nav .nav-list .nav-item .nav-link:hover {
+    color: #000080;
+  }
+  header .container .flex_row .flex_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .container .flex_row .flex_box .select-container {
+    display: flex;
+  }
+  header .container .flex_row .flex_box .login {
+    display: flex;
+    text-decoration: none;
+    color: #2A81DD;
+    transition: color 300ms ease-out;
+    text-align: right;
+    font-size: 0.9722222222rem;
+    line-height: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 2.0138888889rem;
+  }
+  header .container .flex_row .flex_box .login:hover {
+    color: #000080;
   }
   .intro {
     padding-top: 50px;
