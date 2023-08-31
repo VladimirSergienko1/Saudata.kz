@@ -2,9 +2,9 @@ console.log('Hello')
 
 
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     $('.form')[0].reset(); // Сбросить состояние формы
-});
+});*/
 
 $(document).ready(function() {
 
@@ -81,11 +81,7 @@ $(document).ready(function() {
         /* $('body').addClass('lock-scroll')*/
     });
 
-    // $('#closePopup-mobile, .overlay ').click(function() {
-    //     $('.popup, .overlay').removeClass('active');
-    //     /*$('body').css('overflow', '');*/
-    //     /*$('body').removeClass('lock-scroll');*/
-    // });
+
 
     $('.form').submit(function(event) {
         event.preventDefault();
@@ -128,7 +124,6 @@ $(document).ready(function() {
         nextArrow: $('.slick-next'),
         /*centerMode: true,*/
     }).on('afterChange', function(event, slick, currentSlide){
-        console.log('BLA',currentSlide)
         if (currentSlide === 0) {
             $('.prev-arrow').css('stroke', '#989898');
             $('.slick-prev').css('pointer-events', 'none')
@@ -141,11 +136,11 @@ $(document).ready(function() {
 
 
     $('#slider_mobile').on('init', function(event, slick){
-        if (slick.currentSlide === 0) {
+      /*  if (slick.currentSlide === 0) {
             $('.prev-arrow-mobile').css('stroke', '#989898');
             $('.slick-prev-mobile').css('pointer-events', 'none')
 
-        }
+        }*/
     }).slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -153,20 +148,18 @@ $(document).ready(function() {
         /*   rows: 2,*/
         dots: true,
         autoplaySpeed: 2000,
-        arrows: true,
-        prevArrow: $('.slick-prev-mobile'),
-        nextArrow: $('.slick-next-mobile'),
+        arrows: false,
+
         /*centerMode: true,*/
     }).on('afterChange', function(event, slick, currentSlide){
-        console.log('BLA',currentSlide)
-        if (currentSlide === 0) {
+       /* if (currentSlide === 0) {
             $('.prev-arrow-mobile').css('stroke', '#989898');
             $('.slick-prev-mobile').css('pointer-events', 'none')
 
         } else {
             $('.prev-arrow-mobile').css('stroke', '#333333');
             $('.slick-prev-mobile').css('pointer-events', 'all')
-        }
+        }*/
     });
 
 
@@ -12429,7 +12422,7 @@ $(function() {
                 formatter,
                 style: {
                     fontWeight: 100,
-                    fontSize: '10px',
+                    fontSize: '140px',
                     textOutline: 'none'
                 }
             },

@@ -208,7 +208,8 @@ header {
 
     .header-logo {
       margin-right: px2rem(169.5);
-      width: px2rem(93);
+      /*width: px2rem(93);*/
+      width: px2rem(100);
     }
 
 
@@ -416,7 +417,6 @@ header {
     .desc{
       color: $gray;
       font-size: px2rem(18);
-      width: px2rem(472);
       font-style: normal;
       font-weight: 400;
       line-height: 150%; /* 27px */
@@ -851,15 +851,41 @@ footer{
     .links{
       display: flex;
       width: px2rem(210);
-      justify-content: space-between;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+          list-style: none;
+          margin-right: px2rem(30);
+           filter: grayscale(100%);
+          opacity: 55%;
+          transition: .3s;
+          a {
+            text-decoration: none;
+            display: block;
+            width: px2rem(30);
+            img {
+              width: 100%;
+              display: block;
+            }
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+          &:hover {
+              transition: .3s;
+            opacity: 100%;
+            filter: grayscale(0);
+          }
+        }
+      }
 
       .svg-icon {
         width: px2rem(30);
         height: px2rem(30);
 
         & path {
-          fill: #ACACAC;
-          transition: fill 0.3s ease-in-out;
+            transition: fill 0.3s ease-in-out;
         }
 
       }
@@ -1159,6 +1185,10 @@ footer{
   list-style: none;
   margin: 20px 0;
   padding: 0;
+  position: absolute;
+  transform: translate(-50%, 0);
+  left: 50%;
+  bottom: 10px;
 }
 
 
@@ -1523,12 +1553,35 @@ footer{
 }
 
 
+.highcharts-credits {
+  display: none !important;
+}
+
+.highcharts-label {
+  text {
+    font-size: px2rem(16) !important;
+  }
+}
+
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) { }
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767px) {
+
+
+  .highcharts-axis-labels {
+    text {
+      font-size: 12px !important;
+    }
+  }
+
+  .highcharts-label {
+    text {
+      font-size: 16px !important
+    }
+  }
 
   //for mobile
   .mobile {
@@ -1769,6 +1822,26 @@ footer{
         gap: 30px;
         margin-top: 10px;
         margin-bottom: 70px;
+        ul {
+          display: flex;
+          justify-content: space-between;
+          li {
+            list-style: none;
+            margin-right: 30px;
+            filter: grayscale(0);
+            opacity: 100%;
+            transition: .3s;
+            a {
+              text-decoration: none;
+              display: block;
+              width: 30px;
+              img {
+                width: 100%;
+                display: block;
+              }
+            }
+          }
+        }
         .svg-icon {
           width: 30px;
           height: 30px;
@@ -2841,7 +2914,7 @@ footer{
       width: 360px;
       min-height: 430px;
       align-items: flex-start;
-      padding: 25px 25px 30px 25px;
+      padding: 25px 25px 40px 25px;
       border-radius: 8px;
       background: #FFF;
       margin-right: px2rem(32);
@@ -2991,6 +3064,26 @@ footer{
         gap: 30px;
         margin-bottom: 30px;
         justify-content: center;
+        ul {
+          display: flex;
+          justify-content: space-between;
+          li {
+            list-style: none;
+            margin-right: 30px;
+            filter: grayscale(0);
+            opacity: 100%;
+            transition: .3s;
+            a {
+              text-decoration: none;
+              display: block;
+              width: 30px;
+              img {
+                width: 100%;
+                display: block;
+              }
+            }
+          }
+        }
         .svg-icon {
           //margin-right: 30px;
           width: 30px;
