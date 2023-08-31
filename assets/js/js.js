@@ -8,6 +8,54 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 
+    $('.burger').click(function() {
+        if ($(this).hasClass('burger_active')) {
+            $(this).removeClass('burger_active');
+            $('.menu_mobile').removeClass('menu_mobile_active');
+        } else {
+            $('.menu_mobile').addClass('menu_mobile_active');
+            $(this).addClass('burger_active');
+        }
+
+        return false
+
+
+    })
+
+    $('.open-form').click(function() {
+        if ($(this).hasClass('open-form_active')) {
+            $(this).removeClass('open-form_active');
+            $('.form_mobile').removeClass('form_mobile_active');
+        } else {
+            $('.form_mobile').addClass('form_mobile_active');
+            $(this).addClass('burger_active');
+        }
+
+        return false
+
+
+    })
+
+
+    $('.form_prev').click(function(){
+        $('.form_mobile').removeClass('form_mobile_active');
+    })
+
+    $('.nav-link').click(function() {
+        var href = $(this).attr('href');
+        var offset = $(href).offset().top;
+        if (window.innerWidth > 767) {
+            var n_offset = offset - 50;
+        } else {
+            var n_offset = offset - 100;
+        }
+
+        $('html').animate({scrollTop: n_offset}, 800);
+        $('.burger').removeClass('burger_active');
+        $('.menu_mobile').removeClass('menu_mobile_active')
+        return false
+    })
+
     $('#openPopup').click(function() {
         $('.popup, .overlay').addClass('active');
        /* $('body').css('overflow', 'hidden');*/
@@ -16,9 +64,28 @@ $(document).ready(function() {
 
     $('#closePopup, .overlay ').click(function() {
         $('.popup, .overlay').removeClass('active');
+        $('.form_mobile').removeClass('form_mobile_active')
+        $('.menu_mobile').removeClass('menu_mobile_active')
         /*$('body').css('overflow', '');*/
         /*$('body').removeClass('lock-scroll');*/
+
     });
+
+    $('.form').submit(function(event) {
+        event.preventDefault();
+    });
+
+    $('#openPopup-mobile').click(function() {
+        $('.popup, .overlay').addClass('active');
+        /* $('body').css('overflow', 'hidden');*/
+        /* $('body').addClass('lock-scroll')*/
+    });
+
+    // $('#closePopup-mobile, .overlay ').click(function() {
+    //     $('.popup, .overlay').removeClass('active');
+    //     /*$('body').css('overflow', '');*/
+    //     /*$('body').removeClass('lock-scroll');*/
+    // });
 
     $('.form').submit(function(event) {
         event.preventDefault();
@@ -43,7 +110,7 @@ $(document).ready(function() {
         $(this).parent().find('.select2-selection__arrow::before').css('transform', 'translateY(-50%)');
     });
 
-    $('#slider').on('init', function(event, slick){
+    $('#slider_desktop').on('init', function(event, slick){
         if (slick.currentSlide === 0) {
             $('.prev-arrow').css('stroke', '#989898');
             $('.slick-prev').css('pointer-events', 'none')
@@ -52,7 +119,7 @@ $(document).ready(function() {
     }).slick({
         slidesToShow: 2,
         slidesToScroll: 2,
-        autoplay: false,
+        autoplay: true,
      /*   rows: 2,*/
         dots: true,
         autoplaySpeed: 2000,
@@ -69,6 +136,36 @@ $(document).ready(function() {
         } else {
             $('.prev-arrow').css('stroke', '#333333');
             $('.slick-prev').css('pointer-events', 'all')
+        }
+    });
+
+
+    $('#slider_mobile').on('init', function(event, slick){
+        if (slick.currentSlide === 0) {
+            $('.prev-arrow-mobile').css('stroke', '#989898');
+            $('.slick-prev-mobile').css('pointer-events', 'none')
+
+        }
+    }).slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        /*   rows: 2,*/
+        dots: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+        prevArrow: $('.slick-prev-mobile'),
+        nextArrow: $('.slick-next-mobile'),
+        /*centerMode: true,*/
+    }).on('afterChange', function(event, slick, currentSlide){
+        console.log('BLA',currentSlide)
+        if (currentSlide === 0) {
+            $('.prev-arrow-mobile').css('stroke', '#989898');
+            $('.slick-prev-mobile').css('pointer-events', 'none')
+
+        } else {
+            $('.prev-arrow-mobile').css('stroke', '#333333');
+            $('.slick-prev-mobile').css('pointer-events', 'all')
         }
     });
 
@@ -156,14 +253,14 @@ const mapData = {
                         "subregion": null,
                         "fips": "KZ14",
                         "postal-code": "QO",
-                        "name": "Qyzylorda",
+                        "name": "Кызылординская область",
                         "country": "Kazakhstan",
                         "type-en": "Region",
                         "region": null,
                         "longitude": "63.6151",
-                        "woe-name": "Qyzylorda",
+                        "woe-name": "Кызылординская область",
                         "latitude": "44.6012",
-                        "woe-label": "Qyzylorda, KZ, Kazakhstan",
+                        "woe-label": "Кызылординская область, KZ, Kazakhstan",
                         "type": "Oblasy",
                         "hc-middle-lon": 63.729,
                         "hc-middle-lat": 45.005
@@ -193,9 +290,9 @@ const mapData = {
                         "type-en": "City",
                         "region": null,
                         "longitude": "76.94240000000001",
-                        "woe-name": "Алматы",
+                        "woe-name": "Алматинская область",
                         "latitude": "43.2709",
-                        "woe-label": "Алматы, KZ, Kazakhstan",
+                        "woe-label": "Алматинская область, KZ, Kazakhstan",
                         "type": null,
                         "hc-middle-lon": 76.841,
                         "hc-middle-lat": 43.247
@@ -220,14 +317,14 @@ const mapData = {
                         "subregion": null,
                         "fips": "KZ05",
                         "postal-code": "AS",
-                        "name": "Astana",
+                        "name": "Астана",
                         "country": "Kazakhstan",
                         "type-en": "City",
                         "region": null,
                         "longitude": "71.4538",
-                        "woe-name": "Astana",
+                        "woe-name": "Астана",
                         "latitude": "51.1503",
-                        "woe-label": "Astana, KZ, Kazakhstan",
+                        "woe-label": "Астана, KZ, Kazakhstan",
                         "type": null,
                         "hc-middle-lon": 71.356,
                         "hc-middle-lat": 51.104
@@ -256,14 +353,14 @@ const mapData = {
                         "subregion": null,
                         "fips": "KZ13",
                         "postal-code": "QS",
-                        "name": "Qostanay",
+                        "name": "Костанайская область",
                         "country": "Kazakhstan",
                         "type-en": "Region",
                         "region": null,
                         "longitude": "64.12909999999999",
-                        "woe-name": "Qostanay",
+                        "woe-name": "Костанайская область",
                         "latitude": "51.2854",
-                        "woe-label": "Qostanay, KZ, Kazakhstan",
+                        "woe-label": "Костанайская область, KZ, Kazakhstan",
                         "type": "Oblasy",
                         "hc-middle-lon": 63.984,
                         "hc-middle-lat": 51.901
@@ -291,12 +388,12 @@ const mapData = {
                         "subregion": null,
                         "fips": "KZ16",
                         "postal-code": "NK",
-                        "name": "North Kazakhstan",
+                        "name": "Северо-Казахстанская область",
                         "country": "Kazakhstan",
                         "type-en": "Region",
                         "region": null,
                         "longitude": "69.0682",
-                        "woe-name": "North Kazakhstan",
+                        "woe-name": "Северо-Казахстанская область",
                         "latitude": "54.4528",
                         "woe-label": "Soltustik Qazaqstan, KZ, Kazakhstan",
                         "type": "Oblasy",
@@ -400,14 +497,14 @@ const mapData = {
                         "subregion": null,
                         "fips": "KZ17",
                         "postal-code": "ZM",
-                        "name": "Zhambyl",
+                        "name": "Жамбылская область",
                         "country": "Kazakhstan",
                         "type-en": "Region",
                         "region": null,
                         "longitude": "72.4888",
-                        "woe-name": "Zhambyl",
+                        "woe-name": "Жамбылская область",
                         "latitude": "44.3152",
-                        "woe-label": "Zhambyl, KZ, Kazakhstan",
+                        "woe-label": "Жамбылская область, KZ, Kazakhstan",
                         "type": "Oblasy",
                         "hc-middle-lon": 72.144,
                         "hc-middle-lat": 44.374
@@ -435,12 +532,12 @@ const mapData = {
                         "subregion": null,
                         "fips": "KZ15",
                         "postal-code": "EK",
-                        "name": "East Kazakhstan",
+                        "name": "Восточно-Казахстанская область",
                         "country": "Kazakhstan",
                         "type-en": "Region",
                         "region": null,
                         "longitude": "81.9768",
-                        "woe-name": "East Kazakhstan",
+                        "woe-name": "Восточно-Казахстанская область",
                         "latitude": "48.3405",
                         "woe-label": "Shyghys Qazaqstan, KZ, Kazakhstan",
                         "type": "Oblasy",
@@ -470,14 +567,14 @@ const mapData = {
                         "subregion": null,
                         "fips": "KZ06",
                         "postal-code": "AR",
-                        "name": "Atyrau",
+                        "name": "Атырауская область",
                         "country": "Kazakhstan",
                         "type-en": "Region",
                         "region": null,
                         "longitude": "51.7585",
-                        "woe-name": "Atyrau",
+                        "woe-name": "Атырауская область",
                         "latitude": "47.7744",
-                        "woe-label": "Atyrau, KZ, Kazakhstan",
+                        "woe-label": "Атырауская область, KZ, Kazakhstan",
                         "type": "Oblasy",
                         "hc-middle-lon": 53.679,
                         "hc-middle-lat": 47.605
@@ -504,14 +601,14 @@ const mapData = {
                         "subregion": null,
                         "fips": "KZ09",
                         "postal-code": "MG",
-                        "name": "Mangghystau",
+                        "name": "Мангистауская область",
                         "country": "Kazakhstan",
                         "type-en": "Region",
                         "region": null,
                         "longitude": "53.8538",
-                        "woe-name": "Mangghystau",
+                        "woe-name": "Мангистауская область",
                         "latitude": "44.0351",
-                        "woe-label": "Mangghystau, KZ, Kazakhstan",
+                        "woe-label": "Мангистауская область, KZ, Kazakhstan",
                         "type": "Oblasy",
                         "hc-middle-lon": 53.344,
                         "hc-middle-lat": 43.968
@@ -542,14 +639,14 @@ const mapData = {
                         "subregion": null,
                         "fips": "KZ01",
                         "postal-code": "AA",
-                        "name": "Алматы",
+                        "name": "Алматинская область",
                         "country": "Kazakhstan",
                         "type-en": "Region",
                         "region": null,
                         "longitude": "78.2246",
-                        "woe-name": "Алматы ",
+                        "woe-name": "Алматинская область ",
                         "latitude": "45.0707",
-                        "woe-label": "Алматы, KZ, Kazakhstan",
+                        "woe-label": "Алматинская область, KZ, Kazakhstan",
                         "type": "Oblasy",
                         "hc-middle-lon": 77.599,
                         "hc-middle-lat": 45.196
@@ -590,14 +687,14 @@ const mapData = {
                         "subregion": null,
                         "fips": "KZ04",
                         "postal-code": "AT",
-                        "name": "Aqtöbe",
+                        "name": "Актюбинская область",
                         "country": "Kazakhstan",
                         "type-en": "Region",
                         "region": null,
                         "longitude": "58.9373",
-                        "woe-name": "Aqtöbe",
+                        "woe-name": "Актюбинская область",
                         "latitude": "48.0288",
-                        "woe-label": "Aqtobe, KZ, Kazakhstan",
+                        "woe-label": "Актюбинская область, KZ, Kazakhstan",
                         "type": "Oblasy",
                         "hc-middle-lon": 58.451,
                         "hc-middle-lat": 48.419
@@ -624,12 +721,12 @@ const mapData = {
                         "subregion": null,
                         "fips": "KZ07",
                         "postal-code": "WK",
-                        "name": "West Kazakhstan",
+                        "name": "Западно-Казахстанская область",
                         "country": "Kazakhstan",
                         "type-en": "Region",
                         "region": null,
                         "longitude": "50.5145",
-                        "woe-name": "West Kazakhstan",
+                        "woe-name": "Западно-Казахстанская область",
                         "latitude": "49.8909",
                         "woe-label": "Batys Qazaqstan, KZ, Kazakhstan",
                         "type": "Oblasy",
@@ -659,12 +756,12 @@ const mapData = {
                         "subregion": null,
                         "fips": "KZ10",
                         "postal-code": "SK",
-                        "name": "South Kazakhstan",
+                        "name": "Туркестанская область",
                         "country": "Kazakhstan",
                         "type-en": "Region",
                         "region": null,
                         "longitude": "68.7533",
-                        "woe-name": "South Kazakhstan",
+                        "woe-name": "Туркестанская область",
                         "latitude": "42.7187",
                         "woe-label": "Ongtustik Qazaqstan, KZ, Kazakhstan",
                         "type": "Oblasy",
@@ -796,14 +893,14 @@ const mapData = {
                             "subregion": null,
                             "fips": "KZ14",
                             "postal-code": "QO",
-                            "name": "Qyzylorda",
+                            "name": "Кызылординская область",
                             "country": "Kazakhstan",
                             "type-en": "Region",
                             "region": null,
                             "longitude": "63.6151",
-                            "woe-name": "Qyzylorda",
+                            "woe-name": "Кызылординская область",
                             "latitude": "44.6012",
-                            "woe-label": "Qyzylorda, KZ, Kazakhstan",
+                            "woe-label": "Кызылординская область, KZ, Kazakhstan",
                             "type": "Oblasy",
                             "hc-middle-lon": 63.729,
                             "hc-middle-lat": 45.005
@@ -1332,9 +1429,9 @@ const mapData = {
                             "type-en": "City",
                             "region": null,
                             "longitude": "76.94240000000001",
-                            "woe-name": "Алматы",
+                            "woe-name": "Алматинская область",
                             "latitude": "43.2709",
-                            "woe-label": "Алматы, KZ, Kazakhstan",
+                            "woe-label": "Алматинская область, KZ, Kazakhstan",
                             "type": null,
                             "hc-middle-lon": 76.841,
                             "hc-middle-lat": 43.247
@@ -1384,14 +1481,14 @@ const mapData = {
                             "subregion": null,
                             "fips": "KZ05",
                             "postal-code": "AS",
-                            "name": "Astana",
+                            "name": "Астана",
                             "country": "Kazakhstan",
                             "type-en": "City",
                             "region": null,
                             "longitude": "71.4538",
-                            "woe-name": "Astana",
+                            "woe-name": "Астана",
                             "latitude": "51.1503",
-                            "woe-label": "Astana, KZ, Kazakhstan",
+                            "woe-label": "Астана, KZ, Kazakhstan",
                             "type": null,
                             "hc-middle-lon": 71.356,
                             "hc-middle-lat": 51.104
@@ -1445,14 +1542,14 @@ const mapData = {
                             "subregion": null,
                             "fips": "KZ13",
                             "postal-code": "QS",
-                            "name": "Qostanay",
+                            "name": "Костанайская область",
                             "country": "Kazakhstan",
                             "type-en": "Region",
                             "region": null,
                             "longitude": "64.12909999999999",
-                            "woe-name": "Qostanay",
+                            "woe-name": "Костанайская область",
                             "latitude": "51.2854",
-                            "woe-label": "Qostanay, KZ, Kazakhstan",
+                            "woe-label": "Костанайская область, KZ, Kazakhstan",
                             "type": "Oblasy",
                             "hc-middle-lon": 63.984,
                             "hc-middle-lat": 51.901
@@ -2110,12 +2207,12 @@ const mapData = {
                             "subregion": null,
                             "fips": "KZ16",
                             "postal-code": "NK",
-                            "name": "North Kazakhstan",
+                            "name": "Северо-Казахстанская область",
                             "country": "Kazakhstan",
                             "type-en": "Region",
                             "region": null,
                             "longitude": "69.0682",
-                            "woe-name": "North Kazakhstan",
+                            "woe-name": "Северо-Казахстанская область",
                             "latitude": "54.4528",
                             "woe-label": "Soltustik Qazaqstan, KZ, Kazakhstan",
                             "type": "Oblasy",
@@ -3623,14 +3720,14 @@ const mapData = {
                             "subregion": null,
                             "fips": "KZ17",
                             "postal-code": "ZM",
-                            "name": "Zhambyl",
+                            "name": "Жамбылская область",
                             "country": "Kazakhstan",
                             "type-en": "Region",
                             "region": null,
                             "longitude": "72.4888",
-                            "woe-name": "Zhambyl",
+                            "woe-name": "Жамбылская область",
                             "latitude": "44.3152",
-                            "woe-label": "Zhambyl, KZ, Kazakhstan",
+                            "woe-label": "Жамбылская область, KZ, Kazakhstan",
                             "type": "Oblasy",
                             "hc-middle-lon": 72.144,
                             "hc-middle-lat": 44.374
@@ -3920,12 +4017,12 @@ const mapData = {
                             "subregion": null,
                             "fips": "KZ15",
                             "postal-code": "EK",
-                            "name": "East Kazakhstan",
+                            "name": "Восточно-Казахстанская область",
                             "country": "Kazakhstan",
                             "type-en": "Region",
                             "region": null,
                             "longitude": "81.9768",
-                            "woe-name": "East Kazakhstan",
+                            "woe-name": "Восточно-Казахстанская область",
                             "latitude": "48.3405",
                             "woe-label": "Shyghys Qazaqstan, KZ, Kazakhstan",
                             "type": "Oblasy",
@@ -4493,14 +4590,14 @@ const mapData = {
                             "subregion": null,
                             "fips": "KZ06",
                             "postal-code": "AR",
-                            "name": "Atyrau",
+                            "name": "Атырауская область",
                             "country": "Kazakhstan",
                             "type-en": "Region",
                             "region": null,
                             "longitude": "51.7585",
-                            "woe-name": "Atyrau",
+                            "woe-name": "Атырауская область",
                             "latitude": "47.7744",
-                            "woe-label": "Atyrau, KZ, Kazakhstan",
+                            "woe-label": "Атырауская область, KZ, Kazakhstan",
                             "type": "Oblasy",
                             "hc-middle-lon": 53.679,
                             "hc-middle-lat": 47.605
@@ -4930,14 +5027,14 @@ const mapData = {
                             "subregion": null,
                             "fips": "KZ09",
                             "postal-code": "MG",
-                            "name": "Mangghystau",
+                            "name": "Мангистауская область",
                             "country": "Kazakhstan",
                             "type-en": "Region",
                             "region": null,
                             "longitude": "53.8538",
-                            "woe-name": "Mangghystau",
+                            "woe-name": "Мангистауская область",
                             "latitude": "44.0351",
-                            "woe-label": "Mangghystau, KZ, Kazakhstan",
+                            "woe-label": "Мангистауская область, KZ, Kazakhstan",
                             "type": "Oblasy",
                             "hc-middle-lon": 53.344,
                             "hc-middle-lat": 43.968
@@ -5271,14 +5368,14 @@ const mapData = {
                             "subregion": null,
                             "fips": "KZ01",
                             "postal-code": "AA",
-                            "name": "Алматы",
+                            "name": "Алматинская область",
                             "country": "Kazakhstan",
                             "type-en": "Region",
                             "region": null,
                             "longitude": "78.2246",
-                            "woe-name": "Алматы ",
+                            "woe-name": "Алматинская область ",
                             "latitude": "45.0707",
-                            "woe-label": "Алматы, KZ, Kazakhstan",
+                            "woe-label": "Алматинская область, KZ, Kazakhstan",
                             "type": "Oblasy",
                             "hc-middle-lon": 77.599,
                             "hc-middle-lat": 45.196
@@ -5734,14 +5831,14 @@ const mapData = {
                             "subregion": null,
                             "fips": "KZ04",
                             "postal-code": "AT",
-                            "name": "Aqtöbe",
+                            "name": "Актюбинская область",
                             "country": "Kazakhstan",
                             "type-en": "Region",
                             "region": null,
                             "longitude": "58.9373",
-                            "woe-name": "Aqtöbe",
+                            "woe-name": "Актюбинская область",
                             "latitude": "48.0288",
-                            "woe-label": "Aqtobe, KZ, Kazakhstan",
+                            "woe-label": "Актюбинская область, KZ, Kazakhstan",
                             "type": "Oblasy",
                             "hc-middle-lon": 58.451,
                             "hc-middle-lat": 48.419
@@ -6269,12 +6366,12 @@ const mapData = {
                             "subregion": null,
                             "fips": "KZ07",
                             "postal-code": "WK",
-                            "name": "West Kazakhstan",
+                            "name": "Западно-Казахстанская область",
                             "country": "Kazakhstan",
                             "type-en": "Region",
                             "region": null,
                             "longitude": "50.5145",
-                            "woe-name": "West Kazakhstan",
+                            "woe-name": "Западно-Казахстанская область",
                             "latitude": "49.8909",
                             "woe-label": "Batys Qazaqstan, KZ, Kazakhstan",
                             "type": "Oblasy",
@@ -6654,12 +6751,12 @@ const mapData = {
                             "subregion": null,
                             "fips": "KZ10",
                             "postal-code": "SK",
-                            "name": "South Kazakhstan",
+                            "name": "Туркестанская область",
                             "country": "Kazakhstan",
                             "type-en": "Region",
                             "region": null,
                             "longitude": "68.7533",
-                            "woe-name": "South Kazakhstan",
+                            "woe-name": "Туркестанская область",
                             "latitude": "42.7187",
                             "woe-label": "Ongtustik Qazaqstan, KZ, Kazakhstan",
                             "type": "Oblasy",
@@ -12158,82 +12255,83 @@ $(function() {
         },
         {
             "key": "kz-qo",
-            "value": 1,
+            "value": 25335896,
             "visible": true
         },
         {
             "key": "kz-ac",
+            /*"value": 797914722,*/
             "value": 2,
             "visible": true
         },
         {
             "key": "kz-as",
-            "value": 3,
+            "value": 160136864,
             "visible": true
         },
         {
             "key": "kz-qs",
-            "value": 4,
+            "value": 71237044,
             "visible": true
         },
         {
             "key": "kz-nk",
-            "value": 5,
+            "value": 38894011,
             "visible": true
         },
         {
             "key": "kz-pa",
-            "value": 6,
+            "value": 68802139,
             "visible": true
         },
         {
             "key": "kz-am",
-            "value": 7,
+            "value": 47491884,
             "visible": true
         },
         {
             "key": "kz-zm",
-            "value": 8,
+            "value": 43293683,
             "visible": true
         },
         {
             "key": "kz-ek",
-            "value": 9,
+            "value": 87319357,
             "visible": true
         },
         {
             "key": "kz-ar",
-            "value": 10,
+            "value": 43973739,
             "visible": true
         },
         {
             "key": "kz-mg",
-            "value": 11,
+            "value": 40667971,
             "visible": true
         },
         {
             "key": "kz-aa",
-            "value": 12,
+            "value": 96245824,
             "visible": true
         },
         {
             "key": "kz-at",
-            "value": 13,
+            "value": 45228695,
             "visible": true
         },
         {
             "key": "kz-wk",
-            "value": 14,
+            "value": 45068481,
             "visible": true
         },
         {
             "key": "kz-sk",
-            "value": 15,
+            "value": 33007188,
             "visible": true
         },
         {
             "key": "kz-qg",
-            "value": 16,
+            "value": 131005338,
             "visible": true
         }
     ]
