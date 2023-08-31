@@ -2,10 +2,6 @@ console.log('Hello')
 
 
 
-/*$(document).ready(function() {
-    $('.form')[0].reset(); // Сбросить состояние формы
-});*/
-
 $(document).ready(function() {
 
     $('.burger').click(function() {
@@ -21,6 +17,8 @@ $(document).ready(function() {
 
 
     })
+
+
 
     $('.open-form').click(function() {
         if ($(this).hasClass('open-form_active')) {
@@ -56,18 +54,23 @@ $(document).ready(function() {
         return false
     })
 
+    $(".get-demo").click(function() {
+        $("html, body").animate({
+            scrollTop: $("#contact-us").offset().top - 50
+        }, 800);
+        $('.menu_mobile').removeClass('menu_mobile_active')
+    });
+
     $('#openPopup').click(function() {
         $('.popup, .overlay').addClass('active');
-       /* $('body').css('overflow', 'hidden');*/
-       /* $('body').addClass('lock-scroll')*/
+
     });
 
     $('#closePopup, .overlay ').click(function() {
         $('.popup, .overlay').removeClass('active');
         $('.form_mobile').removeClass('form_mobile_active')
         $('.menu_mobile').removeClass('menu_mobile_active')
-        /*$('body').css('overflow', '');*/
-        /*$('body').removeClass('lock-scroll');*/
+
 
     });
 
@@ -77,8 +80,7 @@ $(document).ready(function() {
 
     $('#openPopup-mobile').click(function() {
         $('.popup, .overlay').addClass('active');
-        /* $('body').css('overflow', 'hidden');*/
-        /* $('body').addClass('lock-scroll')*/
+
     });
 
 
@@ -136,30 +138,20 @@ $(document).ready(function() {
 
 
     $('#slider_mobile').on('init', function(event, slick){
-      /*  if (slick.currentSlide === 0) {
-            $('.prev-arrow-mobile').css('stroke', '#989898');
-            $('.slick-prev-mobile').css('pointer-events', 'none')
 
-        }*/
+
     }).slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        /*   rows: 2,*/
+
         dots: true,
         autoplaySpeed: 2000,
         arrows: false,
 
-        /*centerMode: true,*/
-    }).on('afterChange', function(event, slick, currentSlide){
-       /* if (currentSlide === 0) {
-            $('.prev-arrow-mobile').css('stroke', '#989898');
-            $('.slick-prev-mobile').css('pointer-events', 'none')
 
-        } else {
-            $('.prev-arrow-mobile').css('stroke', '#333333');
-            $('.slick-prev-mobile').css('pointer-events', 'all')
-        }*/
+    }).on('afterChange', function(event, slick, currentSlide){
+
     });
 
 
@@ -12253,7 +12245,7 @@ $(function() {
         },
         {
             "key": "kz-ac",
-            /*"value": 797914722,*/
+           /* "value": 797914722,*/
             "value": 2,
             "visible": true
         },

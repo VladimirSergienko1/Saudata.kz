@@ -46,7 +46,8 @@ $blue: #2A81DD;
 $light-blue: #15BCE8;
 
 html {
-  font-size: 1vw;
+  /*font-size: 1vw;*/
+  font-size: 0.85vw;
   font-family: SF Pro Display;
   background-color: $background-gray;
 }
@@ -120,6 +121,12 @@ a {
 //General styles
 .blue{
   color: $blue;
+}
+.light-blue{
+  color: $light-blue;
+}
+.accent{
+  color: $Accent;
 }
 
 .btn{
@@ -374,11 +381,30 @@ header {
   }
 }
 .map-section{
+  position: relative;
   .container{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: px2rem(60);
+
+    .map_popup{
+      position: absolute;
+      /*top: px2rem(60);
+      left: px2rem(130);*/
+      top: px2rem(95);
+      left: px2rem(155);
+     /* width: 100%;*/
+      z-index: 10;
+
+      p{
+        font-size: px2rem(18);
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%; /* 24px */
+      }
+    }
 
     .map{
       width: px2rem(964);
@@ -392,7 +418,7 @@ header {
     .title{
       text-align: center;
       color: $black;
-      font-size: px2rem(20);
+      font-size: px2rem(24);
       font-style: normal;
       font-weight: 700;
       line-height: px2rem(31); /* 155% */
@@ -848,12 +874,15 @@ footer{
       }
     }
 
+    //desktop footer
     .links{
       display: flex;
       width: px2rem(210);
       ul {
         display: flex;
         justify-content: space-between;
+        pointer-events: none;
+
         li {
           list-style: none;
           margin-right: px2rem(30);
@@ -873,7 +902,7 @@ footer{
             margin-right: 0;
           }
           &:hover {
-              transition: .3s;
+            transition: .3s;
             opacity: 100%;
             filter: grayscale(0);
           }
@@ -1185,10 +1214,7 @@ footer{
   list-style: none;
   margin: 20px 0;
   padding: 0;
-  position: absolute;
-  transform: translate(-50%, 0);
-  left: 50%;
-  bottom: 10px;
+
 }
 
 
@@ -1638,8 +1664,25 @@ footer{
       padding: 20px 0 25px 0;
       align-items: center;
       justify-content: space-between;
+
       .burger{
-        width: 24px;
+        width: 20px;
+        margin-right: 4px;
+        cursor: pointer;
+      }
+      .burger path{
+        transition: transform 0.25s;
+      }
+      .burger_active path:nth-of-type(1){
+        transform: rotate(45deg);
+        transform-origin: -1px 3px;
+      }
+      .burger_active path:nth-of-type(2){
+        display: none;
+      }
+      .burger_active path:nth-of-type(3){
+        transform: rotate(-45deg);
+        transform-origin: 0px 13px;
       }
 
       .header-logo {
@@ -1816,6 +1859,7 @@ footer{
 
         }
       }
+      //Mobile burger
       .links{
         display: flex;
         width: 100%;
@@ -1825,12 +1869,15 @@ footer{
         ul {
           display: flex;
           justify-content: space-between;
+          pointer-events: none;
+
           li {
             list-style: none;
             margin-right: 30px;
             filter: grayscale(0);
             opacity: 100%;
             transition: .3s;
+
             a {
               text-decoration: none;
               display: block;
@@ -1915,7 +1962,9 @@ footer{
     top: 60px;
     z-index: 2;
   }
-  .form_mobile{
+
+  //FIXME HIDDEN BLOCK FOR FORM
+  /*.form_mobile{
     position: fixed;
     right: -1000px;
     width: 100%;
@@ -1945,7 +1994,7 @@ footer{
         label {
           position: absolute;
           top:  27px;
-          /* left: px2rem(20);*/
+          !* left: px2rem(20);*!
           left: 20px;
           transform: translateY(-50%);
           pointer-events: none;
@@ -1954,36 +2003,36 @@ footer{
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
-          line-height: 120%; /* 19.2px */
+          line-height: 120%; !* 19.2px *!
           transition: 0.3s ease-in-out;
         }
         .textarea-label{
           position: absolute;
-          /* top: px2rem(28);
-           left: px2rem(20);*/
+          !* top: px2rem(28);
+           left: px2rem(20);*!
           top: 28px;
           left: 20px;
-          /*  transform: translateY(-50%);*/
+          !*  transform: translateY(-50%);*!
           pointer-events: none;
           color: $gray;
           font-family: Roboto Flex;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
-          line-height: 120%; /* 19.2px */
+          line-height: 120%; !* 19.2px *!
           transition: 0.3s ease-in-out;
         }
 
         input:focus + label {
-          /*top: px2rem(10);
-          left: px2rem(20);*/
+          !*top: px2rem(10);
+          left: px2rem(20);*!
           top: 10px;
           left: 20px;
           font-size: 12px;
         }
         textarea:focus + label {
-          /*  top: px2rem(10);
-            left: px2rem(20);*/
+          !*  top: px2rem(10);
+            left: px2rem(20);*!
           top: 10px;
           left: 20px;
           font-size: 12px;
@@ -1991,15 +2040,15 @@ footer{
 
       }
       .input-container.has-value label {
-        /*  top: px2rem(10);
-          left: px2rem(20);*/
+        !*  top: px2rem(10);
+          left: px2rem(20);*!
         top: 10px;
         left: 20px;
         font-size: 12px;
       }
       textarea .has-value  label {
-        /*  top: px2rem(10);
-          left: px2rem(20);*/
+        !*  top: px2rem(10);
+          left: px2rem(20);*!
         top: 10px;
         left: 20px;
         font-size: 12px;
@@ -2019,7 +2068,7 @@ footer{
           font-style: normal;
           font-family: SF Pro Display;
           font-weight: 500;
-          line-height: 140%; /* 36.4px */
+          line-height: 140%; !* 36.4px *!
           margin-bottom: 0;
           width: 100%;
         }
@@ -2031,7 +2080,7 @@ footer{
           font-size: 18px;
           font-style: normal;
           font-weight: 400;
-          line-height: 150%; /* 27px */
+          line-height: 150%; !* 27px *!
           width: 100%;
           margin-bottom: 30px;
         }
@@ -2057,7 +2106,7 @@ footer{
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
-              line-height: 120%; /* 19.2px */
+              line-height: 120%; !* 19.2px *!
               margin-bottom: 20px;
             }
             .input-group{
@@ -2096,7 +2145,7 @@ footer{
               font-size: 18px;
               font-style: normal;
               font-weight: 600;
-              line-height: 18px; /* 100% */
+              line-height: 18px; !* 100% *!
 
               &:hover{
                 background-color: $blue;
@@ -2123,7 +2172,7 @@ footer{
 
                 .round-checkbox{
                   margin-right: 0;
-                  /* Скрыть стандартный внешний вид чекбокса */
+                  !* Скрыть стандартный внешний вид чекбокса *!
                   appearance: none;
                   -webkit-appearance: none;
                   -moz-appearance: none;
@@ -2158,7 +2207,7 @@ footer{
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 130%; /* 20.8px */
+                line-height: 130%; !* 20.8px *!
                 letter-spacing: -0.16px;
                 width: calc(100% - 25px);
               }
@@ -2171,7 +2220,7 @@ footer{
     transition: .3s;
     right: 0;
     z-index: 2;
-  }
+  }*/
 
   .intro{
     padding-top: 99px;
@@ -2313,7 +2362,8 @@ footer{
 
     }
   }
-  .map-section{
+    .map-section{
+    position: relative;
     width: 100%;
     .container{
       display: flex;
@@ -2322,12 +2372,31 @@ footer{
       width: 90%;
       padding-top: 25px;
 
+      .map_popup{
+        position: absolute;
+        /*top: px2rem(60);
+        left: px2rem(130);*/
+        top: 85px;
+        left: 20px;
+        /* width: 100%;*/
+        z-index: 10;
+
+        p{
+          font-size: 11px;
+          font-family: SF Pro Display;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 120%; /* 24px */
+        }
+      }
+
       .map{
         width: 100%;
         height: 301px;
         fill: $background-gray;
         background-color: #f0f0f0;
         margin-bottom: 25px;
+
 
       }
 
@@ -2339,12 +2408,13 @@ footer{
         font-style: normal;
         font-weight: 700;
         line-height: 140%; /* 25.2px */
+        margin-bottom: 45px;
       }
     }
   }
   .products{
     width: 100%;
-    margin-top: px2rem(62);
+    margin-top: 30px;
     background: url("../img/backgrounds/products-background.png") no-repeat;
     background-size: cover;
     background-position: center;
@@ -2383,7 +2453,7 @@ footer{
       display: flex;
       align-self: center;
       width: 95%;
-      margin-top: px2rem(50);
+      margin-top: 40px;
       margin-right: auto;
       margin-left: auto;
 
@@ -2448,7 +2518,7 @@ footer{
   }
   .detilize{
     width: 100%;
-    padding-top: px2rem(80);
+    padding-top: 60px;
     /*background: url("../img/backgrounds/detilize-background.png") no-repeat right center;*/
     background: none;
 
@@ -2482,7 +2552,7 @@ footer{
       }
       .grid {
 
-        margin-top: px2rem(94);
+        margin-top: 40px;
         width: 100%;
         flex-direction: column;
 
@@ -2525,7 +2595,7 @@ footer{
   }
   .contact-us{
     width: 100%;
-    padding-top: px2rem(80);
+    padding-top: 30px;
     background: url("../img/backgrounds/form-background.png");
     background-size: cover;
 
@@ -2533,9 +2603,9 @@ footer{
       position: relative;
       label {
         position: absolute;
-        top:  27px;
+        top:  24px;
        /* left: px2rem(20);*/
-        left: 20px;
+        left: 16px;
         transform: translateY(-50%);
         pointer-events: none;
         color: $gray;
@@ -2550,8 +2620,8 @@ footer{
         position: absolute;
        /* top: px2rem(28);
         left: px2rem(20);*/
-        top: 28px;
-        left: 20px;
+        top: 25px;
+        left: 16px;
       /*  transform: translateY(-50%);*/
         pointer-events: none;
         color: $gray;
@@ -2567,14 +2637,14 @@ footer{
         /*top: px2rem(10);
         left: px2rem(20);*/
         top: 10px;
-        left: 20px;
+        left: 15px;
         font-size: 12px;
       }
       textarea:focus + label {
       /*  top: px2rem(10);
         left: px2rem(20);*/
         top: 10px;
-        left: 20px;
+        left: 15px;
         font-size: 12px;
       }
 
@@ -2583,14 +2653,14 @@ footer{
       /*  top: px2rem(10);
         left: px2rem(20);*/
       top: 10px;
-      left: 20px;
+      left: 15px;
       font-size: 12px;
     }
     textarea .has-value  label {
       /*  top: px2rem(10);
         left: px2rem(20);*/
       top: 10px;
-      left: 20px;
+      left: 1px;
       font-size: 12px;
     }
 
@@ -2609,7 +2679,7 @@ footer{
         font-family: SF Pro Display;
         font-weight: 500;
         line-height: 140%; /* 36.4px */
-        margin-bottom: 15px;
+        margin-bottom: 12px;
         width: 100%;
       }
       .subtitle{
@@ -2620,7 +2690,7 @@ footer{
         font-weight: 400;
         line-height: 150%; /* 27px */
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
       .form-container{
         display: flex;
@@ -2634,7 +2704,8 @@ footer{
           .input-field{
             display: flex;
             width: 100%;
-            padding: 18px 20px 17px 20px;
+           /* padding: 18px 20px 17px 20px;*/
+            padding: 14.5px 15px 12.5px 15px;
             border-radius: 10px;
             background: #FFF;
             border: none;
@@ -2645,11 +2716,12 @@ footer{
             font-style: normal;
             font-weight: 400;
             line-height: 120%; /* 19.2px */
-            margin-bottom: 20px;
+            margin-bottom: 16px;
           }
           .input-group{
             display: flex;
             flex-direction: column;
+            margin-bottom: 0;
           }
           .organization{
             display: flex;
@@ -2657,13 +2729,15 @@ footer{
             margin-bottom: 20px;
           }
           .message{
+            box-sizing: border-box;
+
             display: flex;
             max-width: 100%;
             min-width: 100%;
-            padding: 18px 20px 17px 20px;
-            margin-bottom: 27px;
-            min-height:  162px;
-            max-height: 162px;
+            padding: 14.4px 16px 13.6px 16px;
+            margin-bottom: 15px;
+            min-height:  100px;
+            max-height: 100px;
             resize: none;
 
           }
@@ -2697,7 +2771,7 @@ footer{
 
             .radio-item1{
               display: flex;
-              margin-bottom: 27px;
+              margin-bottom: 15px;
 
               .radio1{
                 margin-right: px2rem(8);
@@ -2706,7 +2780,7 @@ footer{
             .radio-item2{
               display: flex;
               align-items: center;
-              margin-bottom: 27px;
+              margin-bottom: 20px;
 
               .round-checkbox{
                 margin-right: 0;
@@ -3058,6 +3132,7 @@ footer{
         }
       }
 
+      //mobile footer
       .links{
         display: flex;
         width: 70%;
@@ -3067,6 +3142,7 @@ footer{
         ul {
           display: flex;
           justify-content: space-between;
+          pointer-events: none;
           li {
             list-style: none;
             margin-right: 30px;
@@ -3174,7 +3250,7 @@ footer{
   /* Для выпадающего списка */
   .select2-dropdown {
     font-size: 12px;
-    padding-left: 12px;
+    padding-left: 5px;
     width: 60px !important;  /* Пример высоты */
 
     border: none !important;
@@ -3245,7 +3321,7 @@ footer{
 
   }
   .select2-results__option {
-    padding: 6px;
+    padding: 4px;
   }
 
   .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -3275,8 +3351,19 @@ footer{
     width: 60px !important;
   }
 
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    bottom: 10px;
+  }
 
-  .slick-prev-mobile {
+  /*.slick-prev-mobile {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -3327,9 +3414,10 @@ footer{
 
       }
     }
-  }
+  }*/
 
 }
+
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991px) {  }
