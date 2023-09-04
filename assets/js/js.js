@@ -33,6 +33,34 @@ $(document).ready(function() {
 
 
     })
+    // $(document).ready(function () {
+        $('.menu-item').click(function () {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+            } else {
+                $('.menu-item').removeClass('active');
+                $(this).addClass('active')
+            }
+            
+            
+            // $(this).children('menu-item-desciption')
+            //$(this).parent().children('menu-item-description').addClass('menu-item-description_active')
+
+
+            // $(this).toggleClass('active');
+            // var description = $(this).find('.menu-item-description');
+            // if ($(this).hasClass('active')) {
+            //     description.css('max-height', description.prop('scrollHeight') + 'px');
+            //
+            // } else {
+            //         description.css('max-height', '0');
+            // }
+
+
+
+        });
+    // });
+
 
 
     $('.form_prev').click(function(){
@@ -59,6 +87,7 @@ $(document).ready(function() {
             scrollTop: $("#contact-us").offset().top - 50
         }, 800);
         $('.menu_mobile').removeClass('menu_mobile_active')
+        $('.burger_active').removeClass('burger_active');
     });
 
     $('#openPopup').click(function() {
