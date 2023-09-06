@@ -1528,11 +1528,15 @@ a {
 }
 
 .light-blue {
-  color: #15BCE8;
+  color: #00BFF2;
 }
 
 .accent {
-  color: #000080;
+  color: #292974;
+}
+
+.pink {
+  color: #EB008B;
 }
 
 .btn {
@@ -1540,7 +1544,7 @@ a {
   padding: 1.25rem 2.7777777778rem;
   border-radius: 0.5555555556rem;
   border: none;
-  background: #2A81DD;
+  background: #00BFF2;
   text-transform: none;
   color: #FFF;
   text-align: center;
@@ -1552,11 +1556,11 @@ a {
   transition: background 0.3s ease-in-out;
 }
 .btn:hover {
-  background: #000080;
+  background: #EB008B;
 }
 
 .accent {
-  color: #000080;
+  color: #292974;
 }
 
 .content-text {
@@ -1595,7 +1599,7 @@ a {
 }
 .grid .grid-item .grid-text .grid-text-title {
   display: flex;
-  color: #333;
+  color: #292974;
   font-size: 1.3888888889rem;
   font-style: normal;
   font-weight: 700;
@@ -1608,13 +1612,16 @@ a {
 
 header .container {
   display: flex;
-  padding: 1.8055555556rem 0 1.7361111111rem 0;
+  /* padding: px2rem(26) 0 px2rem(25) 0;*/
+  padding: 1.1930555556rem 0 0.8458333333rem 0;
   align-items: center;
 }
 header .container .header-logo {
-  margin-right: 11.7708333333rem;
+  margin-right: 8.125rem;
   /*width: px2rem(93);*/
-  width: 6.9444444444rem;
+}
+header .container .header-logo a {
+  width: 9.5833333333rem;
 }
 header .container .flex_row {
   display: flex;
@@ -1629,9 +1636,13 @@ header .container .flex_row .main-nav .nav-list {
   list-style: none;
   gap: 2.7777777778rem;
 }
+header .container .flex_row .main-nav .nav-list .nav-item:hover {
+  color: #90278E;
+  /* list-style: circle;*/
+}
 header .container .flex_row .main-nav .nav-list .nav-item .nav-link {
   text-decoration: none;
-  transition: color 300ms ease-out;
+  transition: 300ms ease-out;
   color: #616161;
   font-size: 1.1111111111rem;
   font-style: normal;
@@ -1639,7 +1650,7 @@ header .container .flex_row .main-nav .nav-list .nav-item .nav-link {
   line-height: 100%; /* 16px */
 }
 header .container .flex_row .main-nav .nav-list .nav-item .nav-link:hover {
-  color: #000080;
+  color: #292974;
 }
 header .container .flex_row .flex_box {
   display: flex;
@@ -1661,7 +1672,7 @@ header .container .flex_row .flex_box .select-container {
 header .container .flex_row .flex_box .login {
   display: flex;
   text-decoration: none;
-  color: #2A81DD;
+  color: #292974;
   transition: color 300ms ease-out;
   text-align: right;
   font-size: 0.9722222222rem;
@@ -1671,7 +1682,7 @@ header .container .flex_row .flex_box .login {
   margin-left: 2.0138888889rem;
 }
 header .container .flex_row .flex_box .login:hover {
-  color: #000080;
+  color: #90278E;
 }
 
 .intro {
@@ -1694,17 +1705,18 @@ header .container .flex_row .flex_box .login:hover {
   /* justify-content: space-between;*/
 }
 .intro .container .container-text .top-text {
-  width: 33.3333333333rem;
+  font-family: Oswald;
+  /*  width: px2rem(480);*/
   font-size: 2.7777777778rem;
-  color: #333;
+  color: #292974;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 130%; /* 52px */
-  letter-spacing: -0.0277777778rem;
+  letter-spacing: 0.0277777778rem;
   margin-bottom: 1.7361111111rem;
 }
 .intro .container .container-text .middle-text {
-  color: #15BCE8;
+  color: #90278E;
   font-size: 1.5277777778rem;
   font-style: normal;
   font-weight: 400;
@@ -1729,12 +1741,13 @@ header .container .flex_row .flex_box .login:hover {
   border: none;
 }
 .about .container .title {
-  color: #333;
-  font-size: 2.2222222222rem;
+  font-family: Oswald;
+  color: #292974;
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: 500;
   line-height: 140%; /* 44.8px */
-  letter-spacing: -0.0222222222rem;
+  letter-spacing: -0.025rem;
   margin-bottom: 1.7361111111rem;
 }
 .about .container .about-content {
@@ -1763,8 +1776,8 @@ header .container .flex_row .flex_box .login:hover {
   position: absolute;
   /*top: px2rem(60);
   left: px2rem(130);*/
-  top: 6.5972222222rem;
-  left: 10.7638888889rem;
+  top: 7.9861111111rem;
+  left: 18.0555555556rem;
   /* width: 100%;*/
   z-index: 10;
 }
@@ -1776,19 +1789,20 @@ header .container .flex_row .flex_box .login:hover {
   line-height: 150%; /* 24px */
 }
 .map-section .container .map {
-  width: 66.9444444444rem;
-  height: 43.8888888889rem;
+  width: 53.5416666667rem;
+  height: 35.0694444444rem;
   fill: #FAFAFA;
   background-color: #f0f0f0;
   margin-bottom: 4.9305555556rem;
 }
 .map-section .container .title {
   text-align: center;
-  color: #333;
+  color: #292974;
   font-size: 1.6666666667rem;
   font-style: normal;
   font-weight: 700;
   line-height: 2.1527777778rem; /* 155% */
+  margin-bottom: 3.4722222222rem;
 }
 
 .products {
@@ -1800,7 +1814,7 @@ header .container .flex_row .flex_box .login:hover {
   position: relative;
 }
 .products .container .title {
-  color: #333;
+  color: #292974;
   font-size: 2.2222222222rem;
   font-style: normal;
   font-weight: 600;
@@ -1824,7 +1838,7 @@ header .container .flex_row .flex_box .login:hover {
   margin-left: auto;
   padding: 2.7777777778rem 2.7777777778rem 3.125rem 2.7777777778rem;
   border-radius: 0.6944444444rem;
-  background: linear-gradient(180deg, rgba(143, 194, 255, 0.5) 0%, rgba(143, 194, 255, 0.5) 22.92%, rgba(92, 166, 255, 0.4) 86.98%), #2A81DD;
+  background: linear-gradient(94deg, #00BFF2 0%, #1285BB 100%);
   box-shadow: 0 0.8333333333rem 1.1111111111rem 0 rgba(78, 132, 225, 0.05);
 }
 .products .banner .banner-content {
@@ -1860,11 +1874,11 @@ header .container .flex_row .flex_box .login:hover {
   font-weight: 600;
   line-height: 1.25rem; /* 100% */
   background: #FFF;
-  color: #2A81DD;
+  color: #292974;
   transition: color, background-color 0.3s ease-in-out;
 }
 .products .banner .banner-content .btn:hover {
-  background: #333;
+  background: #292974;
   color: #FFF;
 }
 .products .banner .banner-img {
@@ -1892,7 +1906,7 @@ header .container .flex_row .flex_box .login:hover {
 }
 .detilize .container .title-block .detilize-title {
   width: 25.9027777778rem;
-  color: #333;
+  color: #292974;
   font-family: SF Pro Display;
   font-size: 2.2222222222rem;
   font-style: normal;
@@ -1916,7 +1930,7 @@ header .container .flex_row .flex_box .login:hover {
   margin-right: 0;
 }
 .detilize .container .grid .grid-item .grid-text .grid-text-title {
-  color: #333;
+  color: #292974;
   margin-bottom: 1.3888888889rem;
   font-size: 1.25rem;
   font-style: normal;
@@ -1990,7 +2004,7 @@ header .container .flex_row .flex_box .login:hover {
   margin-left: 1.3888888889rem;
 }
 .contact-us .container .title {
-  color: #333;
+  color: #292974;
   font-size: 2.2222222222rem;
   font-style: normal;
   font-weight: 600;
@@ -2055,7 +2069,7 @@ header .container .flex_row .flex_box .login:hover {
   width: 16.0416666667rem;
   display: inline-flex;
   font-family: SF Pro Display;
-  background-color: #333;
+  background-color: #1285BB;
   padding: 1.25rem 2.7777777778rem;
   justify-content: center;
   align-items: center;
@@ -2068,7 +2082,7 @@ header .container .flex_row .flex_box .login:hover {
   line-height: 1.25rem; /* 100% */
 }
 .contact-us .container .form-container .form .btn:hover {
-  background-color: #2A81DD;
+  background-color: #90278E;
 }
 .contact-us .container .form-container .form .radio-group {
   display: flex;
@@ -2161,7 +2175,7 @@ footer .container .contacts .contacts-email .email-text {
 footer .container .contacts .contacts-email .email-text a {
   text-decoration: none;
   display: flex;
-  color: #2A81DD;
+  color: #00BFF2;
   font-family: Roboto Flex;
   font-size: 1.1111111111rem;
   font-style: normal;
@@ -2443,7 +2457,7 @@ footer .rights {
   flex-direction: column;
 }
 #slider_desktop .slider_item .grid-text .grid-tag {
-  color: #2A81DD;
+  color: #00BFF2;
   font-size: 0.9722222222rem;
   font-style: normal;
   font-weight: 500;
@@ -2451,7 +2465,7 @@ footer .rights {
 }
 #slider_desktop .slider_item .grid-text .grid-text-title {
   display: flex;
-  color: #000080;
+  color: #90278E;
   font-size: 1.6666666667rem;
   font-style: normal;
   font-weight: 500;
@@ -2501,13 +2515,13 @@ footer .rights {
 
 /* Стилизация активной точки */
 .slick-dots li.slick-active button::before {
-  background-color: #007bff; /* Цвет активной точки */
+  background-color: #292974;
 }
 
 .slick-dots li button {
-  font-size: 0; /* Установить размер шрифта на 0 */
-  line-height: 0; /* Установить высоту строки на 0 */
-  color: transparent; /* Сделать текст прозрачным */
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
   border: none;
   border-radius: 50%;
 }
@@ -2577,7 +2591,7 @@ footer .rights {
 
 .select2-container .select2-selection__rendered:hover {
   transition: color 0.3s ease-in-out;
-  color: #000080 !important;
+  color: #292974 !important;
 }
 
 /* Когда dropdown активно (открывается вниз) */
@@ -2612,7 +2626,7 @@ footer .rights {
 
 /* Изменение цвета текста при наведении на элемент выпадающего списка */
 .select2-dropdown .select2-results__option:hover {
-  color: #000080 !important;
+  color: #292974 !important;
 }
 
 .select2-results__option--highlighted[aria-selected=true] {
@@ -2738,7 +2752,7 @@ footer .rights {
     transition: background 0.3s ease-in-out;
   }
   .btn:hover {
-    background: #000080;
+    background: #292974;
   }
   header {
     background-color: #FAFAFA;
@@ -2752,7 +2766,7 @@ footer .rights {
   header .container {
     width: 90%;
     display: flex;
-    padding: 20px 0 25px 0;
+    padding: 10px 0 5px 0;
     align-items: center;
     justify-content: space-between;
   }
@@ -2778,7 +2792,10 @@ footer .rights {
   header .container .header-logo {
     margin-right: 0;
     align-items: center;
-    width: 93px;
+    width: 108px;
+  }
+  header .container .header-logo img {
+    width: 108px;
   }
   header .container .flex_row {
     display: flex;
@@ -2807,7 +2824,7 @@ footer .rights {
     margin-left: 2.0138888889rem;
   }
   header .container .flex_row .flex_box .login:hover {
-    color: #000080;
+    color: #292974;
   }
   .menu_mobile {
     position: fixed;
@@ -2841,7 +2858,7 @@ footer .rights {
     line-height: 100%; /* 16px */
   }
   .menu_mobile .container .nav-list .nav-item .nav-link:hover {
-    color: #000080;
+    color: #292974;
   }
   .menu_mobile .container .login {
     display: flex;
@@ -2858,7 +2875,7 @@ footer .rights {
     /*margin-left: px2rem(29);*/
   }
   .menu_mobile .container .login:hover {
-    color: #000080;
+    color: #292974;
   }
   .menu_mobile .container .contacts {
     display: flex;
@@ -3282,7 +3299,7 @@ footer .rights {
     margin-bottom: 15px;
   }
   .intro .container .container-text .middle-text {
-    color: #15BCE8;
+    color: #00BFF2;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -3959,7 +3976,7 @@ footer .rights {
   }
   #slider_mobile .slider_item .grid-text .grid-text-title {
     display: flex;
-    color: #000080;
+    color: #292974;
     width: 100%;
     font-size: 22px;
     font-style: normal;
@@ -4126,7 +4143,7 @@ footer .rights {
   }
   .select2-container .select2-selection__rendered:hover {
     transition: color 0.3s ease-in-out;
-    color: #000080 !important;
+    color: #292974 !important;
   }
   /* Когда dropdown активно (открывается вниз) */
   .select2-container--open .select2-selection {
@@ -4156,7 +4173,7 @@ footer .rights {
   }
   /* Изменение цвета текста при наведении на элемент выпадающего списка */
   .select2-dropdown .select2-results__option:hover {
-    color: #000080 !important;
+    color: #292974 !important;
   }
   .select2-results__option--highlighted[aria-selected=true] {
     background-color: unset !important;

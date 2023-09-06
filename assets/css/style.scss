@@ -39,11 +39,13 @@
 
 $black: #333;
 $red: #c51718;
-$Accent: #000080;
+$Accent: #292974;
+$Accent_pink: #90278E;
+$pink: #EB008B;
 $gray: #616161;
 $background-gray: #FAFAFA;
 $blue: #2A81DD;
-$light-blue: #15BCE8;
+$light-blue: #00BFF2;
 
 html {
   /*font-size: 1vw;*/
@@ -128,13 +130,15 @@ a {
 .accent{
   color: $Accent;
 }
-
+.pink{
+  color: $pink;
+}
 .btn{
   width: px2rem(220);
   padding: px2rem(18) px2rem(40);
   border-radius: px2rem(8);
   border: none;
-  background: $blue;
+  background: $light-blue;
   text-transform: none;
 
   color:  #FFF;
@@ -147,7 +151,7 @@ a {
   transition: background 0.3s ease-in-out;
 
   &:hover{
-    background: $Accent;
+    background: $pink;
   }
 }
 
@@ -189,7 +193,7 @@ a {
       margin-right: px2rem(12);
       .grid-text-title{
         display: flex;
-        color: $black;
+        color: $Accent;
         font-size: px2rem(20);
         font-style: normal;
         font-weight: 700;
@@ -210,13 +214,21 @@ a {
 header {
   .container {
     display: flex;
-    padding: px2rem(26) 0 px2rem(25) 0;
+   /* padding: px2rem(26) 0 px2rem(25) 0;*/
+    padding: px2rem(17.18) 0 px2rem(12.18) 0;
     align-items: center;
 
     .header-logo {
-      margin-right: px2rem(169.5);
+      margin-right: px2rem(117);
       /*width: px2rem(93);*/
-      width: px2rem(100);
+      a{
+        width: px2rem(138);
+        img{
+
+        }
+      }
+
+
     }
 
 
@@ -236,10 +248,15 @@ header {
           list-style: none;
           gap: px2rem(40);
 
+
           .nav-item {
+            &:hover {
+              color: $Accent_pink;
+             /* list-style: circle;*/
+            }
             .nav-link {
               text-decoration: none;
-              transition: color 300ms ease-out;
+              transition: 300ms ease-out;
 
               color: $gray;
               font-size: px2rem(16);
@@ -279,7 +296,7 @@ header {
         .login {
           display: flex;
           text-decoration: none;
-          color: $blue;
+          color: $Accent;
           transition: color 300ms ease-out;
           text-align: right;
           font-size: px2rem(14);
@@ -290,7 +307,7 @@ header {
           margin-left: px2rem(29);
 
           &:hover {
-            color: $Accent;
+            color: $Accent_pink;
           }
         }
       }
@@ -320,17 +337,18 @@ header {
 
       .top-text{
      //FIXME width unmatch
-        width: px2rem(480);
+        font-family: Oswald;
+      /*  width: px2rem(480);*/
         font-size: px2rem(40);
-        color: #333;
+        color: $Accent;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 130%; /* 52px */
-        letter-spacing: px2rem(-0.4);
+        letter-spacing: px2rem(0.4);
         margin-bottom: px2rem(25);
       }
       .middle-text{
-        color: $light-blue;
+        color: $Accent_pink;
         font-size: px2rem(22);
         font-style: normal;
         font-weight: 400;
@@ -358,12 +376,13 @@ header {
     border: none;
 
     .title{
-      color: $black;
-      font-size: px2rem(32);
+      font-family: Oswald;
+      color: $Accent;
+      font-size: px2rem(36);
       font-style: normal;
       font-weight: 500;
       line-height: 140%; /* 44.8px */
-      letter-spacing: px2rem(-0.32);
+      letter-spacing: px2rem(-0.36);
       margin-bottom: px2rem(25);
     }
     .about-content{
@@ -392,8 +411,8 @@ header {
       position: absolute;
       /*top: px2rem(60);
       left: px2rem(130);*/
-      top: px2rem(95);
-      left: px2rem(155);
+      top: px2rem(115);
+      left: px2rem(260);
      /* width: 100%;*/
       z-index: 10;
 
@@ -407,8 +426,8 @@ header {
     }
 
     .map{
-      width: px2rem(964);
-      height: px2rem(632);
+      width: px2rem(771);
+      height: px2rem(505);
       fill: $background-gray;
       background-color: #f0f0f0;
       margin-bottom: px2rem(71);
@@ -417,11 +436,12 @@ header {
 
     .title{
       text-align: center;
-      color: $black;
+      color: $Accent;
       font-size: px2rem(24);
       font-style: normal;
       font-weight: 700;
       line-height: px2rem(31); /* 155% */
+      margin-bottom: px2rem(50);
     }
   }
 }
@@ -433,7 +453,7 @@ header {
   .container{
     position: relative;;
     .title{
-      color: $black;
+      color: $Accent;
       font-size: px2rem(32);
       font-style: normal;
       font-weight: 600;
@@ -468,7 +488,7 @@ header {
     padding: px2rem(40) px2rem(40) px2rem(45) px2rem(40);
 
     border-radius: px2rem(10);
-    background: linear-gradient(180deg, rgba(143, 194, 255, 0.50) 0%, rgba(143, 194, 255, 0.50) 22.92%, rgba(92, 166, 255, 0.40) 86.98%), #2A81DD;
+    background: linear-gradient(94deg, #00BFF2 0%, #1285BB 100%);
     box-shadow: 0 px2rem(12) px2rem(16) 0 rgba(78, 132, 225, 0.05);
 
     .banner-content{
@@ -506,11 +526,11 @@ header {
         font-weight: 600;
         line-height: px2rem(18); /* 100% */
         background: #FFF;
-        color: $blue;
+        color: $Accent;
 
         transition: color,background-color 0.3s ease-in-out;
         &:hover{
-          background: $black;
+          background: $Accent;
           color: #FFF;
         }
       }
@@ -540,7 +560,7 @@ header {
 
       .detilize-title{
         width: px2rem(373);
-        color: $black;
+        color: $Accent;
         font-family: SF Pro Display;
         font-size: px2rem(32);
         font-style: normal;
@@ -570,7 +590,7 @@ header {
           margin-right: 0;
 
           .grid-text-title {
-            color: $black;
+            color: $Accent;
             margin-bottom: px2rem(20);
             font-size: px2rem(18);
             font-style: normal;
@@ -655,7 +675,7 @@ header {
     }
 
     .title{
-      color: $black;
+      color: $Accent;
       font-size: px2rem(32);
       font-style: normal;
       font-weight: 600;
@@ -722,7 +742,7 @@ header {
           width: px2rem(231);
           display: inline-flex;
           font-family: SF Pro Display;
-          background-color: $black;
+          background-color: #1285BB;
           padding: px2rem(18) px2rem(40);
           justify-content: center;
           align-items: center;
@@ -736,7 +756,7 @@ header {
           line-height: px2rem(18); /* 100% */
 
           &:hover{
-            background-color: $blue;
+            background-color: $Accent-pink;
           }
         }
         .radio-group{
@@ -839,7 +859,7 @@ footer{
           a{
             text-decoration: none;
             display: flex;
-            color: $blue;
+            color: $light-blue;
             font-family: Roboto Flex;
             font-size: px2rem(16);
             font-style: normal;
@@ -1229,7 +1249,7 @@ footer{
       width: px2rem(415);
       flex-direction: column;
       .grid-tag{
-        color: $blue;
+        color: $light-blue;
         font-size: px2rem(14);
         font-style: normal;
         font-weight: 500;
@@ -1237,7 +1257,7 @@ footer{
       }
       .grid-text-title{
         display: flex;
-        color: $Accent;
+        color: $Accent_pink;
         font-size: px2rem(24);
         font-style: normal;
         font-weight: 500;
@@ -1294,12 +1314,12 @@ footer{
 
 /* Стилизация активной точки */
 .slick-dots li.slick-active button::before {
-  background-color: #007bff; /* Цвет активной точки */
+  background-color: $Accent;
 }
 .slick-dots li button {
-  font-size: 0; /* Установить размер шрифта на 0 */
-  line-height: 0; /* Установить высоту строки на 0 */
-  color: transparent; /* Сделать текст прозрачным */
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
   border: none;
   border-radius: 50%;
 }
@@ -1669,7 +1689,7 @@ footer{
     .container {
       width: 90%;
       display: flex;
-      padding: 20px 0 25px 0;
+      padding: 10px 0 5px 0;
       align-items: center;
       justify-content: space-between;
 
@@ -1696,7 +1716,11 @@ footer{
       .header-logo {
         margin-right: 0;
         align-items: center;
-        width: 93px;
+        width: 108px;
+
+        img{
+          width: 108px;
+        }
       }
 
 
