@@ -1598,6 +1598,7 @@ a {
   margin-right: 0.8333333333rem;
 }
 .grid .grid-item .grid-text .grid-text-title {
+  font-family: Oswald;
   display: flex;
   color: #292974;
   font-size: 1.3888888889rem;
