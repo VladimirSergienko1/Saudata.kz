@@ -1119,7 +1119,7 @@ footer{
     .title{
       color: $black;
 
-      font-family: SF Pro Display;
+      font-family: Oswald;
       font-size: px2rem(40);
       font-style: normal;
       font-weight: 600;
@@ -1136,17 +1136,279 @@ footer{
 
         .menu-item-title {
           display: inline-block;
-          margin-right: 10px;
+          color: $black;
+          font-family: SF Pro Display;
+          font-size: px2rem(20);
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%; /* 28px */
+          letter-spacing: px2rem(-0.2);
+          margin-right: px2rem(10);
+          margin-bottom: px2rem(20);
         }
         .menu-item-toggle {
           display: inline-block;
+          width: px2rem(24);
+          height: px2rem(24);
           font-weight: bold;
           cursor: pointer;
           transition: transform 0.3s ease-in-out;
+          background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6667 6.5L7.99999 10.5L3.33332 6.5' stroke='rgba(0, 0, 128, 1)' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+
         }
       }
     }
+    .form_mobile{
+     /* position: fixed;*/
+      width: px2rem(333);
+      height: 100%;
+      transition: .9s;
+      background-color:  #EEFBFF;
+      padding-top: 20px;
+      z-index: 2;
 
+      .form_prev {
+        width: 24px;
+        transform: rotate(180deg);
+        padding: 5px;
+        margin-right: 10px;
+      }
+      .flex_box {
+        margin-bottom: 10px;
+        align-items: center;
+      }
+      .title {
+        margin-bottom: 0;
+      }
+
+
+        .input-container {
+          position: relative;
+          label {
+            position: absolute;
+            top:  27px;
+            /* left: px2rem(20);*/
+            left: 20px;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: $gray;
+            font-family: Roboto Flex;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%; /* 19.2px */
+            transition: 0.3s ease-in-out;
+          }
+          .textarea-label{
+            position: absolute;
+            /* top: px2rem(28);
+             left: px2rem(20);*/
+            top: 28px;
+            left: 20px;
+            /*  transform: translateY(-50%);*/
+            pointer-events: none;
+            color: $gray;
+            font-family: Roboto Flex;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%; /* 19.2px */
+            transition: 0.3s ease-in-out;
+          }
+
+          input:focus + label {
+            /*top: px2rem(10);
+            left: px2rem(20);*/
+            top: 10px;
+            left: 20px;
+            font-size: 12px;
+          }
+          textarea:focus + label {
+            /*  top: px2rem(10);
+              left: px2rem(20);*/
+            top: 10px;
+            left: 20px;
+            font-size: 12px;
+          }
+
+        }
+        .input-container.has-value label {
+          /*  top: px2rem(10);
+            left: px2rem(20);*/
+          top: 10px;
+          left: 20px;
+          font-size: 12px;
+        }
+        textarea .has-value  label {
+          /*  top: px2rem(10);
+            left: px2rem(20);*/
+          top: 10px;
+          left: 20px;
+          font-size: 12px;
+        }
+
+        .container{
+          width: 90%;
+          .form-img{
+            display: none;
+            width: px2rem(472);
+            margin-left: px2rem(20);
+          }
+
+          .title{
+            color: $black;
+            font-size: 26px;
+            font-style: normal;
+            font-family: SF Pro Display;
+            font-weight: 500;
+            line-height: 140%; /* 36.4px */
+            margin-bottom: 0;
+            width: 100%;
+          }
+
+
+          .subtitle{
+            color: $gray;
+            font-family: SF Pro Display;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 27px */
+            width: 100%;
+            margin-bottom: 30px;
+          }
+          .form-container{
+            display: flex;
+            width: 100%;
+            .form{
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              width: 100%;
+
+              .input-field{
+                display: flex;
+                width: 100%;
+                padding: 18px 20px 17px 20px;
+                border-radius: 10px;
+                background: #FFF;
+                border: none;
+
+                color: $black;
+                font-family: Roboto Flex;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%; /* 19.2px */
+                margin-bottom: 20px;
+              }
+              .input-group{
+                display: flex;
+                flex-direction: column;
+              }
+              .organization{
+                display: flex;
+                width: 100%;
+                margin-bottom: 20px;
+              }
+              .message{
+                display: flex;
+                max-width: 100%;
+                min-width: 100%;
+                padding: 18px 20px 17px 20px;
+                margin-bottom: 27px;
+                min-height:  162px;
+                max-height: 162px;
+                resize: none;
+
+              }
+
+              .btn{
+                width: 100%;
+                display: inline-flex;
+                font-family: SF Pro Display;
+                background-color: $black;
+                padding: 18px 40px;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: px2rem(100);
+
+                text-align: center;
+                font-family: SF Pro Display;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 18px; /* 100% */
+
+                &:hover{
+                  background-color: $blue;
+                }
+              }
+              .radio-group{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+
+                .radio-item1{
+                  display: flex;
+                  margin-bottom: 27px;
+
+                  .radio1{
+                    margin-right: px2rem(8);
+                  }
+                }
+                .radio-item2{
+                  display: flex;
+                  align-items: center;
+                  margin-bottom: 27px;
+
+                  .round-checkbox{
+                    margin-right: 0;
+                    /* Скрыть стандартный внешний вид чекбокса */
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    border: 2px solid #E2E4E9;
+                    outline: none;
+                    cursor: pointer;
+                    transition: border 0.3s ease-in-out;
+                    box-sizing: border-box;
+
+                    &:checked {
+                      background-image: url("../img/radio-checked.svg");
+                      background-size: cover ;
+                      border: 2px solid #2A81DD;
+                      background-color: #2A81DD;
+                      background-position: center;
+                      //border: none;
+                    }
+                    &:hover{
+                      //border-color: $blue;
+                      border-color: #E2E4E9;
+                    }
+                  }
+
+                }
+                .radio-text{
+                  margin-left: 8px;
+                  color: $gray;
+                  font-family: Roboto Flex;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 130%; /* 20.8px */
+                  letter-spacing: -0.16px;
+                  width: calc(100% - 25px);
+                }
+              }
+            }
+          }
+        }
+    }
   }
 }
 /*INDEXES*/ /*FIXME*/
@@ -1156,11 +1418,18 @@ footer{
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
+  color: $black;
+  font-family: SF Pro Display;
+  font-size: px2rem(20);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 28px */
+  letter-spacing: px2rem(-0.2);
 }
 
 .active {
   .menu-item-description {
-    max-height: 5rem;
+    max-height: 10rem;
   }
 }
 
