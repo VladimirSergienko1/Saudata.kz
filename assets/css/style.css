@@ -1523,6 +1523,10 @@ a {
   margin: 0 auto;
 }
 
+.mrg-bot {
+  margin-bottom: 1.3888888889rem;
+}
+
 .blue {
   color: #2A81DD;
 }
@@ -1691,7 +1695,7 @@ header .container .flex_row .flex_box .login:hover {
 }
 .intro .container {
   display: flex;
-  /*  justify-content: space-between;*/
+  justify-content: space-between;
 }
 .intro .container img {
   /*width: px2rem(668)*/
@@ -1775,18 +1779,15 @@ header .container .flex_row .flex_box .login:hover {
 }
 .map-section .container .map_popup {
   position: absolute;
-  /*top: px2rem(60);
-  left: px2rem(130);*/
   top: 7.9861111111rem;
-  left: 18.0555555556rem;
-  /* width: 100%;*/
+  /*left: px2rem(260);*/
+  left: 20.8333333333rem;
   z-index: 10;
 }
 .map-section .container .map_popup p {
-  font-size: 1.25rem;
+  font-size: 1.1111111111rem;
   font-family: SF Pro Display;
   font-style: normal;
-  font-weight: 600;
   line-height: 150%; /* 24px */
 }
 .map-section .container .map {
@@ -1918,7 +1919,7 @@ header .container .flex_row .flex_box .login:hover {
   width: 25.9027777778rem;
 }
 .detilize .container .grid {
-  margin-top: 6.5277777778rem;
+  margin-top: 4.8611111111rem;
   width: 46.3888888889rem;
 }
 .detilize .container .grid .grid-item {
@@ -2276,6 +2277,7 @@ footer .rights {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
+  z-index: 99;
 }
 
 .popup {
@@ -2293,6 +2295,7 @@ footer .rights {
   box-shadow: 0 0 0.6944444444rem rgba(0, 0, 0, 0.3);
   display: none;
   border-radius: 0.5555555556rem;
+  z-index: 100;
 }
 .popup .close-icon {
   position: absolute;
@@ -2384,6 +2387,31 @@ footer .rights {
   overflow: hidden;
   margin-right: calc(100vw - 100%);
 }*/
+.indexes .container .page-link {
+  display: flex;
+  margin-top: 2.4305555556rem;
+  margin-bottom: 1.0416666667rem;
+}
+.indexes .container .page-link .right-arrow {
+  display: flex;
+  align-items: center;
+}
+.indexes .container .page-link .main-link {
+  color: #333;
+  font-family: SF Pro Display;
+  font-size: 0.9722222222rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3888888889rem; /* 142.857% */
+}
+.indexes .container .page-link .sub-link {
+  color: #B4B4B4;
+  font-family: SF Pro Display;
+  font-size: 0.9722222222rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3888888889rem; /* 142.857% */
+}
 .indexes .container .title {
   color: #333;
   font-family: Oswald;
@@ -2392,13 +2420,23 @@ footer .rights {
   font-weight: 600;
   line-height: 130%; /* 52px */
   letter-spacing: -0.0277777778rem;
+  margin-bottom: 2.0833333333rem;
 }
 .indexes .container .menu {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 46.3888888889rem;
+  margin-right: 8.3333333333rem;
+}
+.indexes .container .menu .index-line {
+  margin-bottom: 1.3888888889rem;
+}
+.indexes .container .menu .index-line:nth-last-child(2) {
+  margin-bottom: 3.4722222222rem;
 }
 .indexes .container .menu .menu-item {
-  margin: 10px 0;
   cursor: pointer;
 }
 .indexes .container .menu .menu-item .menu-item-title {
@@ -2411,7 +2449,8 @@ footer .rights {
   line-height: 140%; /* 28px */
   letter-spacing: -0.0138888889rem;
   margin-right: 0.6944444444rem;
-  margin-bottom: 1.3888888889rem;
+  vertical-align: middle;
+  margin-bottom: 0.6944444444rem;
 }
 .indexes .container .menu .menu-item .menu-item-toggle {
   display: inline-block;
@@ -2421,10 +2460,12 @@ footer .rights {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6667 6.5L7.99999 10.5L3.33332 6.5' stroke='rgba(0, 0, 128, 1)' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .indexes .container .form_mobile {
   /* position: fixed;*/
-  width: 23.125rem;
+  /* width: px2rem(373);*/
   height: 100%;
   transition: 0.9s;
   background-color: #EEFBFF;
@@ -2449,14 +2490,13 @@ footer .rights {
 }
 .indexes .container .form_mobile .input-container label {
   position: absolute;
-  top: 27px;
-  /* left: px2rem(20);*/
-  left: 20px;
+  top: 50%;
+  left: 1.3888888889rem;
   transform: translateY(-50%);
   pointer-events: none;
   color: #616161;
   font-family: Roboto Flex;
-  font-size: 16px;
+  font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 19.2px */
@@ -2464,47 +2504,41 @@ footer .rights {
 }
 .indexes .container .form_mobile .input-container .textarea-label {
   position: absolute;
-  /* top: px2rem(28);
-   left: px2rem(20);*/
-  top: 28px;
-  left: 20px;
-  /*  transform: translateY(-50%);*/
+  top: 1.9444444444rem;
+  left: 1.3888888889rem;
+  transform: translateY(-50%);
   pointer-events: none;
   color: #616161;
   font-family: Roboto Flex;
-  font-size: 16px;
+  font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 19.2px */
   transition: 0.3s ease-in-out;
 }
 .indexes .container .form_mobile .input-container input:focus + label {
-  /*top: px2rem(10);
-  left: px2rem(20);*/
-  top: 10px;
-  left: 20px;
-  font-size: 12px;
+  top: 0.6944444444rem;
+  left: 1.3888888889rem;
+  font-size: 0.8333333333rem;
 }
 .indexes .container .form_mobile .input-container textarea:focus + label {
-  /*  top: px2rem(10);
-    left: px2rem(20);*/
-  top: 10px;
-  left: 20px;
-  font-size: 12px;
+  top: 0.6944444444rem;
+  left: 1.3888888889rem;
+  font-size: 0.8333333333rem;
 }
 .indexes .container .form_mobile .input-container.has-value label {
   /*  top: px2rem(10);
     left: px2rem(20);*/
-  top: 10px;
-  left: 20px;
-  font-size: 12px;
+  top: 0.6944444444rem;
+  left: 1.3888888889rem;
+  font-size: 0.8333333333rem;
 }
 .indexes .container .form_mobile textarea .has-value label {
   /*  top: px2rem(10);
     left: px2rem(20);*/
-  top: 10px;
-  left: 20px;
-  font-size: 12px;
+  top: 0.6944444444rem;
+  left: 1.3888888889rem;
+  font-size: 0.8333333333rem;
 }
 .indexes .container .form_mobile .container {
   width: 90%;
@@ -2516,12 +2550,12 @@ footer .rights {
 }
 .indexes .container .form_mobile .container .title {
   color: #333;
-  font-size: 26px;
+  font-size: 1.5277777778rem;
   font-style: normal;
   font-family: SF Pro Display;
   font-weight: 500;
   line-height: 140%; /* 36.4px */
-  margin-bottom: 0;
+  margin-bottom: 1.3888888889rem;
   width: 100%;
 }
 .indexes .container .form_mobile .container .subtitle {
@@ -2547,17 +2581,17 @@ footer .rights {
 .indexes .container .form_mobile .container .form-container .form .input-field {
   display: flex;
   width: 100%;
-  padding: 18px 20px 17px 20px;
-  border-radius: 10px;
+  padding: 1.25rem 1.3888888889rem 1.1805555556rem 1.3888888889rem;
+  border-radius: 0.6944444444rem;
   background: #FFF;
   border: none;
   color: #333;
   font-family: Roboto Flex;
-  font-size: 16px;
+  font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 19.2px */
-  margin-bottom: 20px;
+  margin-bottom: 1.3888888889rem;
 }
 .indexes .container .form_mobile .container .form-container .form .input-group {
   display: flex;
@@ -2566,16 +2600,16 @@ footer .rights {
 .indexes .container .form_mobile .container .form-container .form .organization {
   display: flex;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 1.3888888889rem;
 }
 .indexes .container .form_mobile .container .form-container .form .message {
   display: flex;
   max-width: 100%;
   min-width: 100%;
-  padding: 18px 20px 17px 20px;
-  margin-bottom: 27px;
-  min-height: 162px;
-  max-height: 162px;
+  padding: 1.25rem 1.3888888889rem 1.1805555556rem 1.3888888889rem;
+  margin-bottom: 1.7361111111rem;
+  min-height: 11.25rem;
+  max-height: 11.25rem;
   resize: none;
 }
 .indexes .container .form_mobile .container .form-container .form .btn {
@@ -2583,16 +2617,15 @@ footer .rights {
   display: inline-flex;
   font-family: SF Pro Display;
   background-color: #333;
-  padding: 18px 40px;
+  padding: 1.25rem 2.7777777778rem;
   justify-content: center;
   align-items: center;
-  margin-bottom: 6.9444444444rem;
+  margin-bottom: 1.7361111111rem;
   text-align: center;
-  font-family: SF Pro Display;
-  font-size: 18px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 18px; /* 100% */
+  line-height: 1.25rem; /* 100% */
 }
 .indexes .container .form_mobile .container .form-container .form .btn:hover {
   background-color: #2A81DD;
@@ -2612,19 +2645,19 @@ footer .rights {
 }
 .indexes .container .form_mobile .container .form-container .form .radio-group .radio-item2 {
   display: flex;
+  margin-bottom: 2.0833333333rem;
   align-items: center;
-  margin-bottom: 27px;
 }
 .indexes .container .form_mobile .container .form-container .form .radio-group .radio-item2 .round-checkbox {
-  margin-right: 0;
+  margin-right: 0.5555555556rem;
   /* Скрыть стандартный внешний вид чекбокса */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 16px;
-  height: 16px;
+  width: 1.1111111111rem;
+  height: 1.1111111111rem;
   border-radius: 50%;
-  border: 2px solid #E2E4E9;
+  border: 0.1388888889rem solid #E2E4E9;
   outline: none;
   cursor: pointer;
   transition: border 0.3s ease-in-out;
@@ -2633,22 +2666,20 @@ footer .rights {
 .indexes .container .form_mobile .container .form-container .form .radio-group .radio-item2 .round-checkbox:checked {
   background-image: url("../img/radio-checked.svg");
   background-size: cover;
-  border: 2px solid #2A81DD;
-  background-color: #2A81DD;
-  background-position: center;
+  border: none;
 }
 .indexes .container .form_mobile .container .form-container .form .radio-group .radio-item2 .round-checkbox:hover {
-  border-color: #E2E4E9;
+  border-color: #2A81DD;
 }
 .indexes .container .form_mobile .container .form-container .form .radio-group .radio-text {
-  margin-left: 8px;
+  margin-left: 0.5555555556rem;
   color: #616161;
   font-family: Roboto Flex;
-  font-size: 16px;
+  font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
   line-height: 130%; /* 20.8px */
-  letter-spacing: -0.16px;
+  letter-spacing: -0.0111111111rem;
   width: calc(100% - 25px);
 }
 
@@ -2666,6 +2697,7 @@ footer .rights {
   font-weight: 500;
   line-height: 140%; /* 28px */
   letter-spacing: -0.0138888889rem;
+  margin-bottom: 1.3888888889rem;
 }
 
 .active .menu-item-description {
@@ -2967,6 +2999,175 @@ footer .rights {
   font-size: 1.1111111111rem !important;
 }
 
+/*LOGIN PAGE*/
+.login-page {
+  display: flex;
+  margin-top: 6.9444444444rem;
+}
+.login-page .container {
+  width: unset;
+  display: flex;
+  flex-direction: column;
+}
+.login-page .container .page-link {
+  display: flex;
+  margin-bottom: 15.8333333333rem;
+  vertical-align: middle;
+}
+.login-page .container .page-link .left-arrow {
+  width: 0.9722222222rem;
+  height: 0.9722222222rem;
+  margin-right: 0.3472222222rem;
+}
+.login-page .container .page-link .main-link {
+  color: #333;
+  font-family: SF Pro Display;
+  font-size: 0.9722222222rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3888888889rem; /* 142.857% */
+}
+.login-page .container .form {
+  display: flex;
+  flex-direction: column;
+  width: 25.9027777778rem;
+}
+.login-page .container .form .form-title {
+  color: #333;
+  /* Desktop/H3 */
+  font-family: Oswald;
+  font-size: 1.8055555556rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 36.4px */
+  letter-spacing: -0.0180555556rem;
+}
+.login-page .container .form .input-container {
+  position: relative;
+}
+.login-page .container .form .input-container .input-field {
+  display: flex;
+  width: 100%;
+  padding: 1.25rem 1.3888888889rem 1.1805555556rem 1.3888888889rem;
+  border-radius: 0.6944444444rem;
+  background: #FFF;
+  border: none;
+  color: #333;
+  font-family: Roboto Flex;
+  font-size: 1.1111111111rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  margin-top: 2.0833333333rem;
+}
+.login-page .container .form .input-container label {
+  position: absolute;
+  top: 50%;
+  left: 1.3888888889rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #616161;
+  font-family: Roboto Flex;
+  font-size: 1.1111111111rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  transition: 0.3s ease-in-out;
+}
+.login-page .container .form .input-container input:focus + label {
+  top: 0.6944444444rem;
+  left: 1.1805555556rem;
+  font-size: 0.8333333333rem;
+}
+.login-page .container .form .input-container.has-value label {
+  top: 0.6944444444rem;
+  left: 1.1805555556rem;
+  font-size: 0.8333333333rem;
+}
+.login-page .container .form .btn {
+  width: 100%;
+  display: inline-flex;
+  font-family: "Roboto Flex";
+  padding: 1.25rem 2.7777777778rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.7361111111rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem; /* 100% */
+  border-radius: 0.1388888889rem;
+  background-color: #1285BB;
+}
+.login-page .container .form .btn:hover {
+  background-color: #90278E;
+}
+.login-page .container .form .radio-item2 {
+  display: flex;
+  margin-top: 1.3888888889rem;
+  margin-bottom: 2.9166666667rem;
+  align-items: center;
+}
+.login-page .container .form .radio-item2 .round-checkbox {
+  margin-right: 0.5555555556rem;
+  /* Скрыть стандартный внешний вид чекбокса */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1.1111111111rem;
+  height: 1.1111111111rem;
+  border-radius: 50%;
+  border: 0.1388888889rem solid #E2E4E9;
+  outline: none;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+.login-page .container .form .radio-item2 .round-checkbox:checked {
+  background-image: url("../img/radio-checked.svg");
+  background-size: cover;
+  border: none;
+}
+.login-page .container .form .radio-item2 .round-checkbox:hover {
+  border-color: #2A81DD;
+}
+.login-page .container .form .radio-item2 .radio-text {
+  margin-left: 0.5555555556rem;
+  color: #616161;
+  font-family: Roboto Flex;
+  font-size: 0.9722222222rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 20.8px */
+  letter-spacing: -0.0111111111rem;
+}
+.login-page .container .form .radio-item2 .pass-rec {
+  margin-left: auto;
+  text-decoration: none;
+  transition: 300ms ease-in-out;
+  color: #292974;
+  text-align: right;
+  font-family: SF Pro Display;
+  font-size: 0.9722222222rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.login-page .container .form .radio-item2 .pass-rec:hover {
+  color: #292974;
+}
+.login-page .login-img_bg {
+  background-image: url("../img/Login-img.svg");
+  width: 47.2222222222rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login-page .login-img {
+  width: 47.2222222222rem;
+}
+
 @media (max-width: 767px) {
   .highcharts-axis-labels text {
     font-size: 12px !important;
@@ -2988,7 +3189,7 @@ footer .rights {
     padding: 10px 16px;
     border-radius: 8px;
     border: none;
-    background: #2A81DD;
+    background: #00BFF2;
     text-transform: none;
     color: #FFF;
     text-align: center;
@@ -3528,6 +3729,7 @@ footer .rights {
     width: 100%;
     height: auto;
     margin-top: 25px;
+    margin-bottom: 30px;
   }
   .intro .container .container-text {
     display: flex;
@@ -3540,11 +3742,12 @@ footer .rights {
     width: 100%;
     font-size: 30px;
     color: #333;
+    font-family: Oswald;
     font-style: normal;
     font-weight: 600;
     line-height: 130%; /* 52px */
     letter-spacing: -0.3px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
   }
   .intro .container .container-text .middle-text {
     color: #00BFF2;
@@ -3576,6 +3779,7 @@ footer .rights {
     color: #333;
     width: 328px;
     font-size: 26px;
+    font-family: Oswald;
     font-style: normal;
     font-weight: 500;
     line-height: 140%; /* 44.8px */
@@ -3659,7 +3863,7 @@ footer .rights {
     position: absolute;
     /*top: px2rem(60);
     left: px2rem(130);*/
-    top: 85px;
+    top: 90px;
     left: 20px;
     /* width: 100%;*/
     z-index: 10;
@@ -3668,7 +3872,6 @@ footer .rights {
     font-size: 11px;
     font-family: SF Pro Display;
     font-style: normal;
-    font-weight: 600;
     line-height: 120%; /* 24px */
   }
   .map-section .container .map {
@@ -3701,6 +3904,7 @@ footer .rights {
   }
   .products .container .title {
     color: #333;
+    font-family: Oswald;
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
@@ -3725,7 +3929,7 @@ footer .rights {
     margin-right: auto;
     margin-left: auto;
     border-radius: 10px;
-    background: linear-gradient(180deg, rgba(143, 194, 255, 0.5) 0%, rgba(143, 194, 255, 0.5) 22.92%, rgba(92, 166, 255, 0.4) 86.98%), #2A81DD;
+    background: linear-gradient(180deg, rgba(143, 194, 255, 0.5) -5.3%, rgba(143, 194, 255, 0.5) 18.83%, rgba(92, 166, 255, 0.4) 86.29%), #2A81DD;
     box-shadow: 0 12px 16px 0 rgba(78, 132, 225, 0.05);
   }
   .products .banner .banner-content {
@@ -3762,13 +3966,13 @@ footer .rights {
     font-weight: 600;
     line-height: 18px;
     background: #FFF;
-    color: #2A81DD;
+    color: #292974;
     transition: color, background-color 0.3s ease-in-out;
     margin-bottom: 14px;
-  }
-  .products .banner .banner-content .btn:hover {
-    background: #333;
-    color: #FFF;
+    /*&:hover{
+      background: $black;
+      color: #FFF;
+    }*/
   }
   .products .banner .banner-img {
     display: none;
@@ -3991,21 +4195,21 @@ footer .rights {
   .contact-us .container .form-container .form .btn {
     width: 100%;
     display: inline-flex;
-    font-family: SF Pro Display;
-    background-color: #333;
+    background-color: #1285BB;
     padding: 18px 40px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 6.9444444444rem;
+    margin-bottom: 100px;
     text-align: center;
     font-family: SF Pro Display;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 18px; /* 100% */
+    border-radius: 2px;
   }
   .contact-us .container .form-container .form .btn:hover {
-    background-color: #2A81DD;
+    background-color: #90278E;
   }
   .contact-us .container .form-container .form .radio-group {
     display: flex;
@@ -4154,10 +4358,10 @@ footer .rights {
     width: 90%;
     padding: 15px 32px;
     border-radius: 8px;
-    border: 1px solid #2A81DD;
+    border: 1px solid #00BFF2;
     text-transform: none;
     background-color: #fff;
-    color: #2A81DD;
+    color: #00BFF2;
     text-align: center;
     font-family: Open Sans;
     font-size: 14px;
@@ -4167,7 +4371,7 @@ footer .rights {
     margin-bottom: 20px;
   }
   .popup .btn:hover {
-    background: #2A81DD;
+    background: #00BFF2;
     color: #FFFFFF;
   }
   .popup.active,
