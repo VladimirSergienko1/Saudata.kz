@@ -1447,14 +1447,14 @@
 html {
   /*font-size: 1vw;*/
   font-size: 0.85vw;
-  font-family: SF Pro Display;
+  font-family: Roboto Condensed;
   background-color: #FAFAFA;
 }
 
 body {
   /* font-family: "Open Sans";*/
   /*font-family: "TT Commons";*/
-  font-family: "SF Pro Display", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 button {
@@ -1524,7 +1524,7 @@ a {
 }
 
 .mrg-bot {
-  margin-bottom: 1.3888888889rem;
+  margin-bottom: 1.7361111111rem;
 }
 
 .bold {
@@ -1544,22 +1544,22 @@ a {
 }
 
 .pink {
-  color: #EB008B;
+  color: #90278E;
 }
 
 .btn {
   width: 15.2777777778rem;
   padding: 1.25rem 2.7777777778rem;
-  border-radius: 0.5555555556rem;
+  border-radius: 0.1388888889rem;
   border: none;
   background: #00BFF2;
   text-transform: none;
   color: #FFF;
   text-align: center;
-  font-family: Open Sans, sans-serif;
+  font-family: Roboto Condensed;
   font-size: 1.25rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.25rem;
   transition: background 0.3s ease-in-out;
 }
@@ -1596,6 +1596,7 @@ a {
   margin-bottom: 2.7777777778rem;
 }
 .grid .grid-item .grid-img {
+  margin-right: 0.9722222222rem;
   display: flex;
   width: 5.5555555556rem;
   height: 5.5555555556rem;
@@ -1621,6 +1622,10 @@ a {
   margin-top: 1.0416666667rem;
 }
 
+header {
+  background-color: #FFF;
+  box-shadow: 0 0.8333333333rem 1.1111111111rem 0 rgba(78, 132, 225, 0.05);
+}
 header .container {
   display: flex;
   /* padding: px2rem(26) 0 px2rem(25) 0;*/
@@ -1654,6 +1659,8 @@ header .container .flex_row .main-nav .nav-list .nav-item:hover {
 header .container .flex_row .main-nav .nav-list .nav-item .nav-link {
   text-decoration: none;
   transition: 300ms ease-out;
+  text-transform: uppercase;
+  font-family: Oswald;
   color: #616161;
   font-size: 1.1111111111rem;
   font-style: normal;
@@ -1687,10 +1694,12 @@ header .container .flex_row .flex_box .login {
   transition: color 300ms ease-out;
   text-align: right;
   font-size: 0.9722222222rem;
-  line-height: 1.25rem;
+  line-height: normal;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   margin-left: 2.0138888889rem;
+  font-family: Oswald;
+  text-transform: uppercase;
 }
 header .container .flex_row .flex_box .login:hover {
   color: #90278E;
@@ -1718,29 +1727,49 @@ header .container .flex_row .flex_box .login:hover {
 .intro .container .container-text .top-text {
   font-family: Oswald;
   /*  width: px2rem(480);*/
-  font-size: 2.7777777778rem;
+  font-size: 2.9166666667rem;
   color: #292974;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 130%; /* 52px */
-  letter-spacing: 0.0277777778rem;
   margin-bottom: 1.7361111111rem;
 }
 .intro .container .container-text .middle-text {
   color: #90278E;
-  font-size: 1.5277777778rem;
+  font-family: Oswald;
+  font-size: 1.3888888889rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 140%; /* 30.8px */
+  letter-spacing: 0.0138888889rem;
   margin-bottom: 1.3888888889rem;
 }
 .intro .container .container-text .bottom-text {
-  color: #363636;
+  font-family: Roboto Condensed;
+  color: #333;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 27px */
   margin-bottom: 2.7777777778rem;
+}
+.intro .container .container-text .btn {
+  padding: 1.25rem 2.7777777778rem;
+  border-radius: 0.1388888889rem;
+  border: none;
+  background: #FE139E;
+  text-transform: none;
+  font-family: Roboto Condensed;
+  color: #FFF;
+  text-align: center;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem;
+  transition: background 0.3s ease-in-out;
+}
+.intro .container .container-text .btn:hover {
+  background: #1285BB;
 }
 
 .about {
@@ -1758,12 +1787,13 @@ header .container .flex_row .flex_box .login:hover {
   font-style: normal;
   font-weight: 500;
   line-height: 140%; /* 44.8px */
-  letter-spacing: -0.025rem;
+  letter-spacing: 0.025rem;
   margin-bottom: 1.7361111111rem;
 }
 .about .container .about-content {
   width: 39.5833333333rem;
   margin-bottom: 3.8194444444rem;
+  color: #616161;
 }
 .about .container .grid-content {
   /*font-family: "Roboto Flex";*/
@@ -1792,7 +1822,7 @@ header .container .flex_row .flex_box .login:hover {
 }
 .map-section .container .map_popup p {
   font-size: 1.1111111111rem;
-  font-family: SF Pro Display;
+  font-family: Roboto Condensed;
   font-style: normal;
   line-height: 150%; /* 24px */
 }
@@ -1805,11 +1835,13 @@ header .container .flex_row .flex_box .login:hover {
 }
 .map-section .container .title {
   text-align: center;
+  font-family: Oswald;
   color: #292974;
-  font-size: 1.6666666667rem;
+  font-size: 1.3888888889rem;
   font-style: normal;
   font-weight: 700;
   line-height: 2.1527777778rem; /* 155% */
+  letter-spacing: 0.0138888889rem;
   margin-bottom: 3.4722222222rem;
 }
 
@@ -1822,14 +1854,17 @@ header .container .flex_row .flex_box .login:hover {
   position: relative;
 }
 .products .container .title {
+  font-family: Oswald;
   color: #292974;
-  font-size: 2.2222222222rem;
+  font-size: 2.5rem;
   font-style: normal;
-  font-weight: 600;
-  line-height: 150%; /* 48px */
+  font-weight: 500;
+  line-height: 140%; /* 48px */
+  letter-spacing: 0.025rem;
   margin-bottom: 1.7361111111rem;
 }
 .products .container .desc {
+  font-family: Roboto Condensed;
   color: #616161;
   font-size: 1.25rem;
   font-style: normal;
@@ -1856,24 +1891,26 @@ header .container .flex_row .flex_box .login:hover {
 .products .banner .banner-content .title {
   width: 40.2777777778rem;
   color: white;
+  font-family: Oswald;
   font-size: 1.9444444444rem;
   font-style: normal;
   font-weight: 500;
   line-height: 150%; /* 42px */
   margin-bottom: 1.0416666667rem;
+  letter-spacing: 0.0388888889rem;
 }
 .products .banner .banner-content .subtitle {
   width: 29.8611111111rem;
+  font-family: Roboto Condensed;
   color: #E2E4E9;
   font-size: 1.25rem;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 140%; /* 25.2px */
   letter-spacing: -0.0125rem;
   margin-bottom: 1.6666666667rem;
 }
 .products .banner .banner-content .btn {
-  font-family: SF Pro Display;
   width: 14.7222222222rem;
   /*width: px2rem(209);*/
   text-align: center;
@@ -1915,11 +1952,12 @@ header .container .flex_row .flex_box .login:hover {
 .detilize .container .title-block .detilize-title {
   width: 25.9027777778rem;
   color: #292974;
-  font-family: SF Pro Display;
-  font-size: 2.2222222222rem;
+  font-family: Oswald;
+  font-size: 2.5rem;
   font-style: normal;
-  font-weight: 600;
-  line-height: 130%; /* 41.6px */
+  font-weight: 500;
+  line-height: 140%; /* 41.6px */
+  letter-spacing: 0.025rem;
 }
 .detilize .container .title-block .detilize-img {
   width: 25.9027777778rem;
@@ -1939,20 +1977,21 @@ header .container .flex_row .flex_box .login:hover {
 }
 .detilize .container .grid .grid-item .grid-text .grid-text-title {
   color: #292974;
+  font-family: Roboto Condensed;
   margin-bottom: 1.3888888889rem;
   font-size: 1.25rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 140%; /* 25.2px */
 }
 .detilize .container .grid .grid-item .grid-text .content-text {
+  width: 22.9166666667rem;
   color: #333;
-  font-family: Roboto Flex;
-  font-size: 1.0416666667rem;
+  font-size: 1.1111111111rem;
   font-style: normal;
-  font-weight: 300;
-  line-height: 140%; /* 21px */
-  letter-spacing: -0.0104166667rem;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  letter-spacing: 0.0111111111rem;
 }
 
 .contact-us {
@@ -1970,7 +2009,6 @@ header .container .flex_row .flex_box .login:hover {
   transform: translateY(-50%);
   pointer-events: none;
   color: #616161;
-  font-family: Roboto Flex;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
@@ -1984,7 +2022,6 @@ header .container .flex_row .flex_box .login:hover {
   transform: translateY(-50%);
   pointer-events: none;
   color: #616161;
-  font-family: Roboto Flex;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
@@ -2012,17 +2049,19 @@ header .container .flex_row .flex_box .login:hover {
   margin-left: 1.3888888889rem;
 }
 .contact-us .container .title {
+  font-family: Oswald;
   color: #292974;
-  font-size: 2.2222222222rem;
+  font-size: 2.5rem;
   font-style: normal;
-  font-weight: 600;
-  line-height: 150%; /* 48px */
+  font-weight: 500;
+  line-height: 140%; /* 48px */
+  letter-spacing: 0.025rem;
   margin-bottom: 1.3888888889rem;
   width: 25.9027777778rem;
 }
 .contact-us .container .subtitle {
   color: #616161;
-  font-family: SF Pro Display;
+  font-family: Roboto Condensed;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
@@ -2040,6 +2079,7 @@ header .container .flex_row .flex_box .login:hover {
   justify-content: space-between;
 }
 .contact-us .container .form-container .form .input-field {
+  font-family: Roboto Condensed;
   display: flex;
   width: 22.2222222222rem;
   padding: 1.25rem 1.3888888889rem 1.1805555556rem 1.3888888889rem;
@@ -2047,7 +2087,6 @@ header .container .flex_row .flex_box .login:hover {
   background: #FFF;
   border: none;
   color: #333;
-  font-family: Roboto Flex;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
@@ -2076,17 +2115,15 @@ header .container .flex_row .flex_box .login:hover {
 .contact-us .container .form-container .form .btn {
   width: 16.0416666667rem;
   display: inline-flex;
-  font-family: SF Pro Display;
-  background-color: #1285BB;
+  background-color: #292974;
   padding: 1.25rem 2.7777777778rem;
   justify-content: center;
   align-items: center;
   margin-bottom: 6.9444444444rem;
   text-align: center;
-  font-family: SF Pro Display;
   font-size: 1.25rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.25rem; /* 100% */
 }
 .contact-us .container .form-container .form .btn:hover {
@@ -2135,7 +2172,6 @@ header .container .flex_row .flex_box .login:hover {
 }
 .contact-us .container .form-container .form .radio-group .radio-text {
   color: #616161;
-  font-family: Roboto Flex;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
@@ -2161,16 +2197,18 @@ footer .container .contacts {
   justify-content: space-between;
 }
 footer .container .contacts .contacts-title {
+  margin-right: 7.3611111111rem;
+  font-family: Oswald;
   color: #333;
-  font-family: SF Pro Display;
-  font-size: 2.2222222222rem;
+  font-size: 1.8055555556rem;
   font-style: normal;
-  font-weight: 600;
-  line-height: 100%; /* 32px */
+  font-weight: 400;
+  line-height: 140%; /* 32px */
+  letter-spacing: -0.0180555556rem;
 }
 footer .container .contacts .contacts-email {
   display: flex;
-  margin-left: 3.6805555556rem;
+  margin-right: 4.8611111111rem;
   align-items: flex-end;
 }
 footer .container .contacts .contacts-email .email-photo {
@@ -2183,8 +2221,7 @@ footer .container .contacts .contacts-email .email-text {
 footer .container .contacts .contacts-email .email-text a {
   text-decoration: none;
   display: flex;
-  color: #00BFF2;
-  font-family: Roboto Flex;
+  color: #90278E;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 500;
@@ -2193,7 +2230,7 @@ footer .container .contacts .contacts-email .email-text a {
 }
 footer .container .contacts .contacts-address {
   display: flex;
-  margin-left: 3.4722222222rem;
+  margin-right: 13.8888888889rem;
   align-items: flex-end;
 }
 footer .container .contacts .contacts-address .address-photo {
@@ -2204,7 +2241,6 @@ footer .container .contacts .contacts-address .address-text {
   margin-left: 0.6944444444rem;
   display: flex;
   color: #333;
-  font-family: Roboto Flex;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 500;
@@ -2267,7 +2303,6 @@ footer .container .links .linkedin:hover path {
 footer .rights {
   color: #616161;
   text-align: center;
-  font-family: Roboto Flex;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
@@ -2320,7 +2355,6 @@ footer .rights {
   display: flex;
   color: #333;
   text-align: center;
-  font-family: SF Pro Display;
   font-size: 2.2222222222rem;
   font-style: normal;
   font-weight: 500;
@@ -2329,7 +2363,6 @@ footer .rights {
 }
 .popup .subtitle {
   color: #616161;
-  font-family: Roboto Flex;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 300;
@@ -2348,7 +2381,6 @@ footer .rights {
 }
 .popup .desc .desc-text {
   color: #333;
-  font-family: SF Pro Display;
   font-size: 1.3888888889rem;
   font-style: normal;
   font-weight: 500;
@@ -2357,7 +2389,6 @@ footer .rights {
 }
 .popup .desc .desc-subtext {
   color: #616161;
-  font-family: Roboto Flex;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
@@ -2404,7 +2435,6 @@ footer .rights {
 }
 .indexes .container .page-link .main-link {
   color: #333;
-  font-family: SF Pro Display;
   font-size: 0.9722222222rem;
   font-style: normal;
   font-weight: 400;
@@ -2412,7 +2442,6 @@ footer .rights {
 }
 .indexes .container .page-link .sub-link {
   color: #B4B4B4;
-  font-family: SF Pro Display;
   font-size: 0.9722222222rem;
   font-style: normal;
   font-weight: 400;
@@ -2454,7 +2483,6 @@ footer .rights {
 .indexes .container .menu .menu-item .menu-item-title {
   display: inline-block;
   color: #333;
-  font-family: SF Pro Display;
   font-size: 1.3888888889rem;
   font-style: normal;
   font-weight: 500;
@@ -2505,7 +2533,6 @@ footer .rights {
   transform: translateY(-50%);
   pointer-events: none;
   color: #616161;
-  font-family: Roboto Flex;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
@@ -2519,7 +2546,6 @@ footer .rights {
   transform: translateY(-50%);
   pointer-events: none;
   color: #616161;
-  font-family: Roboto Flex;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
@@ -2562,7 +2588,6 @@ footer .rights {
   color: #333;
   font-size: 1.5277777778rem;
   font-style: normal;
-  font-family: SF Pro Display;
   font-weight: 500;
   line-height: 140%; /* 36.4px */
   margin-bottom: 1.3888888889rem;
@@ -2570,7 +2595,6 @@ footer .rights {
 }
 .indexes .container .form_mobile .container .subtitle {
   color: #616161;
-  font-family: SF Pro Display;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -2596,7 +2620,6 @@ footer .rights {
   background: #FFF;
   border: none;
   color: #333;
-  font-family: Roboto Flex;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
@@ -2625,7 +2648,6 @@ footer .rights {
 .indexes .container .form_mobile .container .form-container .form .btn {
   width: 100%;
   display: inline-flex;
-  font-family: SF Pro Display;
   background-color: #333;
   padding: 1.25rem 2.7777777778rem;
   justify-content: center;
@@ -2684,7 +2706,6 @@ footer .rights {
 .indexes .container .form_mobile .container .form-container .form .radio-group .radio-text {
   margin-left: 0.5555555556rem;
   color: #616161;
-  font-family: Roboto Flex;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
@@ -2701,7 +2722,6 @@ footer .rights {
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
   color: #333;
-  font-family: SF Pro Display;
   font-size: 1.3888888889rem;
   font-style: normal;
   font-weight: 500;
@@ -2740,6 +2760,7 @@ footer .rights {
   align-items: flex-start;
   /* margin-right: px2rem(15);*/
   background-size: cover;
+  margin-right: 1.0416666667rem;
 }
 #slider_desktop .slider_item .grid-text {
   display: flex;
@@ -2747,16 +2768,18 @@ footer .rights {
   flex-direction: column;
 }
 #slider_desktop .slider_item .grid-text .grid-tag {
-  color: #00BFF2;
+  font-family: Oswald;
+  color: #90278E;
   font-size: 0.9722222222rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 100%; /* 14px */
 }
 #slider_desktop .slider_item .grid-text .grid-text-title {
+  font-family: Oswald;
   display: flex;
-  color: #90278E;
-  font-size: 1.6666666667rem;
+  color: #292974;
+  font-size: 1.5277777778rem;
   font-style: normal;
   font-weight: 500;
   line-height: 150%; /* 36px */
@@ -2768,6 +2791,7 @@ footer .rights {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
+  letter-spacing: 0.0111111111rem;
 }
 #slider_desktop .slider_item .grid-text .grid-content-margin-bot {
   color: #5C5C5C;
@@ -2903,6 +2927,7 @@ footer .rights {
 /*Наведение на dropdown*/
 .select2-dropdown .select2-results__option {
   transition: color 0.3s ease-in-out;
+  font-family: Oswald;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -2912,6 +2937,7 @@ footer .rights {
   padding-right: 1.3888888889rem;
   overflow: inherit;
   line-height: 1.9444444444rem;
+  font-family: Oswald;
 }
 
 /* Изменение цвета текста при наведении на элемент выпадающего списка */
@@ -3031,7 +3057,6 @@ footer .rights {
 }
 .login-page .container .page-link .main-link {
   color: #333;
-  font-family: SF Pro Display;
   font-size: 0.9722222222rem;
   font-style: normal;
   font-weight: 400;
@@ -3063,7 +3088,6 @@ footer .rights {
   background: #FFF;
   border: none;
   color: #333;
-  font-family: Roboto Flex;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
@@ -3077,7 +3101,6 @@ footer .rights {
   transform: translateY(-50%);
   pointer-events: none;
   color: #616161;
-  font-family: Roboto Flex;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
@@ -3097,7 +3120,6 @@ footer .rights {
 .login-page .container .form .btn {
   width: 100%;
   display: inline-flex;
-  font-family: "Roboto Flex";
   padding: 1.25rem 2.7777777778rem;
   justify-content: center;
   align-items: center;
@@ -3145,7 +3167,6 @@ footer .rights {
 .login-page .container .form .radio-item2 .radio-text {
   margin-left: 0.5555555556rem;
   color: #616161;
-  font-family: Roboto Flex;
   font-size: 0.9722222222rem;
   font-style: normal;
   font-weight: 400;
@@ -3158,7 +3179,6 @@ footer .rights {
   transition: 300ms ease-in-out;
   color: #292974;
   text-align: right;
-  font-family: SF Pro Display;
   font-size: 0.9722222222rem;
   font-style: normal;
   font-weight: 500;
@@ -3214,7 +3234,7 @@ footer .rights {
     background: #292974;
   }
   header {
-    background-color: #FAFAFA;
+    background-color: #FFF;
     height: 60px;
     position: fixed;
     top: 0;
@@ -3309,12 +3329,13 @@ footer .rights {
   .menu_mobile .container .nav-list .nav-item .nav-link {
     text-decoration: none;
     transition: color 300ms ease-out;
+    font-family: Oswald;
     color: #616161;
-    font-family: SF Pro Display;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 16px */
+    text-transform: uppercase;
   }
   .menu_mobile .container .nav-list .nav-item .nav-link:hover {
     color: #292974;
@@ -3322,7 +3343,7 @@ footer .rights {
   .menu_mobile .container .login {
     display: flex;
     text-decoration: none;
-    color: #2A81DD;
+    color: #292974;
     transition: color 300ms ease-out;
     text-align: right;
     font-size: 14px;
@@ -3331,6 +3352,7 @@ footer .rights {
     line-height: normal;
     margin-top: 20px;
     margin-bottom: 22px;
+    text-transform: uppercase;
     /*margin-left: px2rem(29);*/
   }
   .menu_mobile .container .login:hover {
@@ -3345,7 +3367,6 @@ footer .rights {
   }
   .menu_mobile .container .contacts .contacts-title {
     color: #333;
-    font-family: SF Pro Display;
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
@@ -3367,8 +3388,7 @@ footer .rights {
   .menu_mobile .container .contacts .contacts-email .email-text a {
     text-decoration: none;
     display: flex;
-    color: #2A81DD;
-    font-family: Roboto Flex;
+    color: #90278E;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -3447,7 +3467,6 @@ footer .rights {
   }
   .menu_mobile .container .btn {
     align-items: center;
-    font-family: SF Pro Display;
     width: 100%;
     padding: 14px 24px;
     /*width: px2rem(209);*/
@@ -3456,7 +3475,8 @@ footer .rights {
     font-style: normal;
     font-weight: 600;
     line-height: 18px;
-    background: #00BFF2;
+    border-radius: 2px;
+    background: #FE139E;
     color: #fff;
     transition: color, background-color 0.3s ease-in-out;
     margin-bottom: 14px;
@@ -3738,7 +3758,7 @@ footer .rights {
   .intro .container img {
     width: 100%;
     height: auto;
-    margin-top: 25px;
+    margin-top: 51px;
     margin-bottom: 30px;
   }
   .intro .container .container-text {
@@ -3751,16 +3771,17 @@ footer .rights {
   .intro .container .container-text .top-text {
     width: 100%;
     font-size: 30px;
-    color: #333;
+    color: #292974;
     font-family: Oswald;
     font-style: normal;
     font-weight: 600;
     line-height: 130%; /* 52px */
     letter-spacing: -0.3px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
   .intro .container .container-text .middle-text {
-    color: #00BFF2;
+    font-family: Oswald;
+    color: #90278E;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -3773,7 +3794,26 @@ footer .rights {
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 27px */
+    letter-spacing: 0.16px;
     margin-bottom: 25px;
+  }
+  .intro .container .container-text .btn {
+    padding: 14px 24px;
+    border-radius: 2px;
+    border: none;
+    background: #FE139E;
+    text-transform: none;
+    font-family: Roboto Condensed;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    transition: background 0.3s ease-in-out;
+  }
+  .intro .container .container-text .btn:hover {
+    background: #1285BB;
   }
   .about {
     padding-top: 4.1666666667rem;
@@ -3786,14 +3826,14 @@ footer .rights {
     flex-direction: column;
   }
   .about .container .title {
-    color: #333;
+    color: #292974;
     width: 328px;
     font-size: 26px;
     font-family: Oswald;
     font-style: normal;
     font-weight: 500;
     line-height: 140%; /* 44.8px */
-    letter-spacing: -0.26px;
+    letter-spacing: 0.26px;
     margin-bottom: 20px;
   }
   .about .container .about-content {
@@ -3803,6 +3843,7 @@ footer .rights {
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
     margin-bottom: 5px;
   }
   .about .container .grid {
@@ -3839,20 +3880,21 @@ footer .rights {
   }
   .about .container .grid .grid-item .grid-text .grid-text-title {
     display: flex;
-    color: #333;
+    font-family: Oswald;
+    color: #292974;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 130%; /* 26px */
-    margin-bottom: 0.6944444444rem;
+    margin-bottom: 10px;
   }
   .about .container .grid .grid-item .grid-text .content-text {
     color: #333;
-    font-family: SF Pro Display;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
   }
   .about .container .grid .grid-item .grid-text .grid-content-next-line {
     width: 100%;
@@ -3867,7 +3909,7 @@ footer .rights {
     flex-direction: column;
     align-items: center;
     width: 90%;
-    padding-top: 25px;
+    padding-top: 0;
   }
   .map-section .container .map_popup {
     position: absolute;
@@ -3879,8 +3921,7 @@ footer .rights {
     z-index: 10;
   }
   .map-section .container .map_popup p {
-    font-size: 11px;
-    font-family: SF Pro Display;
+    font-size: 12px;
     font-style: normal;
     line-height: 120%; /* 24px */
   }
@@ -3892,13 +3933,15 @@ footer .rights {
     margin-bottom: 25px;
   }
   .map-section .container .title {
+    color: #292974;
     display: flex;
     text-align: initial;
-    color: #333;
+    font-family: Oswald;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 140%; /* 25.2px */
+    letter-spacing: 0.18px;
     margin-bottom: 45px;
   }
   .products {
@@ -3919,7 +3962,7 @@ footer .rights {
     font-style: normal;
     font-weight: 500;
     line-height: 140%; /* 36.4px */
-    letter-spacing: -0.26px;
+    letter-spacing: 0.26px;
     margin-bottom: 15px;
   }
   .products .container .desc {
@@ -3935,7 +3978,7 @@ footer .rights {
     display: flex;
     align-self: center;
     width: 95%;
-    margin-top: 40px;
+    margin-top: 35px;
     margin-right: auto;
     margin-left: auto;
     border-radius: 10px;
@@ -3948,6 +3991,7 @@ footer .rights {
     padding: 10px 20px 0 10px;
   }
   .products .banner .banner-content .title {
+    font-family: Oswald;
     width: 90%;
     color: white;
     font-size: 24px;
@@ -3961,15 +4005,17 @@ footer .rights {
     color: #E2E4E9;
     font-size: 16px;
     font-style: normal;
-    font-weight: 300;
-    line-height: 140%; /* 25.2px */
+    font-weight: 400;
+    line-height: 150%; /* 25.2px */
+    letter-spacing: 0.16px;
     margin-bottom: 20px;
   }
   .products .banner .banner-content .btn {
+    padding: 14px 24px;
+    border-radius: 2px;
     align-items: center;
-    font-family: SF Pro Display;
     width: 100%;
-    /*width: px2rem(209);*/
+    font-family: Roboto Condensed;
     text-align: center;
     font-size: 16px;
     font-style: normal;
@@ -4010,14 +4056,14 @@ footer .rights {
     justify-content: space-between;
   }
   .detilize .container .title-block .detilize-title {
+    font-family: Oswald;
     width: 100%;
     color: #333;
-    font-family: SF Pro Display;
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
     line-height: 140%; /* 36.4px */
-    letter-spacing: -0.26px;
+    letter-spacing: 0.26px;
     margin-bottom: 30px;
   }
   .detilize .container .title-block .detilize-img {
@@ -4038,10 +4084,10 @@ footer .rights {
     width: 100%;
   }
   .detilize .container .grid .grid-item .grid-text .grid-text-title {
+    font-family: Oswald;
     width: 100%;
-    color: #333;
+    color: #292974;
     font-style: normal;
-    font-family: SF Pro Display;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -4049,14 +4095,13 @@ footer .rights {
     margin-bottom: 20px;
   }
   .detilize .container .grid .grid-item .grid-text .content-text {
-    width: 90%;
+    width: 95%;
     color: #333;
-    font-family: Roboto Flex;
-    font-size: 15px;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 300;
-    line-height: 140%; /* 21px */
-    letter-spacing: -0.15px;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: 0.16px;
     margin-bottom: 20px;
   }
   .contact-us {
@@ -4076,7 +4121,6 @@ footer .rights {
     transform: translateY(-50%);
     pointer-events: none;
     color: #616161;
-    font-family: Roboto Flex;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -4092,7 +4136,6 @@ footer .rights {
     /*  transform: translateY(-50%);*/
     pointer-events: none;
     color: #616161;
-    font-family: Roboto Flex;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -4136,18 +4179,17 @@ footer .rights {
     margin-left: 1.3888888889rem;
   }
   .contact-us .container .title {
-    color: #333;
+    color: #292974;
+    font-family: Oswald;
     font-size: 26px;
     font-style: normal;
-    font-family: SF Pro Display;
     font-weight: 500;
     line-height: 140%; /* 36.4px */
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     width: 100%;
   }
   .contact-us .container .subtitle {
     color: #616161;
-    font-family: SF Pro Display;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -4174,7 +4216,6 @@ footer .rights {
     background: #FFF;
     border: none;
     color: #333;
-    font-family: Roboto Flex;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -4205,13 +4246,12 @@ footer .rights {
   .contact-us .container .form-container .form .btn {
     width: 100%;
     display: inline-flex;
-    background-color: #1285BB;
+    background-color: #292974;
     padding: 18px 40px;
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
     text-align: center;
-    font-family: SF Pro Display;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -4267,7 +4307,6 @@ footer .rights {
   .contact-us .container .form-container .form .radio-group .radio-text {
     margin-left: 8px;
     color: #616161;
-    font-family: Roboto Flex;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -4320,7 +4359,6 @@ footer .rights {
     display: flex;
     color: #333;
     text-align: center;
-    font-family: SF Pro Display;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
@@ -4329,7 +4367,6 @@ footer .rights {
   .popup .subtitle {
     color: #616161;
     /* Text */
-    font-family: SF Pro Display;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -4348,7 +4385,6 @@ footer .rights {
   }
   .popup .desc .desc-text {
     color: #333;
-    font-family: SF Pro Display;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -4357,7 +4393,6 @@ footer .rights {
   }
   .popup .desc .desc-subtext {
     color: #616161;
-    font-family: SF Pro Display;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -4412,7 +4447,7 @@ footer .rights {
     background: #FFF;
     margin-right: 2.2222222222rem;
     box-shadow: 0 12px 16px 0 rgba(78, 132, 225, 0.05);
-    margin-bottom: 2.0833333333rem;
+    margin-bottom: 10px;
     /*border: 1px solid black;*/
   }
   #slider_mobile .slider_item .grid-img {
@@ -4430,7 +4465,8 @@ footer .rights {
     margin-bottom: 10px;
   }
   #slider_mobile .slider_item .grid-text .grid-tag {
-    color: #2A81DD;
+    font-family: Oswald;
+    color: #90278E;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -4444,7 +4480,7 @@ footer .rights {
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 36px */
-    margin-bottom: 0.6944444444rem;
+    margin-bottom: 10px;
   }
   #slider_mobile .slider_item .grid-text .content-text {
     color: #5C5C5C;
@@ -4453,13 +4489,15 @@ footer .rights {
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
   }
   #slider_mobile .slider_item .grid-text .grid-content-margin-bot {
     color: #5C5C5C;
     margin-bottom: 15px;
+    letter-spacing: 0.16px;
   }
   footer {
-    padding-top: 30px;
+    /*    padding-top: 30px;*/
     padding-bottom: 30px;
     width: 100%;
     flex-direction: column;
@@ -4482,7 +4520,6 @@ footer .rights {
   }
   footer .container .contacts .contacts-title {
     color: #333;
-    font-family: SF Pro Display;
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
@@ -4502,8 +4539,7 @@ footer .rights {
   footer .container .contacts .contacts-email .email-text a {
     text-decoration: none;
     display: flex;
-    color: #2A81DD;
-    font-family: Roboto Flex;
+    color: #90278E;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -4524,7 +4560,6 @@ footer .rights {
     display: flex;
     width: 100%;
     color: #333;
-    font-family: Roboto Flex;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -4583,7 +4618,6 @@ footer .rights {
   footer .rights {
     color: #616161;
     text-align: center;
-    font-family: Roboto Flex;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -4770,7 +4804,6 @@ footer .rights {
   }
   .indexes .container .page-link .main-link {
     color: #333;
-    font-family: SF Pro Display;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -4778,7 +4811,6 @@ footer .rights {
   }
   .indexes .container .page-link .sub-link {
     color: #B4B4B4;
-    font-family: SF Pro Display;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -4830,7 +4862,6 @@ footer .rights {
     transform: translateY(-50%);
     pointer-events: none;
     color: #616161;
-    font-family: Roboto Flex;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -4846,7 +4877,6 @@ footer .rights {
     /*  transform: translateY(-50%);*/
     pointer-events: none;
     color: #616161;
-    font-family: Roboto Flex;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -4893,7 +4923,6 @@ footer .rights {
     color: #333;
     font-size: 26px;
     font-style: normal;
-    font-family: SF Pro Display;
     font-weight: 500;
     line-height: 140%; /* 36.4px */
     margin-bottom: 30px;
@@ -4901,7 +4930,6 @@ footer .rights {
   }
   .indexes .container .flex_box .form_mobile .container .subtitle {
     color: #616161;
-    font-family: SF Pro Display;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -4927,7 +4955,6 @@ footer .rights {
     background: #FFF;
     border: none;
     color: #333;
-    font-family: Roboto Flex;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -4956,7 +4983,6 @@ footer .rights {
   .indexes .container .flex_box .form_mobile .container .form-container .form .btn {
     width: 100%;
     display: inline-flex;
-    font-family: SF Pro Display;
     border-radius: 2px;
     background: var(--Blue2, #1285BB);
     padding: 18px 40px;
@@ -4964,7 +4990,6 @@ footer .rights {
     align-items: center;
     margin-bottom: 6.9444444444rem;
     text-align: center;
-    font-family: SF Pro Display;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -5019,7 +5044,6 @@ footer .rights {
   .indexes .container .flex_box .form_mobile .container .form-container .form .radio-group .radio-text {
     margin-left: 8px;
     color: #616161;
-    font-family: Roboto Flex;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -5056,7 +5080,6 @@ footer .rights {
   .indexes .container .flex_box .menu .menu-item .menu-item-title {
     display: inline-block;
     color: #333;
-    font-family: SF Pro Display;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -5082,7 +5105,6 @@ footer .rights {
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
     color: #333;
-    font-family: SF Pro Display;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;

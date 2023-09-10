@@ -50,13 +50,13 @@ $light-blue: #00BFF2;
 html {
   /*font-size: 1vw;*/
   font-size: 0.85vw;
-  font-family: SF Pro Display;
+  font-family: Roboto Condensed;
   background-color: $background-gray;
 }
 body {
  /* font-family: "Open Sans";*/
   /*font-family: "TT Commons";*/
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 
 
   // background-color: #ffc8b4;
@@ -122,7 +122,7 @@ a {
 
 //General styles
 .mrg-bot{
-  margin-bottom: px2rem(20);
+  margin-bottom: px2rem(25);
 }
 .bold{
   font-weight: bold;
@@ -137,22 +137,22 @@ a {
   color: $Accent;
 }
 .pink{
-  color: $pink;
+  color: $Accent-pink;
 }
 .btn{
   width: px2rem(220);
   padding: px2rem(18) px2rem(40);
-  border-radius: px2rem(8);
+  border-radius: px2rem(2);
   border: none;
   background: $light-blue;
   text-transform: none;
 
   color:  #FFF;
   text-align: center;
-  font-family: Open Sans, sans-serif;
+  font-family: Roboto Condensed;
   font-size: px2rem(18);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: px2rem(18);
   transition: background 0.3s ease-in-out;
 
@@ -190,6 +190,7 @@ a {
       margin-bottom: px2rem(40);
     }
     .grid-img{
+      margin-right: px2rem(14);
       display: flex;
       width: px2rem(80);
       height: px2rem(80);
@@ -222,6 +223,8 @@ a {
 
 
 header {
+  background-color: #FFF;
+  box-shadow: 0 px2rem(12) px2rem(16) 0 rgba(78, 132, 225, 0.05);
   .container {
     display: flex;
    /* padding: px2rem(26) 0 px2rem(25) 0;*/
@@ -267,7 +270,9 @@ header {
             .nav-link {
               text-decoration: none;
               transition: 300ms ease-out;
+              text-transform: uppercase;
 
+              font-family: Oswald;
               color: $gray;
               font-size: px2rem(16);
               font-style: normal;
@@ -310,12 +315,13 @@ header {
           transition: color 300ms ease-out;
           text-align: right;
           font-size: px2rem(14);
-          line-height: px2rem(18);
+          line-height: normal;
           font-style: normal;
-          font-weight: 700;
+          font-weight: 600;
           //line-height: normal;
           margin-left: px2rem(29);
-
+          font-family: Oswald;
+          text-transform: uppercase;
           &:hover {
             color: $Accent_pink;
           }
@@ -349,29 +355,52 @@ header {
      //FIXME width unmatch
         font-family: Oswald;
       /*  width: px2rem(480);*/
-        font-size: px2rem(40);
+        font-size: px2rem(42);
         color: $Accent;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 130%; /* 52px */
-        letter-spacing: px2rem(0.4);
         margin-bottom: px2rem(25);
       }
       .middle-text{
         color: $Accent_pink;
-        font-size: px2rem(22);
+        font-family: Oswald;
+
+        font-size: px2rem(20);
         font-style: normal;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 140%; /* 30.8px */
+        letter-spacing: px2rem(0.2);
         margin-bottom: px2rem(20);
       }
       .bottom-text{
-        color: #363636;
+        font-family: Roboto Condensed;
+        color: $black;
         font-size: px2rem(18);
         font-style: normal;
         font-weight: 400;
         line-height: 150%; /* 27px */
         margin-bottom: px2rem(40);
+      }
+      .btn{
+        padding: px2rem(18) px2rem(40);
+        border-radius: px2rem(2);
+        border: none;
+        background: #FE139E;
+        text-transform: none;
+        font-family: Roboto Condensed;
+
+        color:  #FFF;
+        text-align: center;
+        font-size: px2rem(18);
+        font-style: normal;
+        font-weight: 500;
+        line-height: px2rem(18);
+        transition: background 0.3s ease-in-out;
+
+        &:hover{
+          background: #1285BB;
+        }
       }
 
     }
@@ -392,12 +421,13 @@ header {
       font-style: normal;
       font-weight: 500;
       line-height: 140%; /* 44.8px */
-      letter-spacing: px2rem(-0.36);
+      letter-spacing: px2rem(0.36);
       margin-bottom: px2rem(25);
     }
     .about-content{
       width: px2rem(570);
       margin-bottom: px2rem(55);
+      color: #616161;
     }
     .grid-content{
       /*font-family: "Roboto Flex";*/
@@ -426,7 +456,7 @@ header {
 
       p{
         font-size: px2rem(16);
-        font-family: SF Pro Display;
+        font-family: Roboto Condensed;
         font-style: normal;
           line-height: 150%; /* 24px */
       }
@@ -443,11 +473,13 @@ header {
 
     .title{
       text-align: center;
+      font-family: Oswald;
       color: $Accent;
-      font-size: px2rem(24);
+      font-size: px2rem(20);
       font-style: normal;
       font-weight: 700;
       line-height: px2rem(31); /* 155% */
+      letter-spacing: px2rem(0.2);
       margin-bottom: px2rem(50);
     }
   }
@@ -460,14 +492,17 @@ header {
   .container{
     position: relative;;
     .title{
+      font-family: Oswald;
       color: $Accent;
-      font-size: px2rem(32);
+      font-size: px2rem(36);
       font-style: normal;
-      font-weight: 600;
-      line-height: 150%; /* 48px */
+      font-weight: 500;
+      line-height: 140%; /* 48px */
+      letter-spacing: px2rem(0.36);
       margin-bottom: px2rem(25)
     }
     .desc{
+      font-family: Roboto Condensed;
       color: $gray;
       font-size: px2rem(18);
       font-style: normal;
@@ -504,25 +539,27 @@ header {
       .title{
         width: px2rem(580);
         color: white;
+        font-family: Oswald;
         font-size: px2rem(28);
         font-style: normal;
         font-weight: 500;
         line-height: 150%; /* 42px */
         margin-bottom: px2rem(15);
+        letter-spacing: px2rem(0.56);
       }
       .subtitle{
         width: px2rem(430);
+        font-family: Roboto Condensed;
 
         color:  #E2E4E9;
         font-size: px2rem(18);
         font-style: normal;
-        font-weight: 300;
+        font-weight: 400;
         line-height: 140%; /* 25.2px */
         letter-spacing: px2rem(-0.18);
         margin-bottom: px2rem(24);
       }
       .btn{
-        font-family: SF Pro Display;
         width: px2rem(212);
         //FIXME FONT
 
@@ -568,11 +605,12 @@ header {
       .detilize-title{
         width: px2rem(373);
         color: $Accent;
-        font-family: SF Pro Display;
-        font-size: px2rem(32);
+        font-family: Oswald;
+        font-size: px2rem(36);
         font-style: normal;
-        font-weight: 600;
-        line-height: 130%; /* 41.6px */
+        font-weight: 500;
+        line-height: 140%; /* 41.6px */
+        letter-spacing: px2rem(0.36);
       }
 
       .detilize-img{
@@ -598,21 +636,23 @@ header {
 
           .grid-text-title {
             color: $Accent;
+            font-family: Roboto Condensed;
             margin-bottom: px2rem(20);
             font-size: px2rem(18);
             font-style: normal;
-            font-weight: 600;
+            font-weight: 700;
             line-height: 140%; /* 25.2px */
           }
           .content-text{
+            width: px2rem(330);
             color: $black;
             //FIXME FONT
-            font-family: Roboto Flex;
-            font-size: px2rem(15);
+
+            font-size: px2rem(16);
             font-style: normal;
-            font-weight: 300;
-            line-height: 140%; /* 21px */
-            letter-spacing: px2rem(-0.15);
+            font-weight: 400;
+            line-height: 150%; /* 21px */
+            letter-spacing: px2rem(0.16);
           }
         }
       }
@@ -634,7 +674,7 @@ header {
       transform: translateY(-50%);
       pointer-events: none;
       color: $gray;
-      font-family: Roboto Flex;
+
       font-size: px2rem(16);
       font-style: normal;
       font-weight: 400;
@@ -648,7 +688,7 @@ header {
       transform: translateY(-50%);
       pointer-events: none;
       color: $gray;
-      font-family: Roboto Flex;
+
       font-size: px2rem(16);
       font-style: normal;
       font-weight: 400;
@@ -682,17 +722,19 @@ header {
     }
 
     .title{
+      font-family: Oswald;
       color: $Accent;
-      font-size: px2rem(32);
+      font-size: px2rem(36);
       font-style: normal;
-      font-weight: 600;
-      line-height: 150%; /* 48px */
+      font-weight: 500;
+      line-height: 140%; /* 48px */
+      letter-spacing: px2rem(0.36);
       margin-bottom: px2rem(20);
       width: px2rem(373);
     }
     .subtitle{
       color: $gray;
-      font-family: SF Pro Display;
+      font-family: Roboto Condensed;
       font-size: px2rem(18);
       font-style: normal;
       font-weight: 400;
@@ -710,6 +752,7 @@ header {
         justify-content: space-between;
 
         .input-field{
+          font-family: Roboto Condensed;
           display: flex;
           width: px2rem(320);
           padding: px2rem(18) px2rem(20) px2rem(17) px2rem(20);
@@ -718,7 +761,6 @@ header {
           border: none;
 
           color: $black;
-          font-family: Roboto Flex;
           font-size: px2rem(16);
           font-style: normal;
           font-weight: 400;
@@ -748,18 +790,18 @@ header {
         .btn{
           width: px2rem(231);
           display: inline-flex;
-          font-family: SF Pro Display;
-          background-color: #1285BB;
+
+          background-color: $Accent;
           padding: px2rem(18) px2rem(40);
           justify-content: center;
           align-items: center;
           margin-bottom: px2rem(100);
 
           text-align: center;
-          font-family: SF Pro Display;
+
           font-size: px2rem(18);
           font-style: normal;
-          font-weight: 600;
+          font-weight: 500;
           line-height: px2rem(18); /* 100% */
 
           &:hover{
@@ -813,7 +855,7 @@ header {
           }
           .radio-text{
             color: $gray;
-            font-family: Roboto Flex;
+
             font-size: px2rem(16);
             font-style: normal;
             font-weight: 400;
@@ -841,17 +883,19 @@ footer{
       align-items: center;
       justify-content: space-between;
       .contacts-title{
+        margin-right: px2rem(106);
+        font-family: Oswald;
         color: $black;
-        font-family: SF Pro Display;
-        font-size: px2rem(32);
+        font-size: px2rem(26);
         font-style: normal;
-        font-weight: 600;
-        line-height: 100%; /* 32px */
+        font-weight: 400;
+        line-height: 140%; /* 32px */
+        letter-spacing: px2rem(-0.26);
 
       }
       .contacts-email{
         display: flex;
-        margin-left: px2rem(53);
+        margin-right: px2rem(70);
         align-items: flex-end;
 
         .email-photo{
@@ -866,8 +910,8 @@ footer{
           a{
             text-decoration: none;
             display: flex;
-            color: $light-blue;
-            font-family: Roboto Flex;
+            color: $Accent_pink;
+
             font-size: px2rem(16);
             font-style: normal;
             font-weight: 500;
@@ -879,7 +923,7 @@ footer{
       }
       .contacts-address{
         display: flex;
-        margin-left: px2rem(50);
+        margin-right: px2rem(200);
         align-items: flex-end;
         .address-photo{
           display: flex;
@@ -890,7 +934,7 @@ footer{
           margin-left: px2rem(10);
           display: flex;
           color: $black;
-          font-family: Roboto Flex;
+
           font-size: px2rem(16);
           font-style: normal;
           font-weight: 500;
@@ -983,7 +1027,7 @@ footer{
   .rights{
     color: $gray;
     text-align: center;
-    font-family: Roboto Flex;
+
     font-size: px2rem(16);
     font-style: normal;
     font-weight: 400;
@@ -1041,7 +1085,6 @@ footer{
     display: flex;
     color: $black;
     text-align: center;
-    font-family: SF Pro Display;
     font-size: px2rem(32);
     font-style: normal;
     font-weight: 500;
@@ -1050,7 +1093,7 @@ footer{
   }
   .subtitle{
     color: $gray;
-    font-family: Roboto Flex;
+
     font-size: px2rem(18);
     font-style: normal;
     font-weight: 300;
@@ -1070,7 +1113,6 @@ footer{
 
     .desc-text{
       color: $black;
-      font-family: SF Pro Display;
       font-size: px2rem(20);
       font-style: normal;
       font-weight: 500;
@@ -1079,7 +1121,7 @@ footer{
     }
     .desc-subtext{
       color: $gray;
-      font-family: Roboto Flex;
+
       font-size: px2rem(16);
       font-style: normal;
       font-weight: 400;
@@ -1134,7 +1176,6 @@ footer{
       }
       .main-link{
         color: $black;
-        font-family: SF Pro Display;
         font-size: px2rem(14);
         font-style: normal;
         font-weight: 400;
@@ -1142,7 +1183,6 @@ footer{
       }
       .sub-link{
         color: #B4B4B4;
-        font-family: SF Pro Display;
         font-size: px2rem(14);
         font-style: normal;
         font-weight: 400;
@@ -1190,7 +1230,6 @@ footer{
         .menu-item-title {
           display: inline-block;
           color: $black;
-          font-family: SF Pro Display;
           font-size: px2rem(20);
           font-style: normal;
           font-weight: 500;
@@ -1248,7 +1287,7 @@ footer{
             transform: translateY(-50%);
             pointer-events: none;
             color: $gray;
-            font-family: Roboto Flex;
+
             font-size: px2rem(16);
             font-style: normal;
             font-weight: 400;
@@ -1262,7 +1301,7 @@ footer{
             transform: translateY(-50%);
             pointer-events: none;
             color: $gray;
-            font-family: Roboto Flex;
+
             font-size: px2rem(16);
             font-style: normal;
             font-weight: 400;
@@ -1309,7 +1348,6 @@ footer{
             color: $black;
             font-size: px2rem(22);
             font-style: normal;
-            font-family: SF Pro Display;
             font-weight: 500;
             line-height: 140%; /* 36.4px */
             margin-bottom: px2rem(20);
@@ -1319,7 +1357,6 @@ footer{
 
           .subtitle{
             color: $gray;
-            font-family: SF Pro Display;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
@@ -1345,7 +1382,7 @@ footer{
                 border: none;
 
                 color: $black;
-                font-family: Roboto Flex;
+
                 font-size: px2rem(16);
                 font-style: normal;
                 font-weight: 400;
@@ -1376,7 +1413,6 @@ footer{
               .btn{
                 width: 100%;
                 display: inline-flex;
-                font-family: SF Pro Display;
                 background-color: $black;
                 padding: px2rem(18) px2rem(40);
                 justify-content: center;
@@ -1441,7 +1477,7 @@ footer{
                 .radio-text{
                   margin-left: px2rem(8);
                   color: $gray;
-                  font-family: Roboto Flex;
+
                   font-size: px2rem(16);
                   font-style: normal;
                   font-weight: 400;
@@ -1464,7 +1500,6 @@ footer{
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
   color: $black;
-  font-family: SF Pro Display;
   font-size: px2rem(20);
   font-style: normal;
   font-weight: 500;
@@ -1559,22 +1594,25 @@ footer{
       //FIXME MARGIN
       /* margin-right: px2rem(15);*/
       background-size: cover;
+      margin-right: px2rem(15);
     }
     .grid-text{
       display: flex;
       width: px2rem(415);
       flex-direction: column;
       .grid-tag{
-        color: $light-blue;
+        font-family: Oswald;
+        color: $Accent_pink;
         font-size: px2rem(14);
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 100%; /* 14px */
       }
       .grid-text-title{
+        font-family: Oswald;
         display: flex;
-        color: $Accent_pink;
-        font-size: px2rem(24);
+        color: $Accent;
+        font-size: px2rem(22);
         font-style: normal;
         font-weight: 500;
         line-height: 150%; /* 36px */
@@ -1586,6 +1624,7 @@ footer{
         font-style: normal;
         font-weight: 400;
         line-height: 150%; /* 24px */
+        letter-spacing: px2rem(0.16);
       }
 
       .grid-content-margin-bot{
@@ -1820,6 +1859,8 @@ footer{
 /*Наведение на dropdown*/
 .select2-dropdown .select2-results__option {
   transition: color 0.3s ease-in-out;
+  font-family: Oswald;
+
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered{
@@ -1829,6 +1870,7 @@ footer{
   padding-right: px2rem(20);
   overflow: inherit;
   line-height: px2rem(28);
+  font-family: Oswald;
 }
 
 /* Изменение цвета текста при наведении на элемент выпадающего списка */
@@ -1952,7 +1994,6 @@ footer{
       }
       .main-link{
         color: $black;
-        font-family: SF Pro Display;
         font-size: px2rem(14);
         font-style: normal;
         font-weight: 400;
@@ -1985,7 +2026,7 @@ footer{
           border: none;
 
           color: $black;
-          font-family: Roboto Flex;
+
           font-size: px2rem(16);
           font-style: normal;
           font-weight: 400;
@@ -1999,7 +2040,7 @@ footer{
           transform: translateY(-50%);
           pointer-events: none;
           color: $gray;
-          font-family: Roboto Flex;
+
           font-size: px2rem(16);
           font-style: normal;
           font-weight: 400;
@@ -2021,7 +2062,7 @@ footer{
       .btn{
         width: 100%;
         display: inline-flex;
-        font-family: "Roboto Flex";
+
         padding: px2rem(18) px2rem(40);
         justify-content: center;
         align-items: center;
@@ -2073,7 +2114,7 @@ footer{
           .radio-text{
             margin-left: px2rem(8);
             color: $gray;
-            font-family: Roboto Flex;
+
             font-size: px2rem(14);
             font-style: normal;
             font-weight: 400;
@@ -2086,7 +2127,6 @@ footer{
             transition: 300ms ease-in-out;
             color: $Accent;
             text-align: right;
-            font-family: SF Pro Display;
             font-size: px2rem(14);
             font-style: normal;
             font-weight: 500;
@@ -2171,7 +2211,7 @@ footer{
   }
 
   header {
-    background-color: #FAFAFA;
+    background-color: #FFF;
     height: 60px;
     position: fixed;
     top: 0;
@@ -2281,13 +2321,13 @@ footer{
           .nav-link {
             text-decoration: none;
             transition: color 300ms ease-out;
-
+            font-family: Oswald;
             color: $gray;
-            font-family: SF Pro Display;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
             line-height: 100%; /* 16px */
+            text-transform: uppercase;
             &:hover {
               color: $Accent;
             }
@@ -2297,7 +2337,7 @@ footer{
       .login {
         display: flex;
         text-decoration: none;
-        color: $blue;
+        color: $Accent;
         transition: color 300ms ease-out;
         text-align: right;
         font-size: 14px;
@@ -2306,6 +2346,7 @@ footer{
         line-height: normal;
         margin-top: 20px;
         margin-bottom: 22px;
+        text-transform: uppercase;
         /*margin-left: px2rem(29);*/
 
         &:hover {
@@ -2320,7 +2361,6 @@ footer{
         margin-top: 20px;
         .contacts-title{
           color: $black;
-          font-family: SF Pro Display;
           font-size: 26px;
           font-style: normal;
           font-weight: 500;
@@ -2348,8 +2388,8 @@ footer{
             a{
               text-decoration: none;
               display: flex;
-              color: $blue;
-              font-family: Roboto Flex;
+              color: $Accent_pink;
+
               font-size: 16px;
               font-style: normal;
               font-weight: 500;
@@ -2459,7 +2499,6 @@ footer{
       }
       .btn{
         align-items: center;
-        font-family: SF Pro Display;
         width: 100%;
         padding: 14px 24px;
         //FIXME FONT
@@ -2469,7 +2508,8 @@ footer{
         font-style: normal;
         font-weight: 600;
         line-height: 18px;
-        background: $light-blue;
+        border-radius: 2px;
+        background: #FE139E;
         color: #fff;
         transition: color,background-color 0.3s ease-in-out;
         margin-bottom: 14px;
@@ -2758,7 +2798,7 @@ footer{
       img{
         width: 100% ;
         height:auto;
-        margin-top: 25px;
+        margin-top: 51px;
         margin-bottom: 30px;
       }
       .container-text{
@@ -2773,16 +2813,17 @@ footer{
           //FIXME width unmatch
           width: 100%;
           font-size: 30px;
-          color: #333;
+          color: $Accent;
           font-family: Oswald;
           font-style: normal;
           font-weight: 600;
           line-height: 130%; /* 52px */
           letter-spacing: -0.3px;
-          margin-bottom: 50px;
+          margin-bottom: 25px;
         }
         .middle-text{
-          color: $light-blue;
+          font-family: Oswald;
+          color: $Accent_pink;
           font-size: 18px;
           font-style: normal;
           font-weight: 400;
@@ -2795,7 +2836,29 @@ footer{
           font-style: normal;
           font-weight: 400;
           line-height: 150%; /* 27px */
+          letter-spacing: 0.16px;
+
           margin-bottom: 25px;
+        }
+        .btn{
+          padding: 14px 24px;
+          border-radius: 2px;
+          border: none;
+          background: #FE139E;
+          text-transform: none;
+          font-family: Roboto Condensed;
+
+          color:  #FFF;
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 18px;
+          transition: background 0.3s ease-in-out;
+
+          &:hover{
+            background: #1285BB;
+          }
         }
       }
     }
@@ -2812,14 +2875,14 @@ footer{
       flex-direction: column;
 
       .title{
-        color: $black;
+        color: $Accent;
         width: 328px;
         font-size: 26px;
         font-family: Oswald;
         font-style: normal;
         font-weight: 500;
         line-height: 140%; /* 44.8px */
-        letter-spacing: -0.26px;
+        letter-spacing: 0.26px;
         margin-bottom: 20px;
       }
       .about-content{
@@ -2829,6 +2892,7 @@ footer{
         font-style: normal;
         font-weight: 400;
         line-height: 150%; /* 24px */
+        letter-spacing: 0.16px;
         margin-bottom: 5px;
       }
       .grid{
@@ -2863,20 +2927,22 @@ footer{
 
             .grid-text-title{
               display: flex;
-              color: $black;
+              font-family: Oswald;
+
+              color: $Accent;
               font-size: 18px;
               font-style: normal;
               font-weight: 700;
               line-height: 130%; /* 26px */
-              margin-bottom: px2rem(10);
+              margin-bottom: 10px;
             }
             .content-text{
               color: $black;
-              font-family: SF Pro Display;
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
               line-height: 150%; /* 24px */
+              letter-spacing: 0.16px;
 
             }
 
@@ -2898,7 +2964,7 @@ footer{
       flex-direction: column;
       align-items: center;
       width: 90%;
-      padding-top: 25px;
+      padding-top: 0;
 
       .map_popup{
         position: absolute;
@@ -2910,8 +2976,7 @@ footer{
         z-index: 10;
 
         p{
-          font-size: 11px;
-          font-family: SF Pro Display;
+          font-size: 12px;
           font-style: normal;
           line-height: 120%; /* 24px */
         }
@@ -2928,13 +2993,15 @@ footer{
       }
 
       .title{
+        color: $Accent;
         display: flex;
         text-align: initial;
-        color: $black;
+        font-family: Oswald;
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
         line-height: 140%; /* 25.2px */
+        letter-spacing: 0.18px;
         margin-bottom: 45px;
       }
     }
@@ -2955,7 +3022,7 @@ footer{
         font-style: normal;
         font-weight: 500;
         line-height: 140%; /* 36.4px */
-        letter-spacing: -0.26px;
+        letter-spacing: 0.26px;
         margin-bottom: 15px
       }
       .desc{
@@ -2981,7 +3048,7 @@ footer{
       display: flex;
       align-self: center;
       width: 95%;
-      margin-top: 40px;
+      margin-top: 35px;
       margin-right: auto;
       margin-left: auto;
 
@@ -2996,7 +3063,8 @@ footer{
         width: 100%;
         padding: 10px 20px 0 10px;
         .title{
-         width: 90%;
+          font-family: Oswald;
+          width: 90%;
           color: white;
           font-size: 24px;
           font-style: normal;
@@ -3010,16 +3078,18 @@ footer{
           color:  #E2E4E9;
           font-size: 16px;
           font-style: normal;
-          font-weight: 300;
-          line-height: 140%; /* 25.2px */
+          font-weight: 400;
+          line-height: 150%; /* 25.2px */
+          letter-spacing: 0.16px;
           margin-bottom: 20px;
         }
         .btn{
+          padding: 14px 24px;
+          border-radius: 2px;
           align-items: center;
-          font-family: SF Pro Display;
           width: 100%;
+          font-family: Roboto Condensed;
           //FIXME FONT
-          /*width: px2rem(209);*/
           text-align: center;
           font-size: 16px;
           font-style: normal;
@@ -3063,14 +3133,14 @@ footer{
         justify-content: space-between;
 
         .detilize-title{
+          font-family: Oswald;
           width: 100% ;
           color: $black;
-          font-family: SF Pro Display;
           font-size: 26px;
           font-style: normal;
           font-weight: 500;
           line-height: 140%; /* 36.4px */
-          letter-spacing: -0.26px;
+          letter-spacing: 0.26px;
           margin-bottom: 30px;
         }
 
@@ -3095,10 +3165,10 @@ footer{
             width: 100%;
 
             .grid-text-title {
+              font-family: Oswald;
               width: 100%;
-              color: $black;
+              color: $Accent;
               font-style: normal;
-              font-family: SF Pro Display;
               font-size: 18px;
               font-style: normal;
               font-weight: 600;
@@ -3106,15 +3176,15 @@ footer{
               margin-bottom: 20px;
             }
             .content-text{
-              width: 90%;
+              width: 95%;
               color: $black;
               //FIXME FONT
-              font-family: Roboto Flex;
-              font-size: 15px;
+
+              font-size: 16px;
               font-style: normal;
-              font-weight: 300;
-              line-height: 140%; /* 21px */
-              letter-spacing: -0.15px;
+              font-weight: 400;
+              line-height: 150%; /* 21px */
+              letter-spacing: 0.16px;
               margin-bottom: 20px;
             }
           }
@@ -3138,7 +3208,7 @@ footer{
         transform: translateY(-50%);
         pointer-events: none;
         color: $gray;
-        font-family: Roboto Flex;
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -3154,7 +3224,7 @@ footer{
       /*  transform: translateY(-50%);*/
         pointer-events: none;
         color: $gray;
-        font-family: Roboto Flex;
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -3202,18 +3272,17 @@ footer{
       }
 
       .title{
-        color: $black;
+        color: $Accent;
+        font-family: Oswald;
         font-size: 26px;
         font-style: normal;
-        font-family: SF Pro Display;
         font-weight: 500;
         line-height: 140%; /* 36.4px */
-        margin-bottom: 12px;
+        margin-bottom: 15px;
         width: 100%;
       }
       .subtitle{
         color: $gray;
-        font-family: SF Pro Display;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -3240,7 +3309,7 @@ footer{
             border: none;
 
             color: $black;
-            font-family: Roboto Flex;
+
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -3274,14 +3343,13 @@ footer{
           .btn{
             width: 100%;
             display: inline-flex;
-            background-color: #1285BB;
+            background-color: $Accent;
             padding: 18px 40px;
             justify-content: center;
             align-items: center;
             margin-bottom: 100px;
 
             text-align: center;
-            font-family: SF Pro Display;
             font-size: 18px;
             font-style: normal;
             font-weight: 600;
@@ -3343,7 +3411,7 @@ footer{
             .radio-text{
               margin-left: 8px;
               color: $gray;
-              font-family: Roboto Flex;
+
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
@@ -3406,7 +3474,6 @@ footer{
       display: flex;
       color: $black;
       text-align: center;
-      font-family: SF Pro Display;
       font-size: 24px;
       font-style: normal;
       font-weight: 500;
@@ -3415,7 +3482,6 @@ footer{
     .subtitle{
       color: $gray;
       /* Text */
-      font-family: SF Pro Display;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -3435,7 +3501,6 @@ footer{
 
       .desc-text{
         color: $black;
-        font-family: SF Pro Display;
         font-size: 18px;
         font-style: normal;
         font-weight: 500;
@@ -3444,7 +3509,6 @@ footer{
       }
       .desc-subtext{
         color: $gray;
-        font-family: SF Pro Display;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -3521,7 +3585,7 @@ footer{
       background: #FFF;
       margin-right: px2rem(32);
       box-shadow: 0 12px 16px 0 rgba(78, 132, 225, 0.05);
-      margin-bottom: px2rem(30);
+      margin-bottom: 10px;
       /*border: 1px solid black;*/
 
       .grid-img{
@@ -3539,7 +3603,8 @@ footer{
         flex-direction: column;
         margin-bottom: 10px;
         .grid-tag{
-          color: $blue;
+          font-family: Oswald;
+          color: $Accent_pink;
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
@@ -3553,7 +3618,7 @@ footer{
           font-style: normal;
           font-weight: 500;
           line-height: 150%; /* 36px */
-          margin-bottom: px2rem(10);
+          margin-bottom: 10px;
         }
         .content-text{
           color: #5C5C5C;
@@ -3562,17 +3627,21 @@ footer{
           font-style: normal;
           font-weight: 400;
           line-height: 150%; /* 24px */
+          letter-spacing: 0.16px;
+
         }
 
         .grid-content-margin-bot{
           color: #5C5C5C;
           margin-bottom: 15px;
+          letter-spacing: 0.16px;
+
         }
       }
     }
   }
   footer{
-    padding-top: 30px;
+/*    padding-top: 30px;*/
     padding-bottom: 30px;
     width: 100%;
     flex-direction: column;
@@ -3593,7 +3662,6 @@ footer{
         flex-direction: column;
         .contacts-title{
           color: $black;
-          font-family: SF Pro Display;
           font-size: 26px;
           font-style: normal;
           font-weight: 500;
@@ -3621,8 +3689,8 @@ footer{
             a{
               text-decoration: none;
               display: flex;
-              color: $blue;
-              font-family: Roboto Flex;
+              color: $Accent_pink;
+
               font-size: 16px;
               font-style: normal;
               font-weight: 500;
@@ -3647,7 +3715,7 @@ footer{
             display: flex;
             width: 100%;
             color: $black;
-            font-family: Roboto Flex;
+
             //FIXME FONT
             font-size: 14px;
             font-style: normal;
@@ -3736,7 +3804,7 @@ footer{
     .rights{
       color: $gray;
       text-align: center;
-      font-family: Roboto Flex;
+
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -3957,7 +4025,6 @@ footer{
         }
         .main-link{
           color: $black;
-          font-family: SF Pro Display;
           font-size: 14px;
 
           font-style: normal;
@@ -3966,7 +4033,6 @@ footer{
         }
         .sub-link{
           color: #B4B4B4;
-          font-family: SF Pro Display;
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
@@ -4022,7 +4088,7 @@ footer{
         transform: translateY(-50%);
         pointer-events: none;
         color: $gray;
-        font-family: Roboto Flex;
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -4038,7 +4104,7 @@ footer{
         /*  transform: translateY(-50%);*/
         pointer-events: none;
         color: $gray;
-        font-family: Roboto Flex;
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -4089,7 +4155,6 @@ footer{
         color: $black;
         font-size: 26px;
         font-style: normal;
-        font-family: SF Pro Display;
         font-weight: 500;
         line-height: 140%; /* 36.4px */
         margin-bottom: 30px;
@@ -4099,7 +4164,6 @@ footer{
 
       .subtitle{
         color: $gray;
-        font-family: SF Pro Display;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -4125,7 +4189,7 @@ footer{
             border: none;
 
             color: $black;
-            font-family: Roboto Flex;
+
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -4156,7 +4220,6 @@ footer{
           .btn{
             width: 100%;
             display: inline-flex;
-            font-family: SF Pro Display;
             border-radius: 2px;
             background: var(--Blue2, #1285BB);
             padding: 18px 40px;
@@ -4165,7 +4228,6 @@ footer{
             margin-bottom: px2rem(100);
 
             text-align: center;
-            font-family: SF Pro Display;
             font-size: 18px;
             font-style: normal;
             font-weight: 600;
@@ -4227,7 +4289,7 @@ footer{
             .radio-text{
               margin-left: 8px;
               color: $gray;
-              font-family: Roboto Flex;
+
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
@@ -4271,7 +4333,6 @@ footer{
             .menu-item-title {
               display: inline-block;
               color: $black;
-              font-family: SF Pro Display;
               font-size: 18px;
               font-style: normal;
               font-weight: 500;
@@ -4306,7 +4367,6 @@ footer{
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
     color: $black;
-    font-family: SF Pro Display;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
