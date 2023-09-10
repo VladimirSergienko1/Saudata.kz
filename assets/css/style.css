@@ -2352,6 +2352,7 @@ footer .rights {
   align-items: center;
 }
 .popup .title {
+  font-family: Oswald;
   display: flex;
   color: #333;
   text-align: center;
@@ -2363,6 +2364,7 @@ footer .rights {
 }
 .popup .subtitle {
   color: #616161;
+  font-family: Roboto Condensed;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 300;
@@ -2381,6 +2383,7 @@ footer .rights {
 }
 .popup .desc .desc-text {
   color: #333;
+  font-family: Oswald;
   font-size: 1.3888888889rem;
   font-style: normal;
   font-weight: 500;
@@ -2389,6 +2392,7 @@ footer .rights {
 }
 .popup .desc .desc-subtext {
   color: #616161;
+  font-family: Roboto Condensed;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
@@ -2397,13 +2401,13 @@ footer .rights {
 .popup .btn {
   width: 27.7777777778rem;
   padding: 1.0416666667rem 2.2222222222rem;
-  border-radius: 0.5555555556rem;
-  border: 1px solid #2A81DD;
+  border-radius: 0.1388888889rem;
+  border: 1px solid #90278E;
   text-transform: none;
   background-color: #fff;
   color: #2A81DD;
   text-align: center;
-  font-family: Open Sans;
+  font-family: Roboto Condensed;
   font-size: 0.9722222222rem;
   font-style: normal;
   font-weight: 700;
@@ -2411,7 +2415,8 @@ footer .rights {
   margin-bottom: 1.3888888889rem;
 }
 .popup .btn:hover {
-  background: #2A81DD;
+  background: #90278E;
+  border-color: 1px solid white;
   color: #FFFFFF;
 }
 
@@ -4121,6 +4126,7 @@ footer .rights {
     transform: translateY(-50%);
     pointer-events: none;
     color: #616161;
+    font-family: Roboto Condensed;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -4322,7 +4328,7 @@ footer .rights {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
-    z-index: 5;
+    z-index: 11;
   }
   .popup {
     background: url("../img/backgrounds/popup-background.svg") no-repeat;
@@ -4339,7 +4345,7 @@ footer .rights {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     display: none;
     border-radius: 8px;
-    z-index: 5;
+    z-index: 20;
   }
   .popup .close-icon {
     position: absolute;
@@ -4357,6 +4363,7 @@ footer .rights {
   }
   .popup .title {
     display: flex;
+    font-family: Oswald;
     color: #333;
     text-align: center;
     font-size: 24px;
@@ -4367,10 +4374,12 @@ footer .rights {
   .popup .subtitle {
     color: #616161;
     /* Text */
+    font-family: Roboto Condensed;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
     margin-bottom: 5px;
   }
   .popup .desc {
@@ -4385,6 +4394,7 @@ footer .rights {
   }
   .popup .desc .desc-text {
     color: #333;
+    font-family: Oswald;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -4398,17 +4408,18 @@ footer .rights {
     font-weight: 400;
     width: 100%;
     line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
   }
   .popup .btn {
     width: 90%;
     padding: 15px 32px;
-    border-radius: 8px;
-    border: 1px solid #00BFF2;
+    border-radius: 2px;
+    border: 1px solid #90278E;
     text-transform: none;
     background-color: #fff;
-    color: #00BFF2;
+    color: #1285BB;
     text-align: center;
-    font-family: Open Sans;
+    font-family: Roboto Condensed;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -4416,7 +4427,6 @@ footer .rights {
     margin-bottom: 20px;
   }
   .popup .btn:hover {
-    background: #00BFF2;
     color: #FFFFFF;
   }
   .popup.active,

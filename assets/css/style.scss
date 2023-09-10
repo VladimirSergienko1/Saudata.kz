@@ -1082,6 +1082,7 @@ footer{
     align-items: center;
   }
   .title {
+    font-family: Oswald;
     display: flex;
     color: $black;
     text-align: center;
@@ -1093,7 +1094,7 @@ footer{
   }
   .subtitle{
     color: $gray;
-
+    font-family: Roboto Condensed;
     font-size: px2rem(18);
     font-style: normal;
     font-weight: 300;
@@ -1113,6 +1114,7 @@ footer{
 
     .desc-text{
       color: $black;
+      font-family: Oswald;
       font-size: px2rem(20);
       font-style: normal;
       font-weight: 500;
@@ -1122,6 +1124,7 @@ footer{
     .desc-subtext{
       color: $gray;
 
+      font-family: Roboto Condensed;
       font-size: px2rem(16);
       font-style: normal;
       font-weight: 400;
@@ -1131,14 +1134,14 @@ footer{
   .btn{
     width: px2rem(400);
     padding: px2rem(15) px2rem(32);
-    border-radius: px2rem(8);
-    border: 1px solid $blue;
+    border-radius: px2rem(2);
+    border: 1px solid $Accent_pink;
     text-transform: none;
     background-color: #fff;
 
     color: $blue;
     text-align: center;
-    font-family: Open Sans;
+    font-family: Roboto Condensed;
     font-size: px2rem(14);
     font-style: normal;
     font-weight: 700;
@@ -1146,7 +1149,8 @@ footer{
     margin-bottom: px2rem(20);
 
     &:hover{
-      background: $blue;
+      background: $Accent_pink;
+      border-color: 1px solid white ;
       color: #FFFFFF;
     }
   }
@@ -3208,7 +3212,7 @@ footer{
         transform: translateY(-50%);
         pointer-events: none;
         color: $gray;
-
+        font-family: Roboto Condensed;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -3432,7 +3436,7 @@ footer{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
-    z-index: 5  ;
+    z-index: 11  ;
   }
 
   //FIXME WHEN SCROLL OFF Jumping left
@@ -3451,7 +3455,7 @@ footer{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     display: none;
     border-radius: 8px;
-    z-index: 5;
+    z-index: 20;
 
     .close-icon {
       position: absolute;
@@ -3472,6 +3476,7 @@ footer{
     }
     .title {
       display: flex;
+      font-family: Oswald;
       color: $black;
       text-align: center;
       font-size: 24px;
@@ -3482,10 +3487,12 @@ footer{
     .subtitle{
       color: $gray;
       /* Text */
+      font-family: Roboto Condensed;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: 150%; /* 24px */
+      letter-spacing: 0.16px;
       margin-bottom: 5px;
     }
     .desc{
@@ -3501,6 +3508,7 @@ footer{
 
       .desc-text{
         color: $black;
+        font-family: Oswald;
         font-size: 18px;
         font-style: normal;
         font-weight: 500;
@@ -3514,19 +3522,20 @@ footer{
         font-weight: 400;
         width: 100%;
         line-height: 150%; /* 24px */
+        letter-spacing: 0.16px;
       }
     }
     .btn{
       width: 90%;
       padding: 15px 32px;
-      border-radius: 8px;
-      border: 1px solid $light-blue;
+      border-radius: 2px;
+      border: 1px solid $Accent-pink;
       text-transform: none;
       background-color: #fff;
 
-      color: $light-blue;
+      color: #1285BB;
       text-align: center;
-      font-family: Open Sans;
+      font-family: Roboto Condensed;
       font-size: 14px;
       font-style: normal;
       font-weight: 700;
@@ -3534,7 +3543,6 @@ footer{
       margin-bottom: 20px;
 
       &:hover{
-        background: $light-blue;
         color: #FFFFFF;
       }
     }
