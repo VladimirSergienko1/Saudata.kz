@@ -1851,10 +1851,10 @@ footer{
 
 /* Для выпадающего списка */
 .select2-dropdown {
-  font-size: px2rem(12);
+  /*font-size: px2rem(12);*/
   padding-left: px2rem(2);
   width: px2rem(60) !important;  /* Пример высоты */
-
+  color: $gray;
   border: none !important;
   border-radius: px2rem(15) !important;
   background-color: #F3F5FC !important;
@@ -1866,15 +1866,26 @@ footer{
   font-family: Oswald;
 
 }
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  display: none !important;
+}
+.select2-search--dropdown {
+ display: none !important;
+}
 
 .select2-container--default .select2-selection--single .select2-selection__rendered{
-  font-size: px2rem(12);
+  /*font-size: px2rem(12);*/
+  color: $gray;
   transition: color 0.3s ease-in-out !important;
   padding-left: px2rem(8);
   padding-right: px2rem(20);
   overflow: inherit;
-  line-height: px2rem(28);
+  line-height: px2rem(30);
   font-family: Oswald;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+
 }
 
 /* Изменение цвета текста при наведении на элемент выпадающего списка */
@@ -3865,7 +3876,12 @@ footer{
   .select2-dropdown .select2-results__option {
     transition: color 0.3s ease-in-out;
   }
-
+  .select2-container--default .select2-search--dropdown .select2-search__field {
+    display: none !important;
+  }
+  .select2-search--dropdown {
+    display: none !important;
+  }
   .select2-container--default .select2-selection--single .select2-selection__rendered{
     font-size: 12px;
     transition: color 0.3s ease-in-out !important;
