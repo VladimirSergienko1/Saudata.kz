@@ -257,9 +257,9 @@ header {
         .nav-list {
           display: flex;
           width: px2rem(635);
-          justify-content: flex-end;
+          justify-content: flex-start;
           list-style: none;
-          gap: px2rem(40);
+          gap: px2rem(60);
 
 
           .nav-item {
@@ -848,7 +848,7 @@ header {
                 border: none;
               }
               &:hover{
-                border-color: $blue;
+                border-color: #1285BB;
               }
             }
 
@@ -1473,7 +1473,7 @@ footer{
                       border: none;
                     }
                     &:hover{
-                      border-color: $blue;
+                      border-color: #1285BB;
                     }
                   }
 
@@ -1851,7 +1851,7 @@ footer{
 
 /* Для выпадающего списка */
 .select2-dropdown {
-  /*font-size: px2rem(12);*/
+  font-size: px2rem(12);
   padding-left: px2rem(2);
   width: px2rem(60) !important;  /* Пример высоты */
   color: $gray;
@@ -1874,10 +1874,10 @@ footer{
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered{
-  /*font-size: px2rem(12);*/
+  font-size: px2rem(12);
   color: $gray;
   transition: color 0.3s ease-in-out !important;
-  padding-left: px2rem(8);
+  padding-left: px2rem(10);
   padding-right: px2rem(20);
   overflow: inherit;
   line-height: px2rem(30);
@@ -1921,7 +1921,7 @@ footer{
   content: '';
   display: inline-block;
   position: absolute;
-  top: 50%; /* Центрируем по вертикали */
+  top: 55%; /* Центрируем по вертикали */
   transform: translateY(-50%);
   width: px2rem(16);
   height: px2rem(16);
@@ -1936,7 +1936,7 @@ footer{
 
 }
 .select2-results__option {
-  padding: px2rem(6);
+  padding: px2rem(8);
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -2123,7 +2123,7 @@ footer{
               border: none;
             }
             &:hover{
-              border-color: $blue;
+              border-color: #1285BB;
             }
           }
           .radio-text{
@@ -2542,266 +2542,6 @@ footer{
     top: 60px;
     z-index: 20;
   }
-
-  //FIXME HIDDEN BLOCK FOR FORM
-  /*.form_mobile{
-    position: fixed;
-    right: -1000px;
-    width: 100%;
-    height: 100%;
-    transition: .9s;
-    background-color:  #EEFBFF;
-    padding-top: 20px;
-    z-index: 2;
-
-    .form_prev {
-      width: 24px;
-      transform: rotate(180deg);
-      padding: 5px;
-      margin-right: 10px;
-    }
-    .flex_box {
-      margin-bottom: 10px;
-      align-items: center;
-    }
-    .title {
-      margin-bottom: 0;
-    }
-
-
-      .input-container {
-        position: relative;
-        label {
-          position: absolute;
-          top:  27px;
-          !* left: px2rem(20);*!
-          left: 20px;
-          transform: translateY(-50%);
-          pointer-events: none;
-          color: $gray;
-          font-family: Roboto Flex;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 120%; !* 19.2px *!
-          transition: 0.3s ease-in-out;
-        }
-        .textarea-label{
-          position: absolute;
-          !* top: px2rem(28);
-           left: px2rem(20);*!
-          top: 28px;
-          left: 20px;
-          !*  transform: translateY(-50%);*!
-          pointer-events: none;
-          color: $gray;
-          font-family: Roboto Flex;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 120%; !* 19.2px *!
-          transition: 0.3s ease-in-out;
-        }
-
-        input:focus + label {
-          !*top: px2rem(10);
-          left: px2rem(20);*!
-          top: 10px;
-          left: 20px;
-          font-size: 12px;
-        }
-        textarea:focus + label {
-          !*  top: px2rem(10);
-            left: px2rem(20);*!
-          top: 10px;
-          left: 20px;
-          font-size: 12px;
-        }
-
-      }
-      .input-container.has-value label {
-        !*  top: px2rem(10);
-          left: px2rem(20);*!
-        top: 10px;
-        left: 20px;
-        font-size: 12px;
-      }
-      textarea .has-value  label {
-        !*  top: px2rem(10);
-          left: px2rem(20);*!
-        top: 10px;
-        left: 20px;
-        font-size: 12px;
-      }
-
-      .container{
-        width: 90%;
-        .form-img{
-          display: none;
-          width: px2rem(472);
-          margin-left: px2rem(20);
-        }
-
-        .title{
-          color: $black;
-          font-size: 26px;
-          font-style: normal;
-          font-family: SF Pro Display;
-          font-weight: 500;
-          line-height: 140%; !* 36.4px *!
-          margin-bottom: 0;
-          width: 100%;
-        }
-
-
-        .subtitle{
-          color: $gray;
-          font-family: SF Pro Display;
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 150%; !* 27px *!
-          width: 100%;
-          margin-bottom: 30px;
-        }
-        .form-container{
-          display: flex;
-          width: 100%;
-          .form{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 100%;
-
-            .input-field{
-              display: flex;
-              width: 100%;
-              padding: 18px 20px 17px 20px;
-              border-radius: 10px;
-              background: #FFF;
-              border: none;
-
-              color: $black;
-              font-family: Roboto Flex;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 120%; !* 19.2px *!
-              margin-bottom: 20px;
-            }
-            .input-group{
-              display: flex;
-              flex-direction: column;
-            }
-            .organization{
-              display: flex;
-              width: 100%;
-              margin-bottom: 20px;
-            }
-            .message{
-              display: flex;
-              max-width: 100%;
-              min-width: 100%;
-              padding: 18px 20px 17px 20px;
-              margin-bottom: 27px;
-              min-height:  162px;
-              max-height: 162px;
-              resize: none;
-
-            }
-
-            .btn{
-              width: 100%;
-              display: inline-flex;
-              font-family: SF Pro Display;
-              background-color: $black;
-              padding: 18px 40px;
-              justify-content: center;
-              align-items: center;
-              margin-bottom: px2rem(100);
-
-              text-align: center;
-              font-family: SF Pro Display;
-              font-size: 18px;
-              font-style: normal;
-              font-weight: 600;
-              line-height: 18px; !* 100% *!
-
-              &:hover{
-                background-color: $blue;
-              }
-            }
-            .radio-group{
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: space-between;
-
-              .radio-item1{
-                display: flex;
-                margin-bottom: 27px;
-
-                .radio1{
-                  margin-right: px2rem(8);
-                }
-              }
-              .radio-item2{
-                display: flex;
-                align-items: center;
-                margin-bottom: 27px;
-
-                .round-checkbox{
-                  margin-right: 0;
-                  !* Скрыть стандартный внешний вид чекбокса *!
-                  appearance: none;
-                  -webkit-appearance: none;
-                  -moz-appearance: none;
-                  width: 16px;
-                  height: 16px;
-                  border-radius: 50%;
-                  border: 2px solid #E2E4E9;
-                  outline: none;
-                  cursor: pointer;
-                  transition: border 0.3s ease-in-out;
-                  box-sizing: border-box;
-
-                  &:checked {
-                    background-image: url("../img/radio-checked.svg");
-                    background-size: cover ;
-                    border: 2px solid #2A81DD;
-                    background-color: #2A81DD;
-                    background-position: center;
-                    //border: none;
-                  }
-                  &:hover{
-                    //border-color: $blue;
-                    border-color: #E2E4E9;
-                  }
-                }
-
-              }
-              .radio-text{
-                margin-left: 8px;
-                color: $gray;
-                font-family: Roboto Flex;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 130%; !* 20.8px *!
-                letter-spacing: -0.16px;
-                width: calc(100% - 25px);
-              }
-            }
-          }
-        }
-      }
-  }
-  .form_mobile_active{
-    transition: .3s;
-    right: 0;
-    z-index: 2;
-  }*/
-
   .intro{
     padding-top: 99px;
 
@@ -3411,15 +3151,12 @@ footer{
                 &:checked {
                   background-image: url("../img/radio-checked.svg");
                   background-size: cover ;
-                  border: 2px solid #2A81DD;
-                  background-color: #2A81DD;
+                  border: 2px solid #1285BB;
+                  background-color: #1285BB;
                   background-position: center;
                   //border: none;
                 }
-                &:hover{
-                  //border-color: $blue;
-                  border-color: #E2E4E9;
-                }
+
               }
 
             }
@@ -3885,7 +3622,7 @@ footer{
   .select2-container--default .select2-selection--single .select2-selection__rendered{
     font-size: 12px;
     transition: color 0.3s ease-in-out !important;
-    padding-left: 8px;
+    padding-left: 10px;
     padding-right: 20px;
     overflow: inherit;
     line-height: 28px;
@@ -3928,7 +3665,7 @@ footer{
     transform: translateY(-50%);
     width: 16px;
     height: 16px;
-    right: -5px;
+    right: -6px;
     //right: px2rem(8);
     background-size: 16px;
     background-repeat: no-repeat;
@@ -4305,7 +4042,6 @@ footer{
                 }
                 &:hover{
                   //border-color: $blue;
-                  border-color: #E2E4E9;
                 }
               }
 
