@@ -2905,7 +2905,7 @@ footer .rights {
 .select2-container .select2-selection--single {
   width: 4.1666666667rem !important; /* Пример высоты */
   position: relative;
-  height: 1.9444444444rem;
+  height: auto;
 }
 
 .select2-container .select2-selection__rendered:hover {
@@ -2990,7 +2990,7 @@ footer .rights {
   content: "";
   display: inline-block;
   position: absolute;
-  top: 55%; /* Центрируем по вертикали */
+  top: 50%; /* Центрируем по вертикали */
   transform: translateY(-50%);
   width: 1.1111111111rem;
   height: 1.1111111111rem;
@@ -4397,7 +4397,8 @@ footer .rights {
   .select2-container .select2-selection--single {
     width: 60px !important; /* Пример высоты */
     position: relative;
-    height: 25px;
+    /*height: 25px;*/
+    height: auto;
   }
   .select2-container .select2-selection__rendered:hover {
     transition: color 0.3s ease-in-out;

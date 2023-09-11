@@ -1834,7 +1834,7 @@ footer{
 .select2-container .select2-selection--single {
   width: px2rem(60) !important;  /* Пример высоты */
   position: relative;
-  height: px2rem(28);
+  height: auto;
 
 }
 
@@ -1921,7 +1921,7 @@ footer{
   content: '';
   display: inline-block;
   position: absolute;
-  top: 55%; /* Центрируем по вертикали */
+  top: 50%; /* Центрируем по вертикали */
   transform: translateY(-50%);
   width: px2rem(16);
   height: px2rem(16);
@@ -3583,7 +3583,8 @@ footer{
   .select2-container .select2-selection--single {
     width: 60px !important;  /* Пример высоты */
     position: relative;
-    height: 25px;
+    /*height: 25px;*/
+    height: auto;
 
   }
 
