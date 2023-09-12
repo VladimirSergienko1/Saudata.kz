@@ -137,6 +137,39 @@ $(document).ready(function() {
         $(this).parent().find('.select2-selection__arrow::before').css('transform', 'translateY(-50%)');
     });
 
+    $('.js-example-basic-single').select2({
+        templateResult: function (data) {
+            if (data.id === $('.js-example-basic-single').val()) {
+                return null;
+            }
+            return data.text;
+        }
+    });
+
+
+    //FIXME FOR Mobile SELECT
+    $('.js-example-basic-single2').select2({minimumResultsForSearch: Infinity});
+
+    $('.js-example-basic-single2').on('select2:open', function(e) {
+        $(this).parent().find('.select2-selection__arrow::before').css('transform', 'translateY(-50%) rotate(180deg)');
+    });
+
+    $('.js-example-basic-single2').on('select2:close', function(e) {
+        $(this).parent().find('.select2-selection__arrow::before').css('transform', 'translateY(-50%)');
+    });
+
+    $('.js-example-basic-single2').select2({
+        templateResult: function (data) {
+            if (data.id === $('.js-example-basic-single2').val()) {
+                return null;
+            }
+            return data.text;
+        }
+    });
+
+
+
+
     $('#slider_desktop').on('init', function(event, slick){
         if (slick.currentSlide === 0) {
             $('.prev-arrow').css('stroke', '#989898');
