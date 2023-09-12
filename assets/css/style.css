@@ -1668,7 +1668,7 @@ header .container .flex_row .main-nav .nav-list .nav-item .nav-link {
   line-height: 100%; /* 16px */
 }
 header .container .flex_row .main-nav .nav-list .nav-item .nav-link:hover {
-  color: #292974;
+  color: #90298d;
 }
 header .container .flex_row .flex_box {
   display: flex;
@@ -2947,7 +2947,7 @@ footer .rights {
 
 /* Изменение цвета текста при наведении на элемент выпадающего списка */
 .select2-dropdown .select2-results__option:hover {
-  color: #292974 !important;
+  color: #90298d !important;
 }
 
 .select2-results__option--highlighted[aria-selected=true] {
@@ -4536,11 +4536,13 @@ footer .rights {
     line-height: 140%; /* 36.4px */
     letter-spacing: -0.26px;
     margin-bottom: 20px;
+    margin-right: 0;
   }
   footer .container .contacts .contacts-email {
     display: flex;
     align-items: flex-end;
     margin-bottom: 20px;
+    margin-right: 0;
   }
   footer .container .contacts .contacts-email .email-photo {
     display: flex;
@@ -4561,6 +4563,7 @@ footer .rights {
     margin-left: 3.4722222222rem;
     align-items: flex-end;
     margin-bottom: 20px;
+    margin-right: 0;
   }
   footer .container .contacts .contacts-address .address-photo {
     display: flex;
@@ -4678,7 +4681,7 @@ footer .rights {
   }
   /* Изменение цвета текста при наведении на элемент выпадающего списка */
   .select2-dropdown .select2-results__option:hover {
-    color: #292974 !important;
+    color: #90298d !important;
   }
   .select2-results__option--highlighted[aria-selected=true] {
     background-color: unset !important;
