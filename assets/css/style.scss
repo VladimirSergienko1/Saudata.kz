@@ -450,8 +450,9 @@ header {
     .map_popup{
       position: absolute;
       top: px2rem(115);
-      /*left: px2rem(260);*/
-      left: px2rem(300);
+
+     /* left: px2rem(300);*/
+      left: px2rem(361);
       z-index: 10;
 
       p{
@@ -881,9 +882,10 @@ footer{
     .contacts{
       display: flex;
       align-items: center;
+      width: 100%;
       justify-content: space-between;
       .contacts-title{
-        margin-right: px2rem(106);
+        margin-right: 0;
         font-family: Oswald;
         color: $black;
         font-size: px2rem(26);
@@ -895,7 +897,7 @@ footer{
       }
       .contacts-email{
         display: flex;
-        margin-right: px2rem(70);
+        margin-right: 0;
         align-items: flex-end;
 
         .email-photo{
@@ -923,7 +925,7 @@ footer{
       }
       .contacts-address{
         display: flex;
-        margin-right: px2rem(200);
+        margin-right: 0;
         align-items: flex-end;
         .address-photo{
           display: flex;
@@ -1840,7 +1842,7 @@ footer{
 
 .select2-container .select2-selection__rendered:hover {
   transition: color 0.3s ease-in-out;;
-  color: $Accent !important;
+  color: #90298d !important;
 }
 
 /* Когда dropdown активно (открывается вниз) */
@@ -1957,7 +1959,7 @@ footer{
 /*для ховер стрелочи*/
 //Fixme меняется stroke
 .select2-container:hover .select2-selection--single .select2-selection__arrow::before {
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6667 6.5L7.99999 10.5L3.33332 6.5' stroke='rgba(0, 0, 128, 1)' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6667 6.5L7.99999 10.5L3.33332 6.5' stroke='rgba(144, 41, 141, 1)' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 
 }
 
@@ -3592,7 +3594,7 @@ footer{
 
   .select2-container .select2-selection__rendered:hover {
     transition: color 0.3s ease-in-out;;
-    color: $Accent !important;
+    color: #90298d !important;
   }
 
   /* Когда dropdown активно (открывается вниз) */
@@ -3701,7 +3703,7 @@ footer{
   /*для ховер стрелочи*/
   //Fixme меняется stroke
   .select2-container:hover .select2-selection--single .select2-selection__arrow::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6667 6.5L7.99999 10.5L3.33332 6.5' stroke='rgba(0, 0, 128, 1)' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6667 6.5L7.99999 10.5L3.33332 6.5' stroke='rgba(144, 41, 141, 1)' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 
   }
 

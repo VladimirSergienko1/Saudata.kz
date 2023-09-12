@@ -12307,13 +12307,13 @@ $(function() {
         },
         {
             "key": "kz-ac",
-            "value": 797914722,
+            "value": 96245824,
           /*  "value": 2,*/
             "visible": true
         },
         {
             "key": "kz-as",
-            "value": 160136864,
+            "value": 47491884,
             "visible": true
         },
         {
