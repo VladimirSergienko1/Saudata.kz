@@ -1540,7 +1540,7 @@ a {
 }
 
 .pink {
-  color: #90278E;
+  color: #5877a9;
 }
 
 .btn {
@@ -4756,7 +4756,7 @@ footer .rights {
     width: 100%;
     display: inline-flex;
     border-radius: 2px;
-    background: var(--Blue2, #1285BB);
+    background: #292974;
     padding: 18px 40px;
     justify-content: center;
     align-items: center;
@@ -4768,7 +4768,7 @@ footer .rights {
     line-height: 18px; /* 100% */
   }
   .indexes .container .flex_box .form_mobile .container .form-container .form .btn:hover {
-    background-color: #2A81DD;
+    background-color: #90278E;
   }
   .indexes .container .flex_box .form_mobile .container .form-container .form .radio-group {
     display: flex;

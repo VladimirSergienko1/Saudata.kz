@@ -12446,7 +12446,7 @@ $(function() {
 
         colorAxis: {
             min: 0,
-            stops: [
+           /* stops: [
                 [0, '#EFEFFF'],
                 [0.5, Highcharts.getOptions().colors[0]],
                 [
@@ -12454,12 +12454,16 @@ $(function() {
                     Highcharts.color(Highcharts.getOptions().colors[0])
                         .brighten(-0.5).get()
                 ]
-            ]
-            /*stops: [
-                [0, 'rgba(18, 133, 187, 1)'],
-                [0.5, 'rgba(41, 41, 116, 1)'],
-                [1, 'rgba(144, 39, 142, 1)']
             ]*/
+            stops: [
+                [0, 'rgba(18, 133, 187, 0.1)'],
+                [0.5, Highcharts.getOptions().colors[4]],
+                [
+                    1,
+                    Highcharts.color(Highcharts.getOptions().colors[4])
+                        .brighten(-0.1).get()
+                ]
+            ]
         },
 
         legend: {
@@ -12488,8 +12492,8 @@ $(function() {
                     textOutline: 'none'
                 }
             },
-            borderColor: '#000000',
-            borderWidth: 0.5,
+           /* borderColor: '#000000',
+            borderWidth: 0.5,*/
             point: {
                 events: {
                     click: onPointClick

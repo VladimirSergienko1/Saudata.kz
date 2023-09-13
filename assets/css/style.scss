@@ -135,7 +135,7 @@ a {
   color: $Accent;
 }
 .pink{
-  color: $Accent-pink;
+  color: #5877a9;
 }
 .btn{
   width: px2rem(220);
@@ -3989,7 +3989,7 @@ footer{
             width: 100%;
             display: inline-flex;
             border-radius: 2px;
-            background: var(--Blue2, #1285BB);
+            background: $Accent;
             padding: 18px 40px;
             justify-content: center;
             align-items: center;
@@ -4002,7 +4002,7 @@ footer{
             line-height: 18px; /* 100% */
 
             &:hover{
-              background-color: $blue;
+              background-color: $Accent_pink;
             }
           }
           .radio-group{
