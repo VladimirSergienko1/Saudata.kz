@@ -1770,7 +1770,7 @@ header .container .flex_row .flex_box .login:hover {
 
 .about {
   padding-top: 4.1666666667rem;
-  background: url("../img/backgrounds/waves.png") no-repeat;
+  background: url("../img/backgrounds/waves.svg") no-repeat;
   background-size: cover;
 }
 .about .container {
@@ -1843,7 +1843,7 @@ header .container .flex_row .flex_box .login:hover {
 
 .products {
   /* margin-top: px2rem(62);*/
-  background: url("../img/backgrounds/products-background.png") no-repeat;
+  background: url("../img/backgrounds/products-background.svg") no-repeat;
   background-size: cover;
 }
 .products .container {
@@ -3577,7 +3577,7 @@ footer .rights {
   }
   .about {
     padding-top: 4.1666666667rem;
-    background: url("../img/backgrounds/waves.png") no-repeat;
+    background: url("../img/backgrounds/waves.svg") no-repeat;
     background-size: cover;
   }
   .about .container {
@@ -3707,7 +3707,7 @@ footer .rights {
   .products {
     width: 100%;
     margin-top: 30px;
-    background: url("../img/backgrounds/products-background.png") no-repeat;
+    background: url("../img/backgrounds/products-background.svg") no-repeat;
     background-size: cover;
     background-position: center;
   }
