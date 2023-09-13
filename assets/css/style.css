@@ -1531,10 +1531,6 @@ a {
   font-weight: bold;
 }
 
-.blue {
-  color: #2A81DD;
-}
-
 .light-blue {
   color: #00BFF2;
 }
@@ -2489,11 +2485,12 @@ footer .rights {
 .indexes .container .menu .menu-item .menu-item-title {
   display: inline-block;
   color: #333;
+  font-family: Oswald;
   font-size: 1.3888888889rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 140%; /* 28px */
-  letter-spacing: -0.0138888889rem;
+  letter-spacing: 0.0138888889rem;
   margin-right: 0.6944444444rem;
 }
 .indexes .container .menu .menu-item .menu-item-toggle {
@@ -2592,6 +2589,7 @@ footer .rights {
 }
 .indexes .container .form_mobile .container .title {
   color: #333;
+  font-family: Oswald;
   font-size: 1.5277777778rem;
   font-style: normal;
   font-weight: 500;
@@ -2654,7 +2652,7 @@ footer .rights {
 .indexes .container .form_mobile .container .form-container .form .btn {
   width: 100%;
   display: inline-flex;
-  background-color: #333;
+  background-color: #292974;
   padding: 1.25rem 2.7777777778rem;
   justify-content: center;
   align-items: center;
@@ -2666,7 +2664,7 @@ footer .rights {
   line-height: 1.25rem; /* 100% */
 }
 .indexes .container .form_mobile .container .form-container .form .btn:hover {
-  background-color: #2A81DD;
+  background-color: #90278E;
 }
 .indexes .container .form_mobile .container .form-container .form .radio-group {
   display: flex;
