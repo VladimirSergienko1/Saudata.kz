@@ -1509,13 +1509,11 @@ a {
 .container {
   width: 80.5555555556rem;
   margin: 0 auto;
-  /*  border: 1px solid red;*/
 }
 
 .header-container {
   width: 100%;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 .container1 {
@@ -1813,7 +1811,7 @@ header .container .flex_row .flex_box .login:hover {
   position: absolute;
   top: 7.9861111111rem;
   /* left: px2rem(300);*/
-  left: 25.0694444444rem;
+  left: 24.5527777778rem;
   z-index: 10;
 }
 .map-section .container .map_popup p {
@@ -2081,12 +2079,15 @@ header .container .flex_row .flex_box .login:hover {
   padding: 1.25rem 1.3888888889rem 1.1805555556rem 1.3888888889rem;
   border-radius: 0.6944444444rem;
   background: #FFF;
-  border: none;
+  border: 2px solid #FFF;
   color: #333;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 19.2px */
+}
+.contact-us .container .form-container .form .error {
+  border: 2px solid red;
 }
 .contact-us .container .form-container .form .input-group {
   display: flex;
@@ -2622,13 +2623,16 @@ footer .rights {
   padding: 1.25rem 1.3888888889rem 1.1805555556rem 1.3888888889rem;
   border-radius: 0.6944444444rem;
   background: #FFF;
-  border: none;
+  border: 2px solid #FFF;
   color: #333;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 19.2px */
   margin-bottom: 1.3888888889rem;
+}
+.indexes .container .form_mobile .container .form-container .form .error {
+  border: 2px solid red;
 }
 .indexes .container .form_mobile .container .form-container .form .input-group {
   display: flex;
@@ -3975,13 +3979,16 @@ footer .rights {
     padding: 14.5px 15px 12.5px 15px;
     border-radius: 10px;
     background: #FFF;
-    border: none;
+    border: 2px solid #FFF;
     color: #333;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 19.2px */
     margin-bottom: 16px;
+  }
+  .contact-us .container .form-container .form .error {
+    border: 2px solid red;
   }
   .contact-us .container .form-container .form .input-group {
     display: flex;
@@ -4725,13 +4732,16 @@ footer .rights {
     padding: 18px 20px 17px 20px;
     border-radius: 10px;
     background: #FFF;
-    border: none;
+    border: 2px solid #FFF;
     color: #333;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 19.2px */
     margin-bottom: 20px;
+  }
+  .indexes .container .flex_box .form_mobile .container .form-container .form .error {
+    border: 2px solid red;
   }
   .indexes .container .flex_box .form_mobile .container .form-container .form .input-group {
     display: flex;
