@@ -4,6 +4,21 @@ console.log('Hello')
 
 $(document).ready(function() {
 
+    $('#phone-input').mask('+7(___)___-__-__', {'translation': {_: {pattern: /[0-9]/}}});
+    $('#phone-input-indexes').mask('+7(___)___-__-__', {'translation': {_: {pattern: /[0-9]/}}});
+
+    //To validate Email
+/*    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+    $("#mobile-email-input").on("input", function() {
+        if (emailRegex.test($(this).val())) {
+            $(this).removeClass("error");
+        } else {
+            $(this).addClass("error");
+        }
+    });*/
+
+
     $('.burger').click(function() {
         if ($(this).hasClass('burger_active')) {
             $(this).removeClass('burger_active');
