@@ -12487,9 +12487,16 @@ $(function() {
             verticalAlign: 'bottom'
         },
         tooltip: {
+            formatter: function () {
+                console.log('this.point', this.point)
+                const formattedValue = Number(this.point.value).toLocaleString('ru-RU');
+
+                    return `<b style="">Кол-во чеков:</b> <br> <p>${this.point.name}: </p><span style="color: #90278E;">${formattedValue}</span>`;
+            },
+
             style: {
-                fontFamily: 'Oswald ',  // Задайте шрифт для текста в попапе
-                fontSize: '14px',     // Задайте размер шрифта
+                fontFamily: 'Oswald ',
+                fontSize: '14px',
             },
 
         },
@@ -12531,13 +12538,5 @@ $(function() {
             enableMouseTracking: false
         }]
     });
-
-
-
-
-
-
-
-
 })
 
