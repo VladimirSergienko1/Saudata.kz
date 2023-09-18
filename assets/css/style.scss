@@ -205,6 +205,7 @@ a {
       flex-direction: column;
       margin-right: px2rem(12);
       .grid-text-title{
+        width: px2rem(470);
         font-family: Oswald;
         display: flex;
         color: $Accent;
@@ -428,7 +429,7 @@ header {
       margin-bottom: px2rem(25);
     }
     .about-content{
-      width: px2rem(570);
+      width: px2rem(660);
       margin-bottom: px2rem(55);
       color: #616161;
     }
@@ -454,8 +455,8 @@ header {
       position: absolute;
       top: px2rem(115);
 
-     /* left: px2rem(300);*/
-      left: px2rem(353.56);
+      /*left: px2rem(353.56);*/
+      left: px2rem(365.56);
       z-index: 10;
 
       p{
@@ -639,6 +640,7 @@ header {
           margin-right: 0;
 
           .grid-text-title {
+            width: px2rem(300);
             color: $Accent;
             font-family: Roboto Condensed;
             margin-bottom: px2rem(20);
@@ -891,6 +893,7 @@ footer{
       width: 100%;
       justify-content: space-between;
       .contacts-title{
+        width: px2rem(145);
         margin-right: 0;
         font-family: Oswald;
         color: $black;
@@ -919,6 +922,7 @@ footer{
             text-decoration: none;
             display: flex;
             color: $Accent_pink;
+            font-family: Oswald;
 
             font-size: px2rem(16);
             font-style: normal;
@@ -942,7 +946,7 @@ footer{
           margin-left: px2rem(10);
           display: flex;
           color: $black;
-
+          font-family: Oswald;
           font-size: px2rem(16);
           font-style: normal;
           font-weight: 500;
@@ -1035,7 +1039,7 @@ footer{
   .rights{
     color: $gray;
     text-align: center;
-
+    font-family: Oswald;
     font-size: px2rem(16);
     font-style: normal;
     font-weight: 400;
@@ -1595,7 +1599,7 @@ footer{
   .slider_item {
     display: flex;
     /* width: px2rem(560) !important;*/
-    min-height: px2rem(298) !important;
+    min-height: px2rem(320) !important;
     padding: px2rem(25) px2rem(25) px2rem(30) px2rem(25);
     border-radius: px2rem(8);
     background: #FFF;
@@ -2698,6 +2702,7 @@ footer{
             .grid-text-title{
               display: flex;
               font-family: Oswald;
+              width: auto;
 
               color: $Accent;
               font-size: 18px;
@@ -2740,7 +2745,7 @@ footer{
         position: absolute;
         /*top: px2rem(60);
         left: px2rem(130);*/
-        top: 90px;
+        top: 60px;
         left: 20px;
         /* width: 100%;*/
         z-index: 10;
@@ -2802,7 +2807,7 @@ footer{
         font-style: normal;
         font-weight: 400;
         line-height: 150%; /* 27px */
-        margin-bottom: 45px;
+        margin-bottom: 35px;
       }
       .flex-row{
         //display: flex;
@@ -3353,7 +3358,7 @@ footer{
       flex-direction: column;
       /* width: px2rem(560) !important;*/
       width: 360px;
-      min-height: 430px;
+      min-height: 462px;
       align-items: flex-start;
       padding: 25px 25px 40px 25px;
       border-radius: 8px;
@@ -3386,6 +3391,7 @@ footer{
           line-height: 100%; /* 14px */
         }
         .grid-text-title{
+          font-family: Oswald;
           display: flex;
           color: $Accent;
           width: 100%;
@@ -3436,6 +3442,7 @@ footer{
         justify-content: flex-start;
         flex-direction: column;
         .contacts-title{
+          width: auto;
           color: $black;
           font-size: 26px;
           font-style: normal;

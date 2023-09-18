@@ -1607,6 +1607,7 @@ a {
   margin-right: 0.8333333333rem;
 }
 .grid .grid-item .grid-text .grid-text-title {
+  width: 32.6388888889rem;
   font-family: Oswald;
   display: flex;
   color: #292974;
@@ -1789,7 +1790,7 @@ header .container .flex_row .flex_box .login:hover {
   margin-bottom: 1.7361111111rem;
 }
 .about .container .about-content {
-  width: 39.5833333333rem;
+  width: 45.8333333333rem;
   margin-bottom: 3.8194444444rem;
   color: #616161;
 }
@@ -1814,8 +1815,8 @@ header .container .flex_row .flex_box .login:hover {
 .map-section .container .map_popup {
   position: absolute;
   top: 7.9861111111rem;
-  /* left: px2rem(300);*/
-  left: 24.5527777778rem;
+  /*left: px2rem(353.56);*/
+  left: 25.3861111111rem;
   z-index: 10;
 }
 .map-section .container .map_popup p {
@@ -1974,6 +1975,7 @@ header .container .flex_row .flex_box .login:hover {
   margin-right: 0;
 }
 .detilize .container .grid .grid-item .grid-text .grid-text-title {
+  width: 20.8333333333rem;
   color: #292974;
   font-family: Roboto Condensed;
   margin-bottom: 1.3888888889rem;
@@ -2199,6 +2201,7 @@ footer .container .contacts {
   justify-content: space-between;
 }
 footer .container .contacts .contacts-title {
+  width: 10.0694444444rem;
   margin-right: 0;
   font-family: Oswald;
   color: #333;
@@ -2224,6 +2227,7 @@ footer .container .contacts .contacts-email .email-text a {
   text-decoration: none;
   display: flex;
   color: #90278E;
+  font-family: Oswald;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 500;
@@ -2243,6 +2247,7 @@ footer .container .contacts .contacts-address .address-text {
   margin-left: 0.6944444444rem;
   display: flex;
   color: #333;
+  font-family: Oswald;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 500;
@@ -2305,6 +2310,7 @@ footer .container .links .linkedin:hover path {
 footer .rights {
   color: #616161;
   text-align: center;
+  font-family: Oswald;
   font-size: 1.1111111111rem;
   font-style: normal;
   font-weight: 400;
@@ -2756,7 +2762,7 @@ footer .rights {
 #slider_desktop .slider_item {
   display: flex;
   /* width: px2rem(560) !important;*/
-  min-height: 20.6944444444rem !important;
+  min-height: 22.2222222222rem !important;
   padding: 1.7361111111rem 1.7361111111rem 2.0833333333rem 1.7361111111rem;
   border-radius: 0.5555555556rem;
   background: #FFF;
@@ -3649,6 +3655,7 @@ footer .rights {
   .about .container .grid .grid-item .grid-text .grid-text-title {
     display: flex;
     font-family: Oswald;
+    width: auto;
     color: #292974;
     font-size: 18px;
     font-style: normal;
@@ -3683,7 +3690,7 @@ footer .rights {
     position: absolute;
     /*top: px2rem(60);
     left: px2rem(130);*/
-    top: 90px;
+    top: 60px;
     left: 20px;
     /* width: 100%;*/
     z-index: 10;
@@ -3740,7 +3747,7 @@ footer .rights {
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 27px */
-    margin-bottom: 45px;
+    margin-bottom: 35px;
   }
   .products .banner {
     display: flex;
@@ -4213,7 +4220,7 @@ footer .rights {
     flex-direction: column;
     /* width: px2rem(560) !important;*/
     width: 360px;
-    min-height: 430px;
+    min-height: 462px;
     align-items: flex-start;
     padding: 25px 25px 40px 25px;
     border-radius: 8px;
@@ -4246,6 +4253,7 @@ footer .rights {
     line-height: 100%; /* 14px */
   }
   #slider_mobile .slider_item .grid-text .grid-text-title {
+    font-family: Oswald;
     display: flex;
     color: #292974;
     width: 100%;
@@ -4292,6 +4300,7 @@ footer .rights {
     flex-direction: column;
   }
   footer .container .contacts .contacts-title {
+    width: auto;
     color: #333;
     font-size: 26px;
     font-style: normal;

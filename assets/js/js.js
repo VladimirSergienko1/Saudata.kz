@@ -8,15 +8,26 @@ $(document).ready(function() {
     $('#phone-input-indexes').mask('+7(___)___-__-__', {'translation': {_: {pattern: /[0-9]/}}});
 
     //To validate Email
-/*    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    $('#email-input').on('blur', function() {
+        validateEmail($(this), true);
+    });
 
-    $("#mobile-email-input").on("input", function() {
-        if (emailRegex.test($(this).val())) {
-            $(this).removeClass("error");
+    $('#email-input').on('input', function() {
+        validateEmail($(this), false);
+    });
+
+    function validateEmail($input, checkForErrors) {
+        var email = $input.val();
+        var emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+
+        if (!emailPattern.test(email)) {
+            if (checkForErrors) {
+                $input.addClass('error');
+            }
         } else {
-            $(this).addClass("error");
+            $input.removeClass('error');
         }
-    });*/
+    }
 
 
     $('.burger').click(function() {
@@ -1486,7 +1497,7 @@ const mapData = {
                             "subregion": null,
                             "fips": "KZ02",
                             "postal-code": "AC",
-                            "name": "Алматы",
+                            "name": "Алматинская область",
                             "country": "Kazakhstan",
                             "type-en": "City",
                             "region": null,
@@ -1543,7 +1554,7 @@ const mapData = {
                             "subregion": null,
                             "fips": "KZ05",
                             "postal-code": "AS",
-                            "name": "Астана",
+                            "name": "Акмолинская область",
                             "country": "Kazakhstan",
                             "type-en": "City",
                             "region": null,
@@ -12491,7 +12502,7 @@ $(function() {
                 console.log('this.point', this.point)
                 const formattedValue = Number(this.point.value).toLocaleString('ru-RU');
 
-                    return `<b style="">Кол-во чеков:</b> <br> <p>${this.point.name}: </p><span style="color: #90278E;">${formattedValue}</span>`;
+                    return `<b style=""></b> <br> <p>${this.point.name}: </p><span style="color: #90278E;">${formattedValue}</span>`;
             },
 
             style: {
